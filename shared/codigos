@@ -1,0 +1,101 @@
+algelin1 -- 2 -- Álgebra Linear
+calculo1 -- 1 -- Cálculo Diferencial e Integral 1
+calculo2 -- 2 -- Cálculo 2
+calculo3 -- 3 -- Cálculo 3
+calculodefser -- 2 -- Cálculo Diferencial e Séries
+calcnum -- 4 -- Cálculo Numérico
+ga -- 1 -- Geometria Analítica
+probest -- 4 -- Probabilidade e Estatística
+sereqdif -- 3 -- Séries e Equações Diferenciais
+fisexpa -- 2 -- Física Experimental A
+fisexpb -- 3 -- Física Experimental B
+fisica2 -- 2 -- Física 1
+fisica3 -- 3 -- Física 3 
+circeletricos -- 4 -- Circuitos Elétricos
+circeletronicos1 -- 5 -- Circuitos Eletrônicos 1
+circeletronicos2 -- 6 -- Circuitos Eletrônicos 2
+aed1 -- 2 -- Algoritmos e Estruturas de Dados 1
+aed2 -- 3 -- Algoritmos e Estruturas de Dados 2
+cap -- 1 -- Construção de Algoritmos e Programação
+dm -- 7-9 -- Desenvolvimento Móvel
+dw1 -- 7-9 -- Desenvolvimento de Software para Web 1
+dw2 -- 7-9 -- Desenvolvimento de Software para Web 2
+ipa -- 1 -- Introdução ao Pensamento Algorítmico
+md -- -- Matemática Discreta
+npd -- -- Algoritmos para Problemas NP-Difíceis
+ori -- 5 -- Organização e Recuperação da Informação
+paa -- 4 -- Projeto e Análise de Algoritmos
+plp -- 7-9 -- Paradigmas de Linguagens de Programação
+pooa -- 7-9 -- Programação Orientada a Objetos Avançada
+poo -- 2 -- Programação Orientada a Objetos
+ppd -- 8 -- Programação Paralela e Distribuída
+tc -- X -- Teoria da Computação
+arq1 -- 3 -- Arquitetura e Organização de Computadores 1
+arq2 -- 4 -- Arquitetura e Organização de Computadores 2
+arqad -- 7 -- Arquiteturas de Alto Desempenho
+ld -- 1 -- Lógica Digital 
+sd -- 2 -- Sistemas Digitais % sujeito a votação
+am1 -- 7-9 -- Aprendizado de Máquina 1
+am2 -- 7-9 -- Aprendizado Máquina 2
+asp -- 7-9 -- Arquitetura de Software e Padrões
+bdcd -- 7-9 -- Banco de Dados para Ciência de Dados
+bd -- 6 -- Banco de Dados
+cg -- 7-9 -- Computação Gráfica
+compiladores -- 7-9 -- Construção de Compiladores
+devops -- 7-9 -- DevOps
+es1 -- 4 -- Engenharia de Software 1
+es2 -- 7-9 -- Engenharia de Software 2
+ia -- 6 -- Inteligência Artificial
+ihc -- 8 -- Interação Humano-Computador
+lm -- 7-9 -- Lógica Matemática
+md -- 7-9 -- Matemática Discreta
+pde -- 7-9 -- Processamento de Dados em Escala
+pdi3dv -- 7-9 -- Processamento Digital de Imagens 3D e Vídeos
+pdi -- 7-9 -- Processamento Digital de Imagens
+pibd -- 7-9 -- Projeto e Implementação de Banco de Dados
+pvd -- 7-9 -- Processamento e Visualização de Dados
+rc -- 7 -- Redes de Computadores
+so -- 5 -- Sistemas Operacionais
+tc -- 7-9 -- Teoria da Computação
+controle1 -- 5 -- Controle 1
+controle2 -- 6 -- Controle 2
+engsis -- 6 -- Engenharia de Sistemas
+om -- 8 -- Otimização Matemática
+projsisemb -- 7 -- Projeto de Sistemas Computacionais Embarcados
+% % -- 7 -- Projeto de Sistemas Embarcados I 
+% % -- 8 -- Projeto de Sistemas Embarcados II
+psd -- 5 -- Processamento de Sinais Digitais
+sistdin -- 4 -- Sistema Dinâmicos
+sistdist -- 7 -- Sistemas Distribuídos
+teccom -- 7 -- Tecnologia de Comunicação
+estagio -- 10 -- Estágio em Ciência da Computação
+estagio -- 10 -- Estágio em Engenharia de Computação
+metcient -- 8 -- Metodologia Científica
+sem1 -- 3 -- Seminários 1
+sem2 -- 8 -- Seminários 2
+tcc1 -- 9 -- Trabalho de Conclusão de Curso 1
+tcc2 -- 10 -- Trabalho de Conclusão de Curso 2
+abrev -- Sem -- Nome da Disciplina
+controle -- 7-9 -- Controle Avançado
+empreend -- 7-9 -- Empreendedores em Informática
+libras -- 7-9 -- Introdução à Lingua Brasileira de Sinais
+musical -- 7-9 -- Introdução à Computação Musical
+pmac -- 7-9 -- Projeto de Manufatura Assistido por Computador
+protsisdigan -- 7-9 -- Prototipação de Sistemas Digitais/Analógicos
+robosautonomos -- 7-9 -- Introdução à Programação de Robôs Móveis
+robotica -- 7-9 -- Manipuladores Robóticos
+sc -- 7-9 -- Segurança Cibernética
+siai -- 7-9 -- Sistemas de Integração e Automação Industrial
+vc -- 7-9 -- Visão Computacional
+ti10 -- 7-9 -- Tópicos em Computação 10
+ti11 -- 7-9 -- Tópicos em Computação 11
+ti12 -- 7-9 -- Tópicos em Computação 12
+ -- 7-9 -- Tópicos em Computação 1
+ -- 7-9 -- Tópicos em Computação 2
+ti3 -- 7-9 -- Tópicos em Computação 3
+ti4 -- 7-9 -- Tópicos em Computação 4
+ti5 -- 7-9 -- Tópicos em Computação 5
+ti6 -- 7-9 -- Tópicos em Computação 6
+ti7 -- 7-9 -- Tópicos em Computação 7
+ti8 -- 7-9 -- Tópicos em Computação 8
+ti9 -- 7-9 -- Tópicos em Computação 9

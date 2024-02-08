@@ -1,0 +1,50 @@
+\disciplina{ppd}{
+    \titulo      {8}{Programação Paralela e Distribuída}
+    \objetivo    {Familiarizar o estudante com os conceitos e termos básicos de sistemas paralelos, implementação e uso de concorrência, apresentar os tipos de arquitetura mais usados, descrever o suporte necessário para a programação de tais sistemas e apresentar algumas aplicações.}
+    \requisitos  {Sistemas Operacionais} % xxxxx
+    \recomendadas{Sistemas Distribídos} % TODO: Este não aparece no PPC da EnC, seria o caso de incluir como requisito?
+    \ementa      {Revisão de arquiteturas paralelas: memória compartilhada e distribuída. Desenvolvimento de aplicações concorrentes: conceitos básicos da programação concorrente, definição, ativação e coordenação de processos, modelos de programação e técnicas de decomposição. Técnicas de otimização. Otimização sequencial: uso eficiente da memória, unit stride, blocking. Instruções vetoriais e super escalares, opções de otimização. Profiling e modelagem de desempenho. Controle de processos e paralelização fork-join. Programação com memória compartilhada e introdução ao OpenMP. Programação com memória distribuída e MPI. Programação de sistemas manycore como GPU e aceleradores: CUDA, OpenCL e outros. Programação paralela na nuvem. Avaliação de desempenho e teste de programas concorrentes.}
+    \creditos    {4 total (2 teóricos, 2 práticos)}
+    %    \extra       {x horas}
+    \codigo      {DC}{1001483}
+    \bibliografia {
+        Grama,A.;Gupta,A.;Karypis,G.;Kumar,V. Introduction to Parallel Computing. Adisson- Wesley, 2003. (disponível na BCO).
+
+        Dongarra, J.; Foster, I.; Fox, G.; Gropp, W.; White, A.; Torczon, L.; Kennedy, K. Sourcebook of Parallel Computing. Morgan Kaufmann Pub, 2003. (disonível na BCO).
+
+        Foster, I. Designing and Building Parallel Programs. Addison-Wesley, 1995. www-unix.mcs.anl.gov/dbpp. (disponível na BCO).
+
+        Casanova, H.; Legrand, A.; Robert, Y.. Parallel algorithms. Boca Raton, Fla.: CRC Press, 2009. 335 p. (disponível na BCO).
+
+        Wilkinson, B. and Allen, M. Parallel Programming: Techniques and Applications Using Networked Workdstations and Parallel Computers. Pearson Prentice Hall, 2005. (disponível na BCO)
+
+        Quinn, M. J. Parallel programming: in C with MPI and openMP. Boston: McGraw-Hill/Higher Education, 2004. (disponível na BCO).
+
+        Lin, C.; Snyder, L.. Principles of parallel programming. Boston: Pearson Addison Wesley, 2009. (disponível na BCO).
+    }{
+        Flynn, M. J.; Rudd, K. W. Parallel Architectures. ACM Computing Surveys, v. 28, n.1, 1996.
+
+        Chapman, B.; Jost, G. and van der Pas, R. Using OpenMP: Portable Shared Memory Parallel Programming. MIT Press, 2007.
+
+        Robbins, K. A. and Robbins, S. Practical Unix Programming: A Guide to Concurrency, Communication, and Multithreading.. Prentice-Hall, Inc. 1996.
+
+        Stevens, W. R. UNIX Network Programming: Interprocess Communications. 2nd ed. Prentice Hall, 1999.
+
+        Stevens, W. R. Unix Network Programming: Networking APIs: Sockets and XTI, 2nd ed. Prentice Hall, 1999.
+
+        Snir, M. et. al. MPI - The Complete Reference. The MPI Core, 2nd ed. MIT, 1998. (BCO)
+
+        Gropp, W. et. al. MPI - The Complete Reference. The MPI Extensions, 2nd ed. MIT, 1998. (BCO)
+    }
+    % Jander, 13/5/23
+    \dataatualizacao{23/10/23} % Edilson, Márcio, Luciano, Menotti, Helio
+    \competencias{
+        % cg-aprender/{ce-ap-1, ce-ap-4},
+        % cg-produzir/{ce-pro-2, ce-pro-3, ce-pro-5},
+        % cg-atuar/{ce-atuar-4, ce-atuar-5}
+        cg-aprender/{ce-ap-1, ce-ap-2, ce-ap-4},
+        cg-produzir/{ce-pro-2, ce-pro-3, ce-pro-4},
+        cg-atuar/{ce-atuar-1, ce-atuar-2, ce-atuar-3, ce-atuar-4, ce-atuar-5},
+        cg-pautar/{ce-paut-4}
+    }
+}

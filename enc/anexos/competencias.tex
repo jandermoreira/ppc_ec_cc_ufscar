@@ -1,0 +1,86 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! Criador = Jander Moreira
+%! Data = 26/11/2022
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As Diretrizes Curriculares Nacionais (DCNs) para as Engenharias, instituídas pela Câmara de Educação Superior do Conselho Nacional de Educação (CES/CNE) através da Resolução nº 02/2019, definem os princípios, os fundamentos, as condições e as finalidades, para aplicação, em âmbito nacional, na organização, no desenvolvimento e na avaliação do curso de graduação em Engenharia das Instituições de Educação Superior (IES). Elas trazem, entre outros aspectos, a ênfase no desenvolvimento de competências técnicas e sócio emocionais dos estudantes ao longo da sua trajetória de formação, buscando criar um ambiente propício para o desenvolvimento do pensamento criativo, com sólida base teórica, da capacidade de inovação e de empreendedorismo dos graduandos em engenharia. Neste contexto, este apêndice busca adequar o PPC do curso de Bacharelado em Engenharia de Computação para atender às referidas diretrizes segundo o perfil do profissional a ser formado pela UFSCar.
+
+
+% \section{Caracterização das competências da UFSCar}
+
+%\textcolor{red}{\textbf{Melhorar essa parte aqui!}}
+
+Os aspectos do perfil do profissional a ser formado pela UFSCar e suas respectivas competências estão descritas no documento Perfil do profissional a ser formado na UFSCar \cite{ufscar2008perfil} referendado pela Resolução CEPE/UFSCar no 776/2001. Esse documento define os seguintes aspectos e suas competências básicas a serem desenvolvidas pelos egressos:
+
+%A UFSCar definiu, de acordo com o documento YYYYYYY, as competências gerais para os egressos segundo os seguintes aspectos:
+\begin{itemize}
+    \singlespacing
+    \setlength{\itemsep}{0pt}
+    \ExecuteLista{\Compet}{cg-aprender, cg-produzir, cg-empreender, cg-atuar, cg-comprometer, cg-gerenciar, cg-pautar}{
+        \item \Atributo{\Compet}{aspecto};
+    }
+    \item \Atributo{cg-buscar}{aspecto}.  % usa ponto final no último item
+\end{itemize}
+
+A seguir estão caracterizados cada um destes aspectos, juntamente com as competências específicas envolvidas e siglas utilizadas, devidamente adaptadas ao Curso de Engenharia de Computação.
+
+\ExecuteLista{\CompGeral}{cg-aprender, cg-produzir, cg-empreender, cg-atuar, cg-comprometer, cg-gerenciar, cg-pautar, cg-buscar}{%
+    \TabelaCompetencias{\CompGeral}
+}
+
+% Jander: TODO ESTE CONTEÚDO VAI PARA JUNTO DA DESCRIÇÃO DAS EMENTAS
+%
+% \section{Disciplinas e competências associadas}
+% \label{sec:disc-comp}
+% Esta seção apresenta a relação das atividades obrigatórias e suas respectivas competências. O agrupamento é feito pelos eixos \textit{Algoritmos e programação}, \textit{Arquiteturas de computadores}, \textit{Metolodolias e técnicas de computação}, \textit{Humanas}, \textit{Eletrônica} e \textit{Engenharia e sistemas}.
+
+% \NewDocumentCommand{\ReportaEixo}{ m }{%
+%     Disciplinas:\par
+%     \begin{itemize}[noitemsep, topsep = 0pt]
+%         \ExecuteLista{\Discipl}{#1}{
+%             \item \Atributo{\Discipl}{nome} (\Atributo{\Discipl}{semestre}\textdegree~sem.)
+%         }
+%     \end{itemize}
+
+%     \ExecuteLista{\Discipl}{#1}{
+%         \noindent%
+%         \begin{minipage}{\textwidth}
+%             \MostraCompetencias{\Discipl}
+%         \end{minipage}
+%     }
+% }
+
+
+% \subsection{Eixo: Algoritmos e programação}
+% \ReportaEixo{cap, ipa, aed1, ori, aed2, poo, paa, ppd}
+
+% \subsection{Eixo: Arquiteturas de computadores}
+% \ReportaEixo{ld, sd, arq1, arq2, arqad}
+
+% \subsection{Eixo: Metodologias e técnicas de computação}
+% \ReportaEixo{es1, so, bd, om, ia, rc, sistdist, ihc}
+
+% \subsection{Eixo: Humanas}
+% \ReportaEixo{sem1, sem2, metcient, tcc1, tcc2}
+% % Jander: O QUE FAZER COM "ATIVIDADE COMPLEMENTAR"?
+
+% \subsection{Eixo: Eletrônica}
+% \ReportaEixo{circeletricos, circeletronicos1, circeletronicos2}
+
+% \subsection{Eixo: Engenharia e sistemas}
+% \ReportaEixo{sistdin, controle1, controle2, psd, engsis, teccom, projsisemb}
+
+% \subsection{Disciplinas optativas}
+% % fazer: analisar como apresentar as optativas!!!
+% \begin{itemize}[noitemsep]
+%     \ExecuteLista{\Discipl}{
+%         am1,am2,asp,bdcd,cg,compiladores,controle,dw1,dw2,
+%         dm,devops,empreend,es2,musical,libras,robosautonomos,
+%         lm,robotica,md,plp,pde,pdi,pdi3dv,pvd,
+%         pooa,pmac,pibd,protsisdigan,sc,siai,tc
+%     }{
+%         \item \Atributo{\Discipl}{nome}
+%     }
+% \end{itemize}
+

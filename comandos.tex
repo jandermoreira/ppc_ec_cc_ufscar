@@ -1,0 +1,78 @@
+% Os comandos definidos neste arquivo foram movidos para disciplinas.sty e anotacoes.sty
+% (Jander, 12/2022)
+
+
+% % \newcommand*{\ANOTACOES}{}% comentar para não aparecer no texto final
+
+% %% Usar o template abaixo
+% % \disciplina{abrev}{
+% %  \titulo      {#semestre}{Nome da Disciplinas}
+% %  \objetivo    {Objetivos}
+% %  \requisitos  {XX.XXX-X}
+% %  \recomendadas{XX.XXX-X}
+% %  \ementa      {Topicos; }
+% %  \creditos    {#X total (#X teórico(s), #X prático(s)} preencher em HORAS
+% %  \extra       {#X horas} % Não será usado! Recomendação da DiDPed
+% %  \codigo      {DC}{XX.XXX-X}
+% %  \bibliografia{ % basica
+% %         livro 1
+% %
+% %         livro 2
+% %
+% %         livro 3
+% %   }{ % complementar
+% %         livro A
+% %
+% %         livro B
+% %
+% %         livro C}
+% % }
+% % Temos que padronizar o formato dos objetivos e ementa. Na minha opinião não devemos fazer bullets ou numerações porque dão a ideia de que são todos do mesmo "tamanho". Na ementa, separar os tópicos por ponto e vírgula %TODO
+
+% \newcommand{\disciplina}[2]{%
+%     \noindent
+%     \begin{longtable*}{p{4cm}p{11.1cm}}
+%         \specialrule{.1em}{.05em}{.05em}
+%         #2
+%     \end{longtable*}
+%     \clearpage
+% }
+
+% \newcommand{\titulo}[2]{%
+%     \textbf{\ifdefined\BCC Título \else #1\textdegree~Semestre \fi}
+%     &
+%     \textbf{#2} \\*
+%     \hline
+% } %NOTE: mostra 'Título' no BCC e 'Semestre' na EnC
+
+% \newcommand{\objetivo}[1]{\multicolumn{2}{l}{\textbf{Objetivo Geral}} \\* \multicolumn{2}{p{15.5cm}}{#1} \\ \hline}
+
+% \newcommand{\requisitos}[1]{\textbf{\textbf{Pré-requisitos}} & #1 \\ \hline} %NOTE: % Penso que nas disciplinas que já possuem código, especialmente de outros departamentos, não precisamos incluir este campo, já está cadastrado no sistema. (Menotti)
+
+% \newcommand{\recomendadas}[1]{\ifdefined\BCC \textbf{\textbf{Disc. recomendadas}} & #1\\ \hline \fi} %NOTE: não aparece no PPC da EnC
+
+% \newcommand{\ementa}[1]{
+%     \multicolumn{2}{l}{\textbf{Ementa}} \\* \multicolumn{2}{p{15.5cm}}{#1}  \\ \hline
+% }
+
+% \newcommand{\creditos}[1]{\textbf{Créditos} & #1 \\}
+
+% % \newcommand{\horas}[1]{\textbf{Horas/aula} & #1 \\} % Em reunião na DidPEd as pedagogas recomendaram usar horas no lugar de créditos, mas temos vistos outros ppcs sendo aprovados com créditos, então acho que não vale a pena mudar (Menotti)
+
+% \newcommand{\extra}[1]{\ifdefined\BCC \textbf{Carga extra-classe} & #1 \\ \fi} % Em reunião na DidPEd nos foi desaconselhado usar esta informação. Sugiro comentar esta linha e ver se dá erro em alguma ementa que ficou esquecida
+
+% \newcommand{\codigo}[2]{\textbf{Resp. pela oferta} & #1 (#2) \\ \hline}
+% % \newcommand{\bibliografia}[2]{\textbf{Bibliografia Básica} & #1 \\ \textbf{Bibl. Complementar} & #2 \\ \specialrule{.1em}{.05em}{.05em}}
+% \newcommand{\bibliografia}[2]{
+%     \multicolumn{2}{l}{\textbf{Bibliografia Básica}} \\*
+%     \multicolumn{2}{p{15.5cm}}{#1} \\
+%     \multicolumn{2}{l}{\textbf{Bibliografia Complementar}} \\*
+%     \multicolumn{2}{p{15.5cm}}{#2} \\ \specialrule{.1em}{.05em}{.05em}
+% }
+
+% \newcommand{\livrotexto}[1]{\ifdefined\ANOTACOES \textbf{Livro Texto #1} \fi}
+
+% \newcommand{\menotti}[1]{\ifdefined\ANOTACOES \todo[linecolor=red,backgroundcolor=red!25,bordercolor=red]{#1} \fi}
+% \newcommand{\mauricio}[1]{\ifdefined\ANOTACOES \todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue]{#1} \fi}
+% \newcommand{\kelen}[1]{\ifdefined\ANOTACOES \todo[linecolor=purple,backgroundcolor=purple!25,bordercolor=purple]{#1} \fi}
+

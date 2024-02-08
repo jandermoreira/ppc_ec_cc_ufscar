@@ -1,0 +1,13 @@
+%! Package = anotacoes
+%! Author = jander
+%! Date = 28/11/2022
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{anotacoes}[2022/11/28 Anotações de margem individualizadas]
+
+\RequirePackage[colorinlistoftodos, prependcaption, textsize = tiny]{todonotes}
+
+\newcommand{\menotti}[1]{\ifdefined\ANOTACOES \todo[linecolor=red,backgroundcolor=red!25,bordercolor=red]{#1} \fi}
+\newcommand{\mauricio}[1]{\ifdefined\ANOTACOES \todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue]{#1} \fi}
+\newcommand{\kelen}[1]{\ifdefined\ANOTACOES \todo[linecolor=purple,backgroundcolor=purple!25,bordercolor=purple]{#1} \fi}
+

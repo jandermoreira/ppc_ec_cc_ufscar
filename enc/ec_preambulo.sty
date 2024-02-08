@@ -1,0 +1,109 @@
+%! Package = ec_preambulo
+%! Author = Jander Moreira
+%! Date = 2023/02
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ec_preambulo}[2023/02/27 Preâmbulo e definições para o documento]
+
+
+\RequirePackage{fullpage}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[portuguese]{babel}
+\RequirePackage{microtype}
+\RequirePackage{graphicx}
+\RequirePackage{setspace}
+\RequirePackage{subfig}
+\RequirePackage{float}
+\RequirePackage{enumitem}  % para 'topsep'
+\setlist{
+    itemsep = -0.25ex,
+    topsep = 0.25ex,
+}
+\RequirePackage[all]{nowidow}  % linhas órfãs e viúvas
+\RequirePackage{array}
+\RequirePackage{verbatim}
+\RequirePackage{soulutf8}
+\RequirePackage{xargs}          % Use more than one optional parameter in a new commands
+\RequirePackage[dvipsnames]{xcolor}  % Coloured text etc.
+\RequirePackage{ulem}
+\RequirePackage{hyperref}
+\hypersetup{
+    allbordercolors = white,
+    linkcolor = blue!80!black,
+    filecolor = green!60!black,
+}
+% \RequirePackage{pdfcomment}
+\RequirePackage{pdflscape}
+\RequirePackage{pdfpages}
+%\RequirePackage{ctable}
+\RequirePackage{booktabs}
+\RequirePackage{ragged2e}  % para: \RaggedRight
+\RequirePackage{rotating}
+\RequirePackage{textcomp}
+\RequirePackage{multirow}
+% para criar tabela que pode ser quebrado em várias páginas
+\RequirePackage{longtable}
+\RequirePackage{lipsum}
+
+\RequirePackage{tikz}
+\usetikzlibrary{shadows, arrows, positioning}
+
+\RequirePackage{disciplinas}  % criação/definição de disciplinas
+\RequirePackage{anotacoes}  % para inclusão de anotações de margem
+\RequirePackage{atividades}  % para associacao entre atividades e competencias
+
+\RequirePackage[raggedright]{titlesec}
+
+\RequirePackage{csquotes}
+\RequirePackage[
+    backend = biber,
+    style = abnt,
+    ittitles, justify, indent, sccite,
+    giveninits,
+    noslsn,
+    repeatfields,
+    doi = false,
+    uniquename = init,
+]{biblatex}
+\addbibresource{ppc_enc.bib}
+\DeclareFieldFormat{url}{\url{#1}}
+\DeclareFieldFormat{title}{\textbf{#1}}
+\DeclareFieldFormat{author}{\textsc{#1}}
+
+
+
+\newcommand{\sline}{\specialrule{.1em}{.05em}{.05em}}
+\renewcommand{\baselinestretch}{2}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newenvironment{compenum}{%
+    \begin{enumerate}
+        \begin{onehalfspace}
+        }{%
+        \end{onehalfspace}%
+    \end{enumerate}%
+}
+\newenvironment{compitem}{%
+    \begin{itemize}
+        \begin{onehalfspace}
+        }{%
+        \end{onehalfspace}%
+    \end{itemize}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%Marcio: Comandos p/ remover a palavra "Capítulo" dos titulos
+%%
+\def\@makechapterhead#1{%
+    \vspace*{50\p@}%
+    {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge\bfseries  \thechapter.\quad #1\par\nobreak
+    \vskip 40\p@
+    }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\addto\captionsportuguese{\renewcommand{\listtablename}{Lista de Quadros}}
+\addto\captionsportuguese{\renewcommand{\tablename}{Quadro}}
+

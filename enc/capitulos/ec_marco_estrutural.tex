@@ -1,0 +1,1745 @@
+%! Author = Jander Moreira
+%! Date = 27/02/2023
+
+O marco estrutural do Curso de Bacharelado em Engenharia de Computação da UFSCar, campus de São Carlos, engloba os seguintes componentes curriculares: Disciplinas Obrigatórias, Optativas e Eletivas, Atividades Complementares, Trabalho de Conclusão de Curso e Estágio Obrigatório. A estrutura visa atender a \citetitle{CNE2019}, a qual estabelece as Diretrizes Curriculares Nacionais (DCNs) para as Engenharias, tendo sido instituída pela Câmara de Educação Superior do Conselho Nacional de Educação (CES/CNE).
+
+% \begin{quote}
+%     ``Institui as Diretrizes Curriculares Nacionais para os
+%     cursos de graduação na área da Computação,
+%     abrangendo os cursos de bacharelado em Ciência
+%     da Computação, em Sistemas de Informação, em
+%     Engenharia de Computação, em Engenharia de
+%     Software e de licenciatura em Computação, e dá
+%     outras providências.''
+% \end{quote}
+% \footnote{A Resolução CNE/CES 11/2002 foi publicada no Diário Oficial da União em 9 de abril de 2002, Seção 1, p.32}.
+%\footnote{CNE. Resolução CNE/CES 5/2016. Diário Oficial da União, Brasília, nº 220, de 17 de novembro de 2016 – Seção 1 – págs. 22 á 24}
+
+%%%%%%kelen
+
+% Art. 6º Resolução CNE/CES nº 5, de 16 de novembro de 2016 Os currículos dos cursos de bacharelado e licenciatura da área da Computação deverão incluir conteúdos básicos e tecnológicos referentes à área da Computação, comuns a todos os cursos, bem como conteúdos básicos e tecnológicos específicos para cada curso, todos selecionados em grau de abrangência e de profundidade de forma consistente com o perfil, as competências e as habilidades especificadas para os egressos.
+%§ 1º Estes conteúdos não consistem em disciplinas obrigatórias, mas no conjunto substantivo de conhecimentos que poderão ser selecionados pelas Instituições de Educação Superior para compor a formação dos egressos em cada curso em questão.
+%§ 2º Os conteúdos poderão ser ministrados em diversas formas de organização, observando-se o interesse do processo da formação acadêmica e a legislação vigente, e deverão ser planejados de modo integrado, dando sentido de unidade ao projeto pedagógico do curso.
+%§ 3º Para a licenciatura deverão ser incluídos conteúdos de formação pedagógica, considerando as Diretrizes Curriculares Nacionais para a formação de professores para a Educação Básica.
+%§ 4º Os núcleos de conteúdos poderão ser dispostos, em termos de carga horária e de planos de estudo, em atividades práticas e teóricas, individuais ou em equipe, tais como:
+
+Assim, de acordo com a \citetitle{CNE2019}, tendo em consideração a flexibilidade necessária para atender domínios diversificados de aplicação e as vocações institucionais ao perfil do egresso, o Curso de Bacharelado em Engenharia de Computação provê uma formação sólida em Ciência da Computação, Matemática e Eletrônica. Essa formação se dá por meio de conteúdos básicos e tecnológicos referentes à área da computação, bem como conteúdos básicos e tecnológicos específicos para o curso de Engenharia de Computação. Estes conteúdos são abordados em grau de abrangência e de profundidade de forma consistente com o perfil do egresso, visando desenvolver as competências e as habilidades essenciais na formação de um Bacharel em Engenharia de Computação. A representação do perfil de formação é apresentada na Figura~\ref{fig:perfil}.
+
+\textcolor{red}{\Large \textbf{Necessidade de revisão a partir daqui quando tivermos mais material sobre a curricularização da extensão.}}
+
+
+\begin{figure}[H] %TODO: vou trocar os 3 núcleos pelas 3 áreas: Computação, Matemática e Eletrônica
+    \centering
+    \caption{Representação Gráfica do Perfil de Formação}
+    \label{fig:perfil}
+    \includegraphics[width=\textwidth]{enc/imagens/Perfil.pdf}
+\end{figure}
+
+No Curso de Bacharelado em Engenharia de Computação, os conteúdos são apresentados por eixos que agrupam vários componentes curriculares, cada eixo é detalhado na Seção~\ref{sec:ACMC}. Os conteúdos básicos e tecnológicos referentes à área da computação compõem os eixos: Fundamentos de Matemática e Estatística, Algoritmos e Programação, Arquitetura de Computadores, Metodologias e Técnicas de Computação e Humanas. Estes eixos constituem um grupo de disciplinas de ciências básicas que oferecem uma formação elementar ao estudante referente aos campos de conhecimentos das ciências exatas, das ciências humanas e de computação básica.
+
+Os conteúdos básicos e tecnológicos específicos para o Curso de Bacharelado em Engenharia de Computação consistem nos eixos: Física, Eletrônica, Engenharia e Sistemas e Especialização. Nesses eixos se concentram os conteúdos relacionados à capacitação do estudante ao exercício profissional da Engenheira de Computação. Os conteúdos abordados no eixo de Engenharia e Sistemas se caracterizam pela especificidade em relação às extensões e aprofundamentos profissionalizantes caracterizando o Curso de Bacharelado em Engenharia de Computação e fornecendo ao estudante conhecimentos científicos, tecnológicos e instrumentais próprios da área. O eixo Especialização fornece conhecimento em áreas específicas e também colabora para tornar o curso mais flexível às alterações científicas e tecnológicas, permitindo também ao aluno optar por um curso que se adapte a suas habilidades ou a demandas específicas do mercado.
+
+De acordo com a \citetitle{CNE2019}, no conteúdo curricular se deve assegurar na formação o conhecimento das questões sociais, profissionais, legais, éticas, políticas e humanísticas. Pelo \citetitle[Seção II, Art. 14]{RGCG} e o \citetitle{PDI-UFSCAR}, conforme Parecer ConsUni nº 337 de 08/11/2003, bem como reafirmadas e ampliadas no PDI/UFSCar, conforme a Resolução ConsUni/UFSCar nº 766 de 20/12/2013, e do Perfil do Profissional a ser formado na UFSCar, conforme o Parecer CEPe/UFSCar nº 776 de 30/03/2001, também deve-se assegurar o conhecimento das temáticas relacionadas à História e Cultura Afro-Brasileira e Indígena, Língua Brasileira de Sinais (LIBRAS), Educação em Direitos Humanos e Educação Ambiental.
+Esses conteúdos serão trabalhados de forma transversal nas disciplinas Seminários 1 e Seminários 2, bem como em Disciplinas Eletivas e Atividades Complementares que os estudantes devem desempenhar. %TODO: bem como em Disciplinas Eletivas e Atividades Complementares que os estudantes devem desempenhar ( o que acham?)
+% sendo incorporados nas temáticas ambiental, diversidade cultural, desigualdades sociais, cidadania, empreendedorismo, administrativas, étnico-racial e cultural, sustentabilidade e impacto da computação e suas tecnologias na sociedade.
+
+As Atividades Complementares são atividades curriculares que não estão compreendidas no desenvolvimento regular das disciplinas do Curso, compreendendo
+% https://www.overleaf.com/download/project/5afb872df2e25c77af324668/build/17948239805-f5d853681d1bc600/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-e2-b-zrw3&popupDownload=true
+outras atividades de caráter acadêmico, científico, social e cultural realizadas pelo estudante ao longo de seu curso de graduação, e que contribuem para o enriquecimento de conhecimentos de valores e hábitos científicos, profissionais e éticos, como também a colaboração e o trabalho em equipe. As exigências para a realização destas atividades estão relacionadas no Anexo~\ref{cha:atividades_complementares}.
+
+O Trabalho de Conclusão de Curso~(TCC) é um componente curricular obrigatório e constitui-se de um trabalho acadêmico como síntese, integração ou aplicação de conhecimentos adquiridos de caráter científico ou tecnológico relacionado ao curso de Bacharelado em Engenharia da Computação. O TCC será desenvolvido sob a supervisão de um docente vinculado ao Curso de Bacharelado em Engenharia de Computação e formalizado como uma monografia. O objetivo é reforçar os princípios de investigação científica expondo ao estudante temas que incentivem a realização de projetos inovadores e que extrapolem os limites dos conteúdos transmitidos durante o curso. No Anexo~\ref{cha:tcc} é apresentado o Regulamento do Trabalho de Conclusão de Curso com as condições para realização desta atividade.
+
+O Estágio é uma atividade curricular obrigatória realizada no final do curso visando preparar o estudante para o exercício profissional. O Estágio Obrigatório é orientado por um docente do curso por meio de relatórios técnicos e acompanhamento individualizado durante o período de realização do mesmo. O Regulamento do Estágio Curricular Obrigatório e Não-obrigatório pode ser consultado no Anexo~\ref{cha:estagio}.
+%%%%%end kelen
+
+%  \begin{comment}
+%  De acordo com o Art. 6º da Resolução CNE/CES 11/2002, todo curso de Engenharia, deve possuir em seu currículo um núcleo de conteúdos básicos, um núcleo de conteúdos profissionalizantes e um núcleo de conteúdos específicos que caracterizem a modalidade do respectivo curso. Desta forma, nesse curso de Engenharia da Computação será adotada esta divisão para as componentes curriculares. Na Seção~\ref{sec:ACMC} será apresentado a composição dos núcleos.
+
+% Para o curso de Engenharia de Computação, o  núcleo  de  conteúdos  básicos é constituído por um grupo de disciplinas de ciências básicas e ciências humanas e oferece uma formação elementar ao estudante referente aos campos de conhecimentos da Engenharia. %A carga horária mínima para o núcleo de conteúdos básicos é de 30\% do total previsto.
+
+% No núcleo de conteúdos profissionalizantes, % deve ser composto por cerca de 15\% de carga horária mínima. Neste núcleo
+% se concentram os conteúdos relacionados ao exercício profissional do Engenheiro de Computação. Os conteúdos oferecidos nesse grupo iniciarão a capacitação do estudante quando este aplicar os conceitos adquiridos ao conteúdos específicos profissionalizantes do curso de Engenharia de Computação.
+
+% No núcleo de conteúdos específicos, segundo o parágrafo 4º, Art. 6º, da Resolução CNE/CES nº 11/2002, os conteúdos abordados nos módulos se caracterizam pela especificidade em relação às extensões e aprofundamentos do  núcleo  de  conteúdos  profissionalizantes. Desta forma, os conteúdos concentrados nesse núcleo definem o curso de Engenharia da Computação e fornecem ao estudante conhecimentos científicos, tecnólogicos e instrumentais, próprios da área.
+
+% Estes conteúdos serão compostos pelas disciplinas Obrigatórias, Optativas e Eletivas. Todas as disciplinas Obrigatórias foram selecionadas para compor cada núcleo em grau de abrangência e de profundidade de forma consistente com o perfil do egresso, visando desenvolver as competências e as habilidades essenciais na formação de um bacharel em Engenharia de Computação.
+
+% As disciplinas Optativas e Eletivas fornecem aprofundamento em determinadas áreas específicas e também colaboram para tornar o curso mais flexível às alterações científicas e tecnológicas, permitindo também ao estudante, optar por um curso que se adapte a suas habilidades ou a demandas específicas de mercado. A representação do perfil de formação é apresentada na Figura~\ref{fig:perfil}.
+
+% \begin{figure}[H] %TODO: vou trocar os 3 núcleos pelas 3 áreas: Computação, Matemática e Eletrônica
+%     \centering
+%     \caption{Representação Gráfica do Perfil de Formação}
+%     \label{fig:perfil}
+%     \includegraphics[width=\textwidth]{enc/imagens/Perfil.pdf}
+% \end{figure}
+
+% De acordo com o Art. 3º da Resolução CNE/CES 11/2002, no conteúdo curricular deve-se assegurar na formação o conhecimento das questões sociais, profissionais, legais, éticas, políticas e humanísticas. E pelo Regimento Geral dos Cursos de Graduação, Set. 2016 UFSCar (Seção II, Art. 14º)~\cite{RGCG} e o Plano de Desenvolvimento (PDI) da UFSCar~\cite{PDI-UFSCar}, conforme Parecer ConsUni nº 337 de 08/11/2003, bem como reafirmadas e ampliadas; no PDI/UFSCar~\cite{PDI-UFSCar}, conforme a Resolução ConsUni/UFSCar nº 766 de 20/12/2013; e do Perfil do Profissional a ser formado na UFSCar, conforme o Parecer CEPe/UFSCar nº 776 de 30/03/2001; também deve-se asseguar o conhecimento das temáticas relacionadas à História e Cultura Afro-Brasileira e Indígena, Língua Brasileira de Sinais (LIBRAS), Educação em Direitos Humanos e Educação Ambiental.
+% Esses conteúdos serão trabalhados de forma transversal nas disciplinas Seminários 1 e Seminários 2, bem como em Disciplinas Eletivas que os estudantes podem vir a cursar.
+% % sendo incorporados nas temáticas ambiental, diversidade cultural, desigualdades sociais, cidadania, empreendedorismo, administrativas, étnico-racial e cultural, sustentabilidade e impacto da computação e suas tecnologias na sociedade.
+
+% As Atividades Complementares são atividades curriculares que não estão compreendidas no desenvolvimento regular das disciplinas do Curso, sendo todas e quaisquer atividades de caráter acadêmico, científico, social e cultural realizadas pelo estudante ao longo de seu curso de graduação, e que contribuem para o enriquecimento de conhecimentos de valores e hábitos científicos, profissionais e éticos, como também a colaboração e o trabalho em equipe. As exigências para a realiação destas atividades estão relacionadas no Anexo~\ref{cha:atividades_complementares}.
+
+% %O Projeto Integrador é um componente curricular interdisciplinar que configura-se como eixo articulador para vincular a aprendizagem adquirida ao longo do curso com o aprimoramento de suas habilidades e competências para resolução de problemas contribuindo para o desenvovilmento de sua área.
+
+% %disciplinas de várias eixos de conhecimento visando o desenvolvimento de habilidades e competências que extrapolam o conhecimento adquirido individualmente em cada disciplina.
+
+% % Art. 8º -Resolução CNE/CES nº 5, de 16 de novembro de 2016   O Trabalho de Curso será desenvolvido como atividade de síntese, integração ou aplicação de conhecimentos adquiridos de caráter científico ou tecnológico. Parágrafo único. As Instituições de Educação Superior deverão estabelecer a obrigatoriedade ou não do Trabalho de Curso e aprovar a sua regulamentação, especificando critérios, procedimentos e mecanismo de avaliação, além das diretrizes e técnicas relacionadasà sua elaboração
+
+% O TCC é um componente curricular obrigatório, que de acordo com Art. 7º ~-~Parágrafo Único da CNE/CES 11, 11/2002, constitui-se de um trabalho acadêmico com síntese, integração ou aplicação de conhecimentos adquiridos de caráter científico ou tecnológico relacionado ao curso de Bacharelado em Engenharia da Computação. O TCC será desenvolvido sob a supervisão de um docente vinculado ao curso de Engenharia da Computação e formalizado como uma monografia. O objetivo é reforçar os princípios de investigação cientíca expondo ao estudante temas que incentivem a realização de projetos inovadores e que extrapolem os limites dos conteúdos transmitidos durante o curso. No Anexo~\ref{cha:tcc} é apresentado o Regulamento do Trabalho de Conclusão de Curso com as condições para realização desta atividade.
+
+% O Estágio Supervisionado é uma atividade curricular obrigatória, de acordo com Art. 7º da Resolução CNE/CES 11, 11/2002, realizada no final do curso visando preparar o estudante para o exercício profissional. O Estágio é orientado diretamente por um docente do curso através de relatórios técnicos e acompanhamento individualizado durante o período de realização do mesmo. O Regulamento do Estágio Curricular Obrigatório e Não-obrigatório pode ser consultado no Anexo~\ref{cha:estagio}, com mais detalhes sobre a realização destas atividades.
+
+% \end{comment}
+
+% CNE/CES No:136/2012 Conteúdos Curriculares da Formação Tecnológica e Básica para todos os Cursos de Bacharelado e de Licenciatura
+%Os conteúdos tecnológicos e básicos comuns a todos os cursos são: sistemas operacionais; compiladores; engenharia de \textit{software}; interação humano-computador; redes de computadores; sistemas de tempo real; inteligência artificial e computacional; processamento de imagens; computação gráfica; banco de dados; dependabilidade; segurança; multimídia; sistemas embarcados; processamento paralelo; processamento distribuído; robótica; realidade virtual; automação; novos paradigmas de computação; matemática discreta; estruturas algébricas; matemática do contínuo [cálculo, álgebra linear, equações diferenciais, geometria analítica; matemática aplicada (séries, transformadas), cálculo numérico]; teoria dos grafos; análise combinatória; probabilidade e estatística; pesquisa operacional e otimização; teoria da computação; lógica; algoritmos e complexidade; linguagens formais e autômatos; abstração e estruturas de dados; fundamentos de linguagens (sintaxe, semântica e modelos); programação; modelagem computacional; métodos formais; análise, especificação, verificação e testes de sistemas; circuitos digitais; arquitetura e organização de computadores; avaliação de desempenho; ética e legislação; empreendedorismo; computação e sociedade; filosofia; metodologia cientifica; meio ambiente; fundamentos de administração; fundamentos de economia.
+% CNE/CES No:136/2012 Conteúdos Curriculares da Formação Tecnológica e Básica dos Cursos de Bacharelado em Engenharia de Computação Os conteúdos básicos e tecnológicos, específicos para os cursos de Engenharia de Computação, são os seguintes: projeto de sistemas digitais; projeto de circuitos integrados; microeletrônica e nanoeletrônica; processamento digital de sinais; comunicação de dados; sistemas de controle; automação de projeto; transdutores; teoria dos semicondutores; teoria eletromagnética; eletrônica digital; eletrônica analógica; circuitos elétricos; eletricidade; física.
+
+O Quadro de Integralização Curricular, contendo a quantidade mínima de créditos exigidos para cada tipo de atividade curricular, é apresentado no Quadro~\ref{tab:integralizacao}.
+
+\begin{table}[H]
+    \centering
+    \caption{Integralização Curricular}
+    \label{tab:integralizacao}
+    \begin{tabular}{lcc}
+        \sline
+        \textbf{Atividades Curriculares} & \textbf{Créditos} & \textbf{Carga Horária} \\
+        \hline
+        Disciplinas Obrigatórias         & 200               & 3.000                  \\
+        Disciplinas Optativas            & 12                & 180                    \\
+        Disciplinas Eletivas             & 8                 & 120                    \\
+        Estágio Supervisionado           & 12                & 180                    \\
+        Trabalho de Conclusão de Curso   & 8                 & 120                    \\
+        Atividades Complementares & 4 & 60
+        \\
+        \hline
+        \textbf{Total}                   & \textbf{244}      & \textbf{3.660}         \\
+        \sline
+    \end{tabular}
+\end{table}
+
+
+\section{Princípios Norteadores da Reformulação Curricular}
+
+Além das motivações já mencionadas na Seção~\ref{sec:objetivos}, a elaboração deste projeto pedagógico foi norteada também por relatos de professores e estudantes do curso e por pesquisa em projetos pedagógicos de cursos de Engenharia de Computação do Brasil e do exterior. Os princípios adotados para a elaboração da matriz curricular deste projeto pedagógico são os seguintes:
+
+\begin{itemize}
+    \item \textbf{Caracterização da área de Engenharia de Computação:} Este princípio é contemplado por meio dos núcleos de conteúdos básico e profissionalizantes, que fornecem ao estudante a base teórica necessária para seu engajamento futuro em atividades profissionais na área.
+    \item \textbf{Especialização por meio de Disciplinas Optativas:} Este princípio é contemplado por meio de um conjunto de disciplinas Optativas, que cobrem conteúdos avançados, para complementar a formação básica do estudante.
+    \item \textbf{Limitação da quantidade de disciplinas por semestre:} Para facilitar a concentração do estudante e permitir que ele tenha uma menor diversidade de conteúdos para gerenciar, a matriz curricular foi projetada para que o estudante curse no máximo 28 créditos por semestre. No entanto, caso o estudante queira se inscrever em disciplinas que não sejam do seu perfil a carga horária máxima semestral está limitada a 32 créditos.
+    \item \textbf{Agregação de conteúdos relacionados em uma mesma disciplina:} Buscou-se agregar conteúdos relacionados em uma mesma disciplina, em detrimento de disciplinas distintas, sucessivas ou concorrentes. Por exemplo, a matriz não possui disciplinas distintas para tratar teoria e prática de um mesmo assunto.
+    \item \textbf{Aperfeiçoamento de competências de desenvolvimento de projetos:} Este princípio é contemplado por meio de disciplinas presentes no núcleo de conteúdos específicos.
+    \item \textbf{Substituição de carga horária teórica por prática:} Em diversas disciplinas buscou-se uma substituição de horas-aula teóricas por atividades práticas e/ou desenvolvimento de projetos.
+    \item \textbf{Aprendizado contínuo:} Buscou-se oferecer uma base sólida de conhecimentos e práticas de estudo que permitam ao estudante atualizar-se e aprimorar-se ao longo de toda sua carreira profissional.
+    \item \textbf{Consciência do papel do egresso na sociedade:} As disciplinas de Seminários 1 e 2, as disciplinas Eletivas e as Atividades Complementares foram inseridas na matriz curricular para favorecer reflexões sobre o papel do egresso na sociedade.
+\end{itemize}
+
+
+\section{Atividades Curriculares e Matriz Curricular}~\label{sec:ACMC}
+
+% \begin{comment}
+% Conforme mencionado, os componentes curriculares foram divididos em núcleo de conteúdos básicos, núcleo de conteúdo profissionalizante e núcleo de conteúdo específicos para o curso de Engenharia de Computação.
+% De acordo com o Art. 6º da Resolução CNE/CES 11/2002, o curso deve possuir a proporção da carga horária apresentada a seguir, bem como, apresentar o subconjunto coerente de tópicos para cada núcleo caracterizando a modalidade do curso.
+
+% \begin{compenum}
+%     \item A carga horária mínima de 30\% do total previsto para o núcleo de conteúdos básicos;
+%     \item Para o núcleo de conteúdos profissionalizantes a carga horária mínima deve ser de 15\%;
+%     \item Os conteúdos específicos consubstanciarão o restante da carga horária total;
+%     \item A carga horária mínima do estágio curricular deverá atingir 160 (cento e sessenta) horas.
+%     \item Deverão também ser estimuladas atividades complementares, tais como trabalhos de iniciação científica, projetos multidisciplinares, visitas teóricas, trabalhos em equipe, desenvolvimento de protótipos, monitorias, participação em empresas juniores e outras atividades empreendedoras.
+% \end{compenum}
+
+% Para este curso temos a carga total de 3.900 horas de atividades, estando divididas conforme as diretrizes apresentada acima e o Regimento Geral dos Cursos de Graduação da UFSCar~\cite{RGCG}, onde:
+% %TODO: incluir referência
+
+% \begin{compenum}
+% \item 31\%, correspondente a 1.200 horas didáticas, aplicado ao núcleo de conteúdos básicos;
+% \item 22\%, correspondente a 870 horas, aplicado ao núcleo de conteúdos profissionalizantes;
+% \item 47\%, correspondente a 1.830 horas, aplicado ao núcleo de conteúdos especifícos. Nesse núcleo estão contemplados:
+% \begin{itemize}
+%     \item 180 horas - Trabalho de Conclusão de Curso
+%     \item 300 horas - Estágio Supervisionado
+%     \item 120 horas - Atividade Complementar
+% \end{itemize}
+% \end{compenum}
+% Nas Subseções~\ref{sec:NCB} à \ref{sec:matriz_curricular} serão apresentadas as componentes curriculares pertencentes a cada núcleo.
+
+% %%%%%%%%%%%%%%%%%%%%
+% \subsection{Núcleo de Conteúdos Básicos}~\label{sec:NCB}
+
+
+% O núcleo de conteúdos básicos é constituído por 20 disciplinas. Entre elas estão 13 disciplinas que abrangem os tópicos de matemática e física, comuns a todos os cursos de ciências exatas e engenharias, que fornecem os conhecimentos básicos na resolução de problemas em engenharia. A disciplina de Otimização Matemática para gerar a capacitação de tais problemas de forma análitica e computacional também foi incluída.
+
+% \begin{compenum}
+%     \item Cálculo Diferencial e Integral 1
+%     \item Geometria Analítica
+%     \item Cálculo 2
+%     \item Álgebra Linear 1
+%     \item Cálculo 3
+%     \item Séries e Equações Diferenciais
+%     \item Probabilidade e Estatística
+%     \item Cálculo Numérico
+%     \item Física 1
+%     \item Fisica Experimental A
+%     \item Física 3
+%     \item Fisica Experimental B
+%     \item Otimização Matemática
+% \end{compenum}
+
+% Nesse conteúdo, tem-se também quatro disciplinas básicas de Informática, que enquadram-se como técnicas essenciais na área da computação.
+
+% \begin{compenum}
+%     \item Construção de Algoritmos e Programação
+%     \item Introdução ao Pensamento Algorítmico
+%     \item Engenharia de Software 1
+%     \item Banco de Dados
+% \end{compenum}
+
+% Além da disciplina Metodologia Científica, apresentam-se também nesse núcleo as disciplinas Seminários 1 e 2 que visam trabalhar conteúdos relacionados a Administração, Economia, Humanidades, Ciências Sociais e Cidadania. Em vez de adotar uma disciplina associada a uma única temática, tais disciplinas tratam de conhecimentos distintos, trazendo intrinsecamente a vantagem da multidisciplinaridade, que possibilita cativar pela expectativa da contínua novidade, e também, da flexibilidade, que possibilita a modularização dos temas.
+
+% Tais conteúdos são trabalhados na forma de seminários isolados ou programados em série, conforme ementa das respectivas disciplinas. Estas disciplinas têm como objetivo geral contribuir para a formação do perfil do futuro profissional nos aspectos não tecnológicos do curso, explicitados na Resolução CNE/CES 11/2002, tais como sociais, profissionais, legais, éticos, políticos e humanísticos. Desta forma, assenta-se a clara preocupação de formar um profissional não somente voltado às competências técnicas de suas atividades específicas, mas também torná-lo reflexivo diante de temas gerais importantes para o desenvolvimento da sociedade e do bem comum.
+
+% \begin{compenum}
+% \item Metodologia Científica
+% \item Seminários 1
+% \item Seminários 2
+% \end{compenum}
+
+% Na Figura~\ref{fig:basicos} apresenta-se o núcleo de conteúdos básico e suas componentes curriculares, bem como os respectivos semestres de oferecimento ao longo do curso.
+
+% \begin{figure}[H]
+%     \centering
+%     \caption{Núcleo de Conteúdos Básicos}
+%     \label{fig:basicos}
+%     \includegraphics[height=\textwidth]{imagens/Basicos}
+% \end{figure}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \subsection{Núcleo de Conteúdos Profissionalizantes}~\label{sec:NCP}
+
+% O conteúdo de núcleo de conteúdos profissionalizantes é constituído por 12 disciplinas, que se dividem em diversos tópicos que proporcionam o embasamento necessário para o perfil do egresso.
+
+% Os tópicos Circuitos Elétricos, Controle de Sistemas Dinâmicos, Eletrônica Analógica e Digital e Telecomunicações são abordados nas cinco disciplinas a seguir. Estas disciplinas apresentam teorias e técnicas que permitem o desenvolvimento e análise de projeto e de componentes de sistemas computacionais e de comunicação.
+
+% \begin{compenum}
+% \item Circuitos Elétricos
+% \item Circuitos Eletrônicos 1
+% \item Circuitos Eletrônicos 2
+% \item Sistemas Dinâmicos
+% \item Tecnologia de Comunicação
+% \end{compenum}
+
+% Os tópicos Algoritmos e Estrutura de Dados e Sistemas Operacionais são abordados nas três disciplinas a seguir, e que tem como objetivo capacitar o {estudante} para desenvolver e/ou utilizar ferramentas e técnicas de algoritmos e programação, bem como a formação básica para desenvolvimento de programas que usem eficientemente os recursos e serviços providos por sistemas operacionais tornando os aptos a entender e atuar em desenvolvimento de projeto.
+
+% \begin{compenum}
+% \item Algoritmos e Estrutura de Dados 1
+% \item Algoritmos e Estrutura de Dados 2
+% \item Sistemas Operacionais
+% \end{compenum}
+
+% Os tópicos de Circuitos Lógicos e Organização de Computadores são constituídos por quatro disciplinas que tratam à construção de sistemas computacionais, em específico aspectos de \textit{hardware}.
+
+% \begin{compenum}
+% \item Lógica Digital
+% \item Sistemas Digitais
+% \item Arquitetura e Organização de Computadores 1
+% \item Arquitetura e Organização de Computadores 2
+% \end{compenum}
+
+% Na Figura~\ref{fig:profissionalizantes} apresenta-se o núcleo de conteúdos profissionalizantes e suas componentes curriculares, bem como os respectivos semestres de oferecimento ao longo do curso.
+
+% \begin{figure}[H]
+%     \centering
+%     \caption{Núcleo de Conteúdos Profissionalizantes}
+%     \label{fig:profissionalizantes}
+%     \includegraphics[height=\textwidth]{imagens/Profissionalizantes}
+% \end{figure}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \subsection{Núcleo de Conteúdos Específicos}~\label{sec:NCE}
+
+% De acordo com parágrafo 4º - Artº. 6 da Resolução CNE/CES 11/2002, o núcleo de conteúdos específicos se constitui em extensões e aprofundamentos dos conteúdos do núcleo de conteúdos profissionalizantes, bem como de outros conteúdos destinados a caracterizar o curso de Engenharia de Computação. Tendo como objetivo, proporcionar conhecimentos científicos, tecnológicos e instrumentais necessários para a definição do perfil do Bacharel em Engenharia de Computação e garantir o desenvolvimento das competências e habilidades estabelecidas nas diretrizes. Desta forma, este núcleo constitui 24 disciplinas agrupadas em modalidades de conhecimento.
+
+% As cinco disciplinas a seguir, apresentam o aprofundamento da capacitação do {estudante} para desenvolver e aplicar estratégias algorítmicas avançadas, construção de programas verificando a análise e correção do desempenho dos algoritmos, sistemas paralelos e concorrência, consolidação de paradigmas de projeto de algoritmos, avaliação das técnicas a serem implementadas em cada projeto/sistema, bem como projetar e entender tipos de arquiteturas de computadores não convencionais para alto desempenho.
+
+% \begin{compenum}
+% \item Programação Orientada a Objetos
+% \item Projeto e Análise de Algoritmos
+% \item Organização e Recuperação da Informação
+% \item Programação Paralela e Distribuída
+% \item Arquitetura de Alto Desempenho
+% \end{compenum}
+
+% As quatro disciplinas a seguir, apresentam as principais metodologias e técnicas da área da computação, tornando o estudante apto a realizar o \textit{design}, construção e avaliação de sistemas computacionais, bem como o uso de técnicas para prover comunicação, sincronização e coordenação entre múltiplos sistemas de computação distribuídos.
+
+% \begin{compenum}
+% \item Redes de Computadores
+% \item Sistemas Distribuídos
+% \item Interação Humano-Computador
+% \item Inteligência Artificial
+% \end{compenum}
+
+% Estas nove disciplinas fornecem o conhecimento sobre identificar, formular e avaliar problemas de Engenharia de Computação e conceber soluções, bem como as disciplinas de apoio e prática profissional ao estudante, atividades relacionadas ao desenvolvimento de projetos sob supervisão docente e estágio.
+
+% \begin{compenum}
+% \item Controle 1
+% \item Controle 2
+% \item Processamento de Sinais Digitais
+% \item Engenharia de Sistemas
+% \item Projeto de Sistemas Computacionais Embarcados
+% \item Trabalho de Conclusão de Curso 1
+% \item Trabalho de Conclusão de Curso 2
+% \item Estágio Supervisionado
+% \end{compenum}
+
+% As cinco disciplinas Optativas e Eletivas fornecem aprofundamento em determinadas áreas específicas, permitindo ao estudante optar por um aprofundamento que se adapte a suas habilidades ou demandas específicas de mercado.
+% Importante ressaltar, que de acordo com o Regimento Geral dos Cursos de Graduação, Set. 2016 UFSCar (Seção II, Art. 14º)~\cite{RGCG}, devemos assegurar ao estudante a possibilidade de se especializar em Língua Brasileira de Sinais  (LIBRAS) cursando uma disciplina do tipo Optativa, desde o primeiro semestre do curso. A lista das disciplinas optativas está relacionada na Seção~\ref{sec:matriz_curricular}. Estas disciplinas devem ser idealmente cursadas entre o sétimo e nono período, mas podem ser antecipadas, desde que satisfeitos os pré-requisitos. A posição na grade e o número de disciplinas, portanto, é apenas uma sugestão. O estudante pode, por exemplo, cursar duas disciplinas de dois créditos ao invés de uma disciplina de quatro créditos como indicado na Figura~\ref{fig:especificos}.
+
+% \begin{compenum}
+% \item Optativa
+% \item Optativa
+% \item Optativa
+% \item Eletiva
+% \item Eletiva
+% \end{compenum}
+
+% As Atividades Complementares contemplam atividades acadêmicas, científicas e culturais que fazem parte da vida acadêmica do estudante e estão relacionadas com o desenvolvimento das habilidades e atitudes necessárias ao exercício de sua futura profissão. Dentre estas atividades podemos citar atuação em projetos de Iniciação Científica e de extensão universitária; monitorias e tutorias;  disciplinas ACIEPEs (Atividades Curriculares de Integração Ensino, Pesquisa e Extensão); participação na Empresa Júnior e no Programa de Ensino Tutorial da Engenharia de Computação (PET EnC), que é vinculado ao Departamento de Computação. %TODO As regras para consignação das horas-aula de atividades acadêmico-científico-culturais serão determinadas pelo Conselho de Coordenação de Curso, que atualizará quando necessário.
+
+% \begin{compenum}
+% \item Atividade Complementar
+% \item Atividade Complementar
+% \end{compenum}
+
+
+% Na Figura~\ref{fig:especificos} apresenta-se o núcleo de conteúdos especifícos e suas componentes curriculares, bem como os respectivos semestres de oferecimento ao longo do curso.
+
+
+% \begin{figure}[H]
+%     \centering
+%     \caption{Núcleo de Conteúdos Específicos}
+%     \label{fig:especificos}
+%     \includegraphics[height=\textwidth]{imagens/Especificos}
+% \end{figure}
+
+
+% \end{comment}
+
+%%%%%%%%%%%%%%%%%%%%
+
+
+Conforme mencionado, os componentes curriculares foram divididos em conteúdos básicos e tecnológicos referentes à área da computação e conteúdos básicos e tecnológicos específicos para o curso de Engenharia de Computação. Os conteúdos serão apresentados por eixos que agrupam vários componentes curriculares, e estes serão detalhados nas subseções a seguir.
+O curso possui a proporção da carga horária apresentada a seguir, bem como, apresenta o subconjunto coerente de tópicos para cada núcleo caracterizando a modalidade do curso.
+
+Para este curso temos a carga total de 3.660 horas de atividades, estando divididas conforme as diretrizes CNE/CES 5/2016 e o Regimento Geral dos Cursos de Graduação da UFSCar~\cite{RGCG}, onde:
+%TODO: incluir referência
+
+\begin{compenum}
+    \item 57\%, correspondente a 2.070 horas didáticas, aplicado ao núcleo de conteúdos básicos e tecnológicos referentes à área da computação;
+    \item 43\%, correspondente a 1.590 horas, aplicado ao núcleo de conteúdos tecnológicos específicos para o curso de Engenharia de Computação. Nesse núcleo estão contemplados:
+    \begin{itemize}
+        \item 120 horas - Trabalho de Conclusão de Curso;
+        \item 180 horas - Estágio Supervisionado;
+        \item  60 horas - Atividade Complementar.
+    \end{itemize}
+\end{compenum}
+
+A seguir são apresentados os componentes curriculares pertencentes a cada eixo. A matriz curricular é apresentada na Seção~\ref{sec:matriz_curricular}.
+
+\subsection{Conteúdos básicos e tecnológicos referentes à área da computação}~\label{sec:cb_tac}
+
+O núcleo de conteúdos básicos e tecnológicos referentes à área da computação é constituído por 5 eixos.
+
+\subsubsection{Eixo de Fundamentos de Matemática e Estatística}~\label{sec:E1}
+
+Este eixo é constituído por sete disciplinas básicas de matemática e uma de estatística, comuns a todos os cursos de ciências exatas e engenharias, que fornencem os conhecimentos básicos na resolução de problemas em engenharia. As disciplinas deste eixo são apresentadas a seguir, bem como os respectivos semestres de oferecimento ao longo do curso.
+
+\begin{compenum}
+    \item Cálculo Diferencial e Integral 1 (1º Sem.)
+    \item Geometria Analítica (1º Sem.)
+    \item Cálculo Diferencial e Integral 2 (2º Sem.)
+    \item Álgebra Linear 1 (2º Sem.)
+    \item Cálculo 3 (3º Sem.)
+    \item Séries e Equações Diferenciais (3º Sem.)
+    \item Probabilidade e Estatística (4º Sem.)
+    \item Cálculo Numérico (4º Sem.)
+\end{compenum}
+
+\subsubsection{Eixo de Algoritmos e Programação}~\label{sec:E4}
+
+Nesse eixo, tem-se oito disciplinas de programação, que enquadram-se como técnicas essenciais na área da computação e apresentam o aprofundamento da capacitação do {estudante} para desenvolver e aplicar estratégias algorítmicas avançadas, construção de programas verificando a análise e correção do desempenho dos algoritmos, sistemas paralelos e concorrência, consolidação de paradigmas de projeto de algoritmos, avaliação das técnicas a serem implementadas em cada projeto/sistema.
+% e tem como objetivo capacitar o {aluno} para desenvolver e/ou utilizar ferramentas e técnicas de algoritmos e programação.
+As disciplinas Algoritmos e Estrutura de Dados 1 e 2 têm como objetivo capacitar o {estudante} para desenvolver e/ou utilizar ferramentas e técnicas de algoritmos e programação, bem como a formação básica para desenvolvimento de programas que usem eficientemente os recursos e serviços providos por sistemas operacionais tornando-os aptos a entender e atuar em desenvolvimento de projeto.
+
+\begin{compenum}
+    \item Construção de Algoritmos e Programação (1º Sem.)
+    \item Introdução ao Pensamento Algorítmico (1º Sem.)
+    \item Algoritmos e Estrutura de Dados 1 (2º Sem.)
+    \item Programação Orientada a Objetos (2º Sem.)
+    \item Algoritmos e Estrutura de Dados 2 (3º Sem.)
+    \item Projeto e Análise de Algoritmos (4º Sem.)
+    \item Organização e Recuperação da Informação (5º Sem.)
+    \item Programação Paralela e Distribuída (8º Sem.)
+\end{compenum}
+
+\subsubsection{Eixo de Arquiteturas de Computadores}~\label{sec:E5}
+
+Esse eixo é constituído por cinco disciplinas que tratam da construção de sistemas computacionais, em específico aspectos de \textit{hardware}. As disciplinas que compõem este eixo são apresentadas a seguir.
+
+\begin{compenum}
+    \item Lógica Digital (1º Sem.)
+    \item Sistemas Digitais (2º Sem.)
+    \item Arquitetura e Organização de Computadores 1 (3º Sem.)
+    \item Arquitetura e Organização de Computadores 2 (4º Sem.)
+    \item Arquiteturas de Alto Desempenho (7º Sem.)
+\end{compenum}
+
+\subsubsection{Eixo de Metodologia e Técnicas da Computação }~\label{sec:E6}
+
+Este eixo é constituído por sete disciplinas e apresentam as principais metodologias e técnicas da área da computação, tornando o estudante apto a realizar o \textit{design}, construção e avaliação de sistemas computacionais, bem como o uso de técnicas para prover comunicação, sincronização e coordenação entre múltiplos sistemas de computação distribuídos.
+As disciplinas que compõem este eixo são apresentadas a seguir.
+
+\begin{compenum}
+    \item Engenharia de Software 1 (4º Sem.)
+    \item Sistemas Operacionais (5º Sem.)
+    \item Banco de Dados (6º Sem.)
+    \item Inteligência Artificial (6º Sem.)
+    \item Redes de Computadores (7º Sem.)
+    \item Sistemas Distribuídos (7º Sem.)
+    \item Interação Humano-Computador (8º Sem.)
+\end{compenum}
+
+\subsubsection{Eixo de Humanas}~\label{sec:E8}
+
+% Neste eixo, as disciplinas Seminários 1 e Seminários 2 são propostas em um formato alternativo. Diferentemente, em vez de adotar uma disciplina associada a um único núcleo de conhecimento, tais disciplinas tratam núcleos de conhecimentos distintos, trazendo intrinsecamente a vantagem da multidisciplinaridade, que possibilita cativar pela expectativa da contínua novidade, e também, da flexibilidade, que possibilita a modulação dos temas de acordo com os diversos parâmetros envolvidos, por exemplo: audiência e tendências afins mais presentes no quotidiano. Tais  conteúdos são trabalhados na forma de seminários isolados ou programados em série. Estas disciplinas têm como objetivo geral contribuir para a  formação do perfil do futuro profissional nos aspectos, grosso modo, não tecnológicos do curso, alguns explicitados na Resolução CNE/CES 11, de 11 de março de 2002 \footnote{A resolução CNE/CES 11/2002 foi publicada no Diário Oficial da União em 9 de abril de 2002, Seção 1, p.32} a qual trata das Diretrizes Gerais para os cursos de Engenharia,  entre outros:  sociais, profissionais, legais, éticos, políticos e humanísticos. Desta forma, assenta-se a clara preocupação de formar um profissional não somente voltado às competências de suas atividades específicas, mas também torná-lo, de um lado, reflexivo diante de temas gerais importantes para o desenvolvimento da teia social; e, complementarmente, de outro lado, assumir a co-responsabilidade nos rumos seguidos pela sociedade no qual está inserido quando premido pela necessidade de apresentar, em momentos de decisão em face de múltiplas opções, aquela de maior valor coletivo.
+
+Apresentam-se nesse eixo as disciplinas Seminários 1 e 2 que visam trabalhar conteúdos relacionados a Administração, Economia, Humanidades, Ciências Sociais e Cidadania. Em vez de adotar uma disciplina associada a uma única temática, tais disciplinas tratam de conhecimentos distintos, trazendo intrinsecamente a vantagem da multidisciplinaridade, que possibilita cativar pela expectativa da contínua novidade, e também, da flexibilidade, que possibilita a modularização dos temas.
+
+Tais conteúdos são trabalhados na forma de seminários isolados ou programados em série, conforme ementa das respectivas disciplinas. Estas disciplinas têm como objetivo geral contribuir para a formação do perfil do futuro profissional nos aspectos não tecnológicos do curso, explicitados na Resolução CNE/CES 5/2016, tais como sociais, profissionais, legais, éticos, políticos e humanísticos. Desta forma, assenta-se a clara preocupação de formar um profissional não somente voltado às competências técnicas de suas atividades específicas, mas também torná-lo reflexivo diante de temas gerais importantes para o desenvolvimento da sociedade e do bem comum.
+
+\begin{compenum}
+    \item Seminários 1 (3º Sem.)
+    \item Disciplina Eletiva (6º Sem.)
+    \item Disciplina Eletiva (7º Sem.)
+    \item Seminários 2 (8º Sem.)
+    \item Atividade Complementar (9º Sem.)
+\end{compenum}
+
+As Atividades Complementares contemplam atividades acadêmicas, científicas e culturais que fazem parte da vida acadêmica do estudante e estão relacionadas com o desenvolvimento das habilidades e atitudes necessárias ao exercício de sua futura profissão. Dentre estas atividades podemos citar atuação em projetos de Iniciação Científica e de extensão universitária; monitorias e tutorias; disciplinas ACIEPEs (Atividades Curriculares de Integração Ensino, Pesquisa e Extensão); participação na Empresa Júnior e no Programa de Ensino Tutorial da Engenharia de Computação (PET EnC), que é vinculado ao Departamento de Computação. %TODO As regras para consignação das horas-aula de atividades acadêmico-científico-culturais serão determinadas pelo Conselho de Coordenação de Curso, que atualizará quando necessário.
+
+\subsection{Conteúdos básicos e tecnológicos específicos para o curso de Engenharia de Computação}~\label{sec:cb_tec}
+
+O núcleo de conteúdos básicos e tecnológicos específicos para o curso de Engenharia de Computação é constituído em extensões e aprofundamentos dos conteúdos deste núcleo, bem como de outros conteúdos destinados a caracterizar o curso de Engenharia de Computação. Tendo como objetivo proporcionar conhecimentos científicos, tecnológicos e instrumentais necessários para a definição do perfil do Bacharel em Engenharia de Computação e garantir o desenvolvimento das competências e habilidades estabelecidas nas diretrizes. Desta forma, este núcleo constitui quatro eixos que se dividem em diversos tópicos que proporcionam o embasamento necessário para o perfil do egresso.
+
+\subsubsection{Eixo de Física}~\label{sec:E2}
+
+Este eixo é constituído por quatro disciplinas básicas de física, comuns a todos os curso de ciências exatas e engenharias. As disciplinas deste eixo são apresentadas a seguir, bem como os respectivos semestres de oferecimento ao longo do curso.
+
+\begin{compenum}
+    \item Física 1 (2º Sem.)
+    \item Física Experimental A (2º Sem.)
+    \item Física 3 (3º Sem.)
+    \item Física Experimental B (3º Sem.)
+
+\end{compenum}
+
+\subsubsection{Eixo de Eletrônica}~\label{sec:E3}
+
+Este eixo é constituído por três disciplinas que apresentam teoria e técnicas que permitem o desenvolvimento, análise e projeto de componentes que compõem sistemas computacionais. As disciplinas deste eixo são apresentadas a seguir, bem como os respectivos semestres de oferecimento ao longo do curso.
+
+\begin{compenum}
+    \item Circuitos Elétricos (4º Sem.)
+    \item Circuitos Eletrônicos 1 (5º Sem.)
+    \item Circuitos Eletrônicos 2 (6º Sem.)
+\end{compenum}
+
+\subsubsection{Eixo de Engenharia e Sistemas}~\label{sec:E7}
+
+Este eixo é constituído por doze disciplinas que fornecem o conhecimento sobre identificar, formular e avaliar problemas de engenharia de computação e conceber soluções, bem como as disciplinas de apoio e prática profissional do estudante, atividades relacionadas ao desenvolvimento de projetos sob supervisão docente e estágio. Estas disciplinas também apresentam teorias e técnicas que permitem o desenvolvimento e análise de projeto e de componentes de sistemas computacionais e de comunicação. A disciplina de Otimização Matemática gera a capacitação para resolução de problemas em engenharia de forma analítica e computacional. As disciplinas que compõem este eixo são apresentadas a seguir.
+
+\begin{compenum}
+    \item Sistemas Dinâmicos (4º Sem.)
+    \item Controle 1 (5º Sem.)
+    \item Processamento de Sinais Digitais (5º Sem.)
+    \item Controle 2 (6º Sem.)
+    \item Engenharia de Sistemas (6º Sem.)
+    \item Tecnologia de Comunicação (7º Sem.)
+    \item Projeto de Sistemas Computacionais Embarcados (7º Sem.)
+    \item Otimização Matemática (8º Sem.)
+    \item Metodologia Científica (8º Sem.)
+    \item Trabalho de Conclusão de Curso 1 (9º Sem.)
+    \item Trabalho de Conclusão de Curso 2 (10º Sem.)
+    \item Estágio Supervisionado (10º Sem.)
+\end{compenum}
+
+\subsubsection{Eixo de Especializações }~\label{sec:E9}
+
+Este eixo engloba as Disciplinas Optativas que fornecem especializações em determinadas áreas, permitindo que o estudante se adapte às suas habilidades ou a demandas específicas do mercado.
+
+\begin{compenum}
+    \item Disciplina Optativa (7º Sem.)
+    \item Disciplina Optativa (8º Sem.)
+    \item Disciplina Optativa (9º Sem.)
+
+\end{compenum}
+
+É importante ressaltar que, de acordo com o Regimento Geral dos Cursos de Graduação, Set. 2016 UFSCar (Seção II, Art. 14º)~\cite{RGCG}, deve-se assegurar ao estudante a possibilidade de se especializar na Língua Brasileira de Sinais (LIBRAS) cursando uma disciplina do tipo Optativa, desde o primeiro semestre do curso. A lista das disciplinas optativas está relacionada na Seção~\ref{sec:matriz_curricular}. Estas disciplinas devem ser idealmente cursadas entre o sétimo e nono período, mas podem ser antecipadas, desde que satisfeitos os pré-requisitos. A posição na grade e o número de disciplinas, portanto, é apenas uma sugestão. O estudante pode, por exemplo, cursar duas disciplinas de dois créditos ao invés de uma disciplina de quatro créditos.% como indicado na Figura~\ref{fig:especificos}.%TODO Menotti verificar está figura pra esta nova atribuição
+
+
+\subsection{Atividades Curriculares Extensionista}\label{sec:atividades-curriculares-extensionistas}
+
+De acordo com a Resolução QUE AINDA NÃO SAIU, Art.~5º, as Atividades Curriculares Extensionista (ACEs) que contemplam os princípios listados no artigo Art.~2º, conforme validação pela Comissão Mista ProGrad/ProEx/CoG/Coex, podem ser dos tipos de I a III, a seguir:
+
+\begin{enumerate}[label = \Roman*--]
+    \item Ações de extensão, com ou sem bolsa, com aprovação registrada na Pró-Reitoria de Extensão nas modalidades de projetos, cursos, oficinas, eventos e prestação de serviços;
+    \item Atividades Curriculares de Integração entre Ensino, Pesquisa e Extensão (ACIEPEs); e
+    \item Atividades curriculares com carga horária integral ou parcial voltada à abordagem extensionista.
+\end{enumerate}
+
+O Curso de Engenharia de Computação destina um mínimo de 336~horas para estas atividades alocadas em disciplinas com caráter extensionista. Tais disciplinas podem ser caracterizadas dentre as obrigatórias contidas no projeto pedagógico e as optativas.
+
+Disciplinas elencadas: Engenharia de Sistemas, Sistemas Distribuídos, Sistemas Embarcados...
+
+Disciplinas optativas (carga horária de 300 horas): Devem seguir o seguinte template:
+
+
+
+
+\subsection{Matriz Curricular}~\label{sec:matriz_curricular}
+
+
+A matriz curricular completa é apresentada na Figura~\ref{fig:matriz_completa}. O detalhamento das disciplinas em cada semestre é apresentado nos Quadros~\ref{tab:matriz1} a~\ref{tab:matriz_optativas9}. O Semestre 9, apresentado no Quadro~\ref{tab:matriz9}, possui uma quantidade de créditos reduzida para que o estudante possa: (i) antecipar o início do Estágio Supervisionado e realizá-lo durante um ano, requisito desejável em muitas vagas; (ii) se envolver em Atividades Complementares mais intensas, se assim desejar, e; (iii) cumprir eventuais dependências, se necessário, para se dedicar integralmente ao Estágio Supervisionado e ao Trabalho de Conclusão de Curso.
+
+
+%%%%%%% Matriz Completa  %%%%%%%%%%%%%%%%%%%
+\begin{landscape}
+    \begin{figure}[H]
+        \centering
+        \caption{Matriz Curricular}
+        \label{fig:matriz_completa}
+        \includegraphics[scale=.9]{imagens/Grade_eixos}
+    \end{figure}
+
+    \singlespacing
+
+    % As tabelas abaixo estão na ordem em que aparecem na matriz completa, da esquerda para a direita.
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 1: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 1}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                        & & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Cálculo Diferencial e Integral 1       & & DM                 & Obrigatório & 5          & 1          & 6              \\
+            2 & Geometria Analítica                    & & DM                 & Obrigatório & 3          & 1          & 4              \\
+            3 & Construção de Algoritmos e Programação & & DC                 & Obrigatório & 4          & 4          & 8              \\
+            4 & Introdução ao Pensamento Algorítmico   & & DC                 & Obrigatório & 2          & --         & 2              \\
+            5 & Lógica Digital                         & & DC                 & Obrigatório & 4          & 2          & 6              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz1}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 2: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 2}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                   &                                        & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Cálculo 2                         & Cálculo Diferencial e Integral 1       & DM                 & Obrigatório & 3          & 1          & 4              \\
+            2 & Álgebra Linear 1                  & Geometria Analítica                    & DM                 & Obrigatório & 3          & 1          & 4              \\
+            3 & Física 1                          &                                        & DF                 & Obrigatório & 4          & --         & 4              \\
+            4 & Física Experimental A             &                                        & DF                 & Obrigatório & --         & 4          & 4              \\
+            5 & Algoritmos e Estrutura de Dados 1 & Construção de Algoritmos e Programação & DC                 & Obrigatório & 4 & -- & 4 \\
+            6 & Programação Orientada a Objetos   & Construção de Algoritmos e Programação & DC                 & Obrigatório & 2 & 2 & 4 \\
+            7 & Sistemas Digitais                 & Lógica Digital                         & DC                 & Obrigatório & 2          & 2          & 4              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz2}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 3: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 3}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{8.0cm}p{6.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                             &                                    & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Cálculo 3                                   & Cálculo 2                          & DM                 & Obrigatório & 3          & 1          & 4              \\
+            2 & Séries e Equações Diferenciais              & Cálculo Diferencial e Integral 1   & DM                 & Obrigatório & 3 & 1 & 4 \\
+            3 & Física 3                                    & Física 1                           & DF                 & Obrigatório & 4          & --         & 4              \\
+            4 & Física Experimental B                       &                                    & DF                 & Obrigatório & --         & 4          & 4              \\
+            5 & Algoritmos e Estrutura de Dados 2           & Algoritmos e Estruturas de Dados 1 & DC                 & Obrigatório & 4 & -- & 4 \\
+            6 & Arquitetura e Organização de Computadores 1 & Lógica Digital                     & DC                 & Obrigatório & 4          & 2          & 6              \\
+            7 & Seminários 1                                &                                    & DC                 & Obrigatório & --         & 2          & 2              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz3}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 4: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 4}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                             &                                                                                                & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Probabilidade e Estatística                 &                                                                                                & DEs                & Obrigatório & 4          & --         & 4              \\
+            2 & Cálculo Numérico                            & Cálculo Diferencial e Integral 1, Geometria Analítica e Construção de Algoritmos e Programação & DM & Obrigatório & 3 & 1 & 4\\
+            3 & Circuitos Elétricos                         & Séries e Equações Diferenciais                                                                 & DC                 & Obrigatório & 4          & --         & 4              \\
+            4 & Projeto e Análise de Algoritmos             & Algoritmos e Estruturas de Dados 1                                                             & DC                 & Obrigatório & 4 & -- & 4 \\
+            5 & Arquitetura e Organização de Computadores 2 & Arquitetura e Organização de Computadores 1 & DC & Obrigatório & 2 & 2 & 4 \\ % CoC corrigiu 6 -> 4 % Identificado pela prof. Vania
+            6 & Engenharia de Software 1                    & Programação Orientada a Objetos                                                                & DC                 & Obrigatório & 4          & --         & 4              \\
+            7 & Sistemas Dinâmicos                          & Séries e Equações Diferenciais e Física 1                                                      & DC                 & Obrigatório & 4          & -- & 4 \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz4}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 5: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 5}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                         &                                                                                                                & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Circuitos Eletrônicos 1                 & Circuitos Elétricos                                                                                            & DC                 & Obrigatório & 4          & 2          & 6              \\
+            2 & Organização e Recuperação de Informação & Algoritmos e Estruturas de Dados 1                                                                             & DC                 & Obrigatório & 4 & -- & 4 \\
+            3 & Sistemas Operacionais                   & Arquitetura e Organização de Computadores 1                                                                    & DC                 & Obrigatório & 4 & 2 & 6 \\
+            4 & Controle 1                              & Sistemas Dinâmicos                                                                                             & DC                 & Obrigatório & 4          & 2          & 6              \\
+            5 & Processamento de Sinais Digitais        & Cálculo Diferencial e Integral 1, Geometria Analítica, Álgebra Linear e Construção de Algoritmos e Programação & DC & Obrigatório & 4 & 2 & 6 \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz5}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 6: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 6}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                         &                                    & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Circuitos Eletrônicos 2 & Circuitos Eletrônicos 1            & DC                 & Obrigatório & 4          & 2          & 6              \\
+            2 & Inteligência Artificial & Algoritmos e Estruturas de Dados 1 & DC                 & Obrigatório & 2          & 2          & 4              \\
+            3 & Banco de Dados          & Algoritmos e Estrutura de Dados 1  & DC                 & Obrigatório & 2          & 2          & 4              \\
+            4 & Controle 2              & Controle 1                         & DC                 & Obrigatório & 4          & 2          & 6              \\
+            5 & Engenharia de Sistemas  & Engenharia de Software 1           & DC                 & Obrigatório & 4          & --         & 4              \\
+            6 & Disciplina Eletiva      &                                    & --                 & Optativo    & --         & --         & 4              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz6}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 7: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 7}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                               &                                                                      & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Arquiteturas de Alto Desempenho               & Arquitetura e Organização de Computadores 1                          & DC & Obrigatório & 2 & 2 & 4 \\
+            2 & Sistemas Distribuídos                         & Sistemas Operacionais                                                & DC                 & Obrigatório & 4          & --         & 4              \\
+            3 & Redes de Computadores                         & Sistemas Operacionais                                                & DC                 & Obrigatório & 4          & --         & 4              \\
+            4 & Tecnologias de Comunicação                    & Sistemas Operacionais                                                & DC                 & Obrigatório & 2          & 2          & 4              \\
+            5 & Projeto de Sistemas Computacionais Embarcados & Arquitetura e Organização de Computadores 2 e Engenharia de Sistemas & DC & Obrigatório & -- & 4 & 4 \\
+            6 & Disciplina Eletiva                            &                                                                      & --                 & Optativo    & --         & --         & 4              \\
+            7 & Disciplina Optativa                           &                                                                      & --                 & Optativo    & --         & --         & 4              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz7}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 8: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 8}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                    &                                        & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Programação Paralela e Distribuída & Sistemas Operacionais                  & DC                 & Obrigatório & 2          & 2          & 4              \\
+            2 & Interação Humano-Computador        & Construção de Algoritmos e Programação & DC                 & Obrigatório & 2 & 2 & 4 \\
+            3 & Otimização Matemática              & Cálculo 2                              & DC                 & Obrigatório & --         & 4          & 4              \\
+            4 & Metodologia Científica             &                                        & DC                 & Obrigatório & 4          & --         & 4              \\
+            5 & Seminários 2                       & Seminários 1                           & DC                 & Obrigatório & --         & 2          & 2              \\
+            6 & Disciplina Optativa                &                                        & --                 & Optativo    & --         & --         & 4              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz8}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 9: %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 9}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                  &                        & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Trabalho de Conclusão de Curso 1 & Metodologia Científica & DC                 & Obrigatório & 2          & --         & 2              \\
+            2 & Atividade Complementar           &                        & --                 & Complem.    & --         & --         & 4              \\
+            3 & Disciplina Optativa              &                        & --                 & Optativo    & --         & --         & 4              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz9}
+    \end{table}
+
+    %%%%%%%%%%%%%%%%%%
+    %% Semestre 10: %%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht]
+        \caption{Matriz Curricular - Semestre 10}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                  &                                  & \textbf{Ofertante} &             & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Estágio Supervisionado           & 200 créditos                     & DC                 & Estágio     & --         & 12         & 12             \\
+            2 & Trabalho de Conclusão de Curso 2 & Trabalho de Conclusão de Curso 1 & DC                 & Obrigatório & -- & 6 & 6 \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz10}
+    \end{table}
+
+    %TODO verificar esta lista
+    O detalhamento das possíveis disciplinas optativas é apresentado nos Quadros~\ref{tab:matriz_optativas7},~\ref{tab:matriz_optativas8}~e~\ref{tab:matriz_optativas9} de acordo com a sugestão do semestre.
+
+    %%%%%%%%%%%%%%%%%%
+    %% Optativas:  %%%
+    %%%%%%%%%%%%%%%%%%
+
+    \begin{table}[H]%[!ht] %TODO: conferir se está coerente com as ementas
+        \caption{Matriz Curricular - Optativas recomendadas para o 7º semestre}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                              &                                                                      & \textbf{Ofertante} &          & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1  & Aprendizado de Máquina 1                     & Inteligência Artificial e Introdução à Probabilidade e Estatística & DC & Optativo & 4 & -- & 4 \\ %Requisito de IA coloca esta no 9o semestre e inviabiliza AM2
+            2  & Computação Gráfica                           & Geometria Analítica e Algoritmos e Estruturas de Dados 1             & DC & Optativo & 2 & 2 & 4 \\
+            3  & Controle Avançado                            & Controle 2                                                           & DC                 & Optativo & 2          & 2          & 4              \\
+            4  & Desenvolvimento de Software para Web 1       & Banco de Dados                                                       & DC                 & Optativo & --         & 4          & 4              \\
+            5  & Empreendedores em Informática                &                                                                      & DC                 & Optativo & 4          & --         & 4              \\
+            6  & Engenharia de Software 2                     & Engenharia de Software 1                                             & DC                 & Optativo & 4          & --         & 4              \\
+            7  & Introdução à Língua Brasileira de Sinais     &                                                                      & DPsi               & Optativo & 2          & --         & 2              \\
+            8  & Lógica Matemática                            &                                                                      & DC                 & Optativo & 4          & --         & 4              \\
+            9  & Matemática Discreta                          &                                                                      & DC                 & Optativo & 4          & --         & 4              \\
+            10 & Processamento Digital de Imagens & Construção de Algoritmos e Programação, Cálculo Diferencial e Integral I e
+            Geometria Analítica & DC & Optativo & 2 & 2 & 4    \\
+            11 & Programação Orientada a Objetos Avançada     & Algoritmos e Estruturas de Dados 1 e Programação Orientada a Objetos & DC & Optativo & 2 & 2 & 4    \\
+            12 & Projeto e Implementação de Banco de Dados    & Banco de Dados                                                       & DC                 & Optativo & 2          & 2          & 4              \\
+            13 & Prototipação de Sistemas Digitais/Analógicos & Circuitos Eletrônicos 2                                              & DC                 & Optativo & -- & 4    & 4    \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz_optativas7}
+    \end{table}
+
+    \begin{table}[H]%[!ht] %TODO: conferir se está coerente com as ementas
+        \caption{Matriz Curricular - Optativas recomendadas para o 8º semestre}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                              &                                                       & \textbf{Ofertante} &          & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1  & Aprendizado de Máquina 2                     & Aprendizado Máquina 1                                 & DC                 & Optativo & 4          & --         & 4              \\
+            2  & Arquitetura de Software e Padrões            & Engenharia de Software 2                              & DC                 & Optativo & 4          & --         & 4              \\
+            3  & Banco de Dados para Ciência de Dados         & Projeto e Implementação de Banco de Dados & DC & Optativo & 2 & 2 & 4    \\
+            4  & Desenvolvimento de Software para Web 2       & Desenvolvimento de Software para Web 1                & DC & Optativo & -- & 4 & 4    \\
+            5  & Introdução à Computação Musical              &                                                       & DC                 & Optativo & 2          & 2          & 4              \\
+            6  & Paradigmas de Linguagens de Programação      & Projeto e Análise de Algoritmos                       & DC                 & Optativo & 2 & 2 & 4    \\
+            7  & Processamento Digital de Imagens 3D e Vídeos & Processamento Digital de Imagens                      & DC & Optativo & 2 & 2 & 4    \\
+            8  & Processamento e Visualização de Dados        & Computação Gráfica                                    & DC                 & Optativo & 2          & 2          & 4              \\
+            9  & Segurança Cibernética                        & Sistemas Operacionais e Arquitetura de Computadores 1 & DC & Optativo & 2 & 2 & 4    \\
+            10 & Teoria da Computação                         & Matemática Discreta                                   & DC                 & Optativo & 4          & --         & 4              \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz_optativas8}
+    \end{table}
+
+    \begin{table}[H]%[!ht] %TODO: conferir se está coerente com as ementas
+        \caption{Matriz Curricular - Optativas recomendadas para o 9º semestre}
+        \centering
+        %\footnotesize
+        \begin{tabular}{cp{7.0cm}p{7.0cm}ccccc}
+            \sline
+            \multirow{2}{*}{\textbf{Nro.}} & \multirow{2}{*}{\textbf{Disciplina}} & \multirow{2}{*}{\textbf{Requisito}} & \textbf{Depto.} & \multirow{2}{*}{\textbf{Caráter}} & \multicolumn{3}{c}{\textbf{Natureza}} \\
+            &                                                &                                                                                         & \textbf{Ofertante} &          & \textbf{T} & \textbf{P} & \textbf{Total} \\
+            \hline
+            1 & Construção de Compiladores                     & Teoria da Computação e Construção de Algoritmos e Programação& DC & Optativo & 4 & -- & 4    \\
+            2 & Desenvolvimento Móvel                          & Desenvolvimento de Software para Web 2                                                  & DC                 & Optativo & --         & 4          & 4              \\
+            3 & DevOps                                         & Programação Orientada a Objetos Avançada e Arquitetura e Organização de Computadores 1 & DC & Optativo & -- & 4 & 4    \\
+            4 & Introdução à Programação de Robôs Móveis       & Álgebra Linear 1, Geometria Analítica e Probabilidade e Estatística & DC & Optativo & 2 & 2 & 4    \\
+            5 & Manipuladores Robóticos                        & Álgebra Linear 1,  Geometria Analítica e Cálculo Diferencial e Integral 1 & DC & Optativo & 2 & 2 & 4    \\
+            6 & Processamento de Dados em Escala               & Sistemas Operacionais                                                                   & DC                 & Optativo & 2          & 2          & 4              \\
+            7 & Projeto de Manufatura Assistido por Computador & Geometria Analítica                                                                     & DC                 & Optativo & 2 & 2 & 4    \\
+            8 & Sistemas de Integração e Automação Industrial  & Controle 1                                                                              & DC                 & Optativo & 1          & 3          & 4              \\
+            9 & Visão Computacional                            & Processamento de Sinais Digitais ou (Álgebra Linear e Processamento Digital de Imagens) & DC & Optativo & 2 & 2 & 4    \\
+            \sline
+        \end{tabular}
+        \label{tab:matriz_optativas9}
+    \end{table}
+
+\end{landscape}
+
+%TODO Citar disicplinas eletivas
+
+
+\section{Ementário de Disciplinas}\label{sec:ED}
+
+A seguir são apresentadas, por ordem de semestres, as disciplinas do curso, bem como os objetivos, a ementa, pré-requisitos e bibliografia básica e complementar. % As disciplinas que foram reformuladas, bem como novas disciplinas propostas, constam com código XX.XXX-X indicando que um novo código deverá ser criado para cada uma delas. As disciplinas que possuem código permanecem inalteradas.
+
+\singlespacing
+
+%NOTE: Ordenei por semestres para conferir e coincidir com a ordem que aparece na grade (Menotti)
+% \subsection{Conteúdo Básico}
+
+% \newpage
+
+% Sem 1
+%Cálculo Diferencial e Integral 1
+%Geometria Analítica
+%Construção de Algoritmos e Programação
+%Introdução ao Pensamento Algorítmico
+%Lógica Digital
+
+\input{shared/1/1calculo1.tex}  %Cálculo Diferencial e Integral 1
+\input{shared/1/1ga.tex}        %Geometria Analítica
+\input{shared/4/4cap.tex}       %Construção de Algoritmos e Programação
+\input{shared/4/4ipa.tex}       %Introdução ao Pensamento Algorítmico
+\input{shared/5/5ld.tex}        %Lógica Digital
+
+\ExecuteLista{\Disciplina}{calculo1, ga, cap, ipa, ld}{\MostraDisciplina{\Disciplina}}
+
+
+% Sem 2
+%Cálculo 2
+%Álgebra Linear
+%Física 1
+%Física Experimental A
+%Algoritmos e Estruturas de Dados 1
+%Programação Orientada a Objetos
+%Sistemas Digitais
+
+\input{shared/1/1calculo2.tex}
+\input{shared/1/1algelin.tex}
+\input{shared/2/2fisica1.tex}
+\input{shared/2/2fisexpa.tex}
+\input{shared/4/4aed1.tex}
+\input{shared/4/4poo.tex}
+\input{shared/5/5sd.tex}
+
+\ExecuteLista{\Disciplina}{calculo2, algelin, fisica1, fisexpa, aed1, poo, sd}{
+    \MostraDisciplina{\Disciplina}
+}
+
+% Sem 3
+%Cálculo 3
+%Séries e Equações Diferenciais
+%Física 3
+%Física Experimental B
+%Algoritmos e Estruturas de Dados 2
+%Arquitetura e Organização de Computadores 1
+%Seminários 1
+\input{shared/1/1calculo3.tex}
+\input{shared/1/1sereqdif.tex}
+\input{shared/2/2fisica3.tex}
+\input{shared/2/2fisexpb.tex}
+\input{shared/4/4aed2.tex}
+\input{shared/5/5arq1.tex}
+\input{shared/8/8sem1.tex}
+
+\ExecuteLista{\Disciplina}{calculo3, sereqdif, fisica3, fisexpb, aed2, arq1, sem1}{
+    \MostraDisciplina{\Disciplina}
+}
+
+% Sem 4
+%Probabilidade e Estatística
+%Cálculo Numérico
+%Circuitos Elétricos
+%Projeto e Análise de Algoritmos
+%Arquitetura e Organização de Computadores 2
+%Engenharia de Software 1
+%Sistemas Dinâmicos
+\input{shared/1/1probest.tex}
+\input{shared/1/1calnum.tex}
+\input{shared/3/3circeletricos.tex}
+\input{shared/4/4paa.tex}
+\input{shared/5/5arq2.tex}
+\input{shared/6/6es1.tex}
+\input{shared/7/7sistdin.tex}
+
+\ExecuteLista{\Disciplina}{probest, calnum, circeletricos, paa, arq2, es1, sistdin}{
+    \MostraDisciplina{\Disciplina}
+}
+
+% Sem 5
+%Circuitos Eletrônicos 1
+%Organização e Recuperação da Informação
+%Sistemas Operacionais
+%Controle 1
+%Processamento de Sinais Digitais
+\input{shared/3/3circeletronicos1.tex}
+\input{shared/4/4ori.tex}
+\input{shared/6/6so.tex}
+\input{shared/7/7controle1.tex}
+\input{shared/7/7psd.tex}
+
+\ExecuteLista{\Disciplina}{circeletronicos1, ori, so, controle1, psd}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+% Sem 6
+%Circuitos Eletrônicos 2
+%Inteligência Artificial
+%Banco de Dados
+%Controle 2
+%Engenharia de Sistemas
+\input{shared/3/3circeletronicos2.tex}
+\input{shared/6/6ia.tex}
+\input{shared/6/6bd.tex}
+\input{shared/7/7controle2.tex}
+\input{shared/7/7engsis.tex}
+
+\ExecuteLista{\Disciplina}{circeletronicos2, ia, bd,  controle2, engsis}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+% Sem 7
+%Arquiteturas de Alto Desempenho
+%Sistemas Distribuídos
+%Redes de Computadores
+%Tecnologia de Comunicação
+%Projeto de Sistemas Computacionais Embarcados
+\input{shared/5/5arqad.tex}
+\input{shared/7/7sistdist.tex} %TODO: pre-requisitos
+\input{shared/6/6rc.tex}
+\input{shared/7/7teccom.tex}
+\input{shared/7/7projsisemb.tex}
+% \Eletiva
+% \Optativa
+
+\ExecuteLista{\Disciplina}{arqad, sistdist, rc, teccom, projsisemb}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+% Sem 8
+%Programação Paralela e Distribuída
+%Interação Humano-Computador
+%Otimização Matemática
+%Metodologia Científica
+%Seminários 2
+\input{shared/4/4ppd.tex} % TODO: pre-requisitos
+\input{shared/6/6ihc.tex}
+\input{shared/7/7om.tex}
+\input{shared/8/8metcient.tex}
+\input{shared/8/8sem2.tex}
+% \Optativa
+
+\ExecuteLista{\Disciplina}{ppd, ihc, om, metcient, sem2}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+% Sem 9
+%Trabalho de Conclusão de Curso 1
+
+\input{shared/8/8tcc.tex}
+% \Ativ. Compl.
+% \Optativa
+
+\ExecuteLista{\Disciplina}{tcc1}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+% Sem 10
+%Trabalho de Conclusão de Curso 2
+%Estágio em Engenharia de Computação
+\input{shared/8/8estagio-ec.tex}
+% \TCC2 % junto com TCC1
+
+\ExecuteLista{\Disciplina}{tcc2, estagio}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+
+% \subsection{Conteúdo Profissionalizante}
+% Sem 1
+% Sem 2
+% Sem 3
+% Sem 4
+% Sem 5
+% Sem 6
+% Sem 7
+% Sem 8
+
+% \subsection{Conteúdo Específico}
+% Sem 1
+% Sem 2
+% Sem 3
+% Sem 4
+% Sem 5
+% Sem 6
+% Sem 7
+
+\subsection{Disciplinas Optativas} 
+% TODO: incluir as disciplinas no BCC e as nossas
+% TODO: resolver se haverá agrupamentos (humanas, profissionalizantes, eletivas)
+
+% Aprendizado Máquina 1
+\input{shared/6/6am1.tex}
+% Aprendizado Máquina 2
+\input{shared/6/6am2.tex}
+% Arquitetura de Software e Padrões
+\input{shared/6/6asp.tex}
+% Banco de Dados para Ciência de Dados
+\input{shared/6/6bdcd.tex}
+% Computação Gráfica
+\input{shared/6/6cg.tex}
+% Construção de Compiladores
+\input{shared/6/6compiladores.tex}
+% Controle Avançado
+\input{shared/9/9controle.tex}
+% Desenvolvimento de Software para Web 1
+\input{shared/4/4dw1.tex}
+% Desenvolvimento de Software para Web 2
+\input{shared/4/4dw2.tex}
+% Desenvolvimento Móvel
+\input{shared/4/4dm.tex}
+% Dev Ops
+\input{shared/6/6devops.tex}
+% Empreendedores em Informática
+\input{shared/9/9empreend.tex}
+% Engenharia de Software 2
+\input{shared/6/6es2.tex}
+% Introdução à Computação Musical
+\input{shared/9/9musical.tex}
+% Introdução à Lingua Brasileira de Sinais
+% TODO: confirmar se deve ser Optativa ou pode ser Eletiva
+\input{shared/9/9libras.tex}
+% Introdução à Programação de Robôs Móveis
+\input{shared/9/9robosautonomos.tex}
+% Lógica Matemática
+\input{shared/6/6lm.tex}
+% Manipuladores Robóticos
+\input{shared/9/9robotica.tex}
+% Matemática Discreta
+\input{shared/6/6md.tex}
+% Paradigmas de Linguagens de Programação
+\input{shared/4/4plp.tex}
+% Processamento de Dados em Escala
+\input{shared/6/6pde.tex}
+% Processamento Digital de Imagens
+\input{shared/6/6pdi.tex}
+% Processamento Digital de Imagens 3D e Vídeos
+\input{shared/6/6pdi3dv.tex}
+% Processamento e Visualização de Dados
+\input{shared/6/6pvd.tex}
+% Programação Orientada a Objetos Avançada
+\input{shared/4/4pooa.tex}
+% Projeto de Manufatura Assistido por Computador
+\input{shared/9/9pmac.tex}
+% Projeto e Implementação de Banco de Dados
+\input{shared/6/6pibd.tex}
+% Prototipação de Sistemas Digitais/Analógicos
+\input{shared/9/9protsisdigan.tex}
+% Segurança Cibernética
+\input{shared/9/9sc.tex}
+% Sistemas de Integração e Automação Industrial
+\input{shared/9/9siai.tex}
+% Teoria da Computação
+\input{shared/6/6tc.tex}
+
+\ExecuteLista{\Disciplina}{
+    am1, am2, asp, bdcd, cg, compiladores, controle, dw1, dw2,
+    dm, devops, empreend, es2, musical, libras, robosautonomos, lm, robotica, md, plp, pde,
+    pdi, pdi3dv, pvd, pooa, pmac, pibd, protsisdigan, sc, siai, tc
+}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+% Tópicos em Computação 1-12
+%TODO: verificar se é o caso de incluir em uma seção a parte
+% \input{shared/A/10ti1.tex}
+% \input{shared/A/10ti2.tex}
+% \input{shared/A/10ti3.tex}
+% \input{shared/A/10ti4.tex}
+% \input{shared/A/10ti5.tex}
+% \input{shared/A/10ti6.tex}
+% \input{shared/A/10ti7.tex}
+% \input{shared/A/10ti8.tex}
+% \input{shared/A/10ti9.tex}
+% \input{shared/A/10ti10.tex}
+% \input{shared/A/10ti11.tex}
+% \input{shared/A/10ti12.tex}
+% Visão Computacional
+\input{shared/9/9vc.tex} %TODO: pre-requisitos e créditos
+\ExecuteLista{\Disciplina}{vc}{
+    \MostraDisciplina{\Disciplina}
+}
+
+
+% ti10,ti11,ti12,ti3,ti4,ti5,ti6,ti7,ti8,ti9,calculodifser,npd
+
+
+% \section{Plano de migração}
+
+% O Art. 84 do Regimento Geral dos Cursos de Graduação da UFSCar estabelece que:
+% \begin{quote}
+%     ``Quando da implantação de um novo currículo em um curso, é facultado aos estudantes que ainda não tiverem concluído 50\% (cinquenta por cento) da carga horária total do curso, a opção pelo novo currículo.''
+% \end{quote}
+
+% Para estes casos, são listadas a seguir, nos Quadros~\ref{tab:dispensa1}~e~\ref{tab:dispensa2} as disciplinas da grade nova que são dispensadas por disciplinas da grade antiga. Dito de outra forma, as disciplinas da primeira coluna dispensam as disciplinas da segunda coluna.
+
+% \begin{landscape}
+%     \begin{table}[htbp]
+%         \centering
+%         \caption{Disciplinas da grade nova que são dispensadas por ($\leftarrow$) disciplinas da grade antiga (I)}
+%         \label{tab:dispensa1}
+%         \begin{tabular}{clccclc}
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multicolumn{3}{c}{\textbf{Matriz Vigente (ano: 2006)}} & & \multicolumn{3}{c}{\textbf{Matriz em Processo de Reformulação}} \\
+%             \multicolumn{3}{c}{Disciplina/atividade curricular} & & \multicolumn{3}{c}{Disciplina/atividade curricular} \\
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}}          & \textbf{Depto}          & \multirow{2}{*}{\textbf{Rel.}} & \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}} & \textbf{Depto} \\
+%             &                                         & \textbf{Ofertante}      &                                &                                  &                                                       & \textbf{Ofertante}  \\
+%             \specialrule{.1em}{.05em}{.05em}
+
+%             \multirow{3}{*}{1}               & Geometria Analítica                     & DM                      & $\leftarrow$                   & 1                                & Geometria Analítica                                   & DM                  \\
+%             \cline{2-7}
+%             & Física 1                                & DF                      & $\leftarrow$                   & 2                                & Física 1                                              & DF                  \\
+%             \cline{2-7}
+%             % & Fundamentos de Química & DQ & 9 & Fundamentos de Química$\dagger$ & DQ \\ % $\dagger$ = ELETIVA
+%             % & Introdução à Lógica \\
+%             % & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi & 7 & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi \\
+%             & Construção de Algoritmos e Programação  & DC                      & $\leftarrow$                   & 1                                & Construção de Algoritmos e Programação & DC \\
+%             % \cline{2-7}
+%             %  & Cálculo 1 & DM & $\leftarrow$ & 1 & Cálculo Diferencial e Integral 1 & DM \\
+%             \sline
+
+%             \multirow{6}{*}{2}               & Física Experimental A                   & DF                      & $\leftarrow$                   & 2                                & Física Experimental A & DF \\
+%             \cline{2-7}
+%             % & Física 2 & DF & 9 & Física 2$\dagger$ & DF \\
+%             & Programação de Computadores             & DC                      & $\leftarrow$                   & 2                                & Programação Orientada a Objetos                       & DC                  \\
+%             \cline{2-7}
+%             & Cálculo 2                               & DM                      & $\leftarrow$                   & 2                                & Cálculo 2                                             & DM                  \\
+%             \cline{2-7}
+%             & Introdução à Engenharia                 & DC                      & $\leftarrow$                   & 3                                & Seminários 1                                          & DC                  \\
+%             \cline{2-7}
+%             & Séries e Equações Diferenciais          & DM                      & $\leftarrow$                   & 3                                & Séries e Equações Diferenciais & DM \\
+%             \cline{2-7}
+%             % & Estruturas Discretas \\
+%             % & Sociologia Industrial e do Trabalho & DS & 7 & Sociologia Industrial e do Trabalho$\dagger$ & DS \\
+%             & Probabilidade e Estatistica             & DEs                     & $\leftarrow$                   & 4                                & Probabilidade e Estatistica                           & DEs                 \\
+%             \sline
+
+%             \multirow{7}{*}{3}               & Física 3                                & DF                      & $\leftarrow$                   & 3                                & Física 3                                              & DF                  \\
+%             \cline{2-7}
+%             % & Mecânica Aplicada 1 & DECiv & 9 & Mecânica Aplicada 1* & DECiv \\
+%             & Circuitos Digitais                      & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftarrow$}  & \multirow{2}{*}{1} & \multirow{2}{*}{Lógica Digital} & \multirow{2}{*}{DC} \\
+%             & Laboratório de Circuitos Digitais & \multicolumn{1}{c|}{DC} & & \\
+%             \cline{2-7}
+%             & Física Experimental B                   & DF                      & $\leftarrow$                   & 3                                & Física Experimental B                                 & DF                  \\
+%             \cline{2-7}
+%             & Calculo 3                               & DM                      & $\leftarrow$                   & 3                                & Calculo 3                                             & DM                  \\
+%             \cline{2-7}
+
+%             & Estruturas de Dados                     & DC                      & $\leftarrow$                   & 2                                & Algoritmos e Estruturas de Dados 1                    & DC                  \\
+%             \cline{2-7}
+%             & Circuitos Elétricos                     & DC                      & $\leftarrow$                   & 4                                & Circuitos Elétricos                                   & DC                  \\
+%             \sline
+
+%             \multirow{6}{*}{4}               & Organização e Recuperação da Informação & DC                      & $\leftarrow$                   & 5                                & Organização e Recuperação da Informação & DC \\
+%             \cline{2-7}
+%             % & Mecânica dos Sólidos Elementar & DEMa & 9 & Mecânica dos Sólidos Elementar$\dagger$ & DEMa \\
+%             & Algebra Linear 1                        & DM                      & $\leftarrow$                   & 2                                & Algebra Linear 1                                      & DM                  \\
+%             \cline{2-7}
+%             & Calculo Numerico                        & DM                      & $\leftarrow$                   & 4                                & Calculo Numerico                                      & DM                  \\
+%             \cline{2-7}
+%             & Arquitetura e Org. de Computadores 1    & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftarrow$} & \multirow{2}{*}{3} & \multirow{2}{*}{Arquitetura e Org. de Computadores 1} & \multirow{2}{*}{DC} \\
+%             & Lab. de Arquitetura e Org. de Computadores 1 & \multicolumn{1}{c|}{DC} & \\
+%             \cline{2-7}
+%             & Projeto e Análise de Algoritmos         & DC                      & $\leftarrow$                   & 4                                & Projeto e Análise de Algoritmos & DC \\
+%             % & Fenômenos de Transporte 6 & DEQ & 9 & Fenômenos de Transporte 6$\dagger$ & DEQ \\
+%             \sline
+%         \end{tabular}
+%     \end{table}
+
+%     \begin{table}[htbp]
+%         \centering
+%         \caption{Disciplinas da grade nova que são dispensadas por ($\leftarrow$) disciplinas da grade antiga (II)}
+%         \label{tab:dispensa2}
+%         \begin{tabular}{clccclc}
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multicolumn{3}{c}{\textbf{Matriz Vigente (ano: 2006)}} & & \multicolumn{3}{c}{\textbf{Matriz em Processo de Reformulação}} \\
+%             \multicolumn{3}{c}{Disciplina/atividade curricular} & & \multicolumn{3}{c}{Disciplina/atividade curricular} \\
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}}               & \textbf{Depto}          & \multirow{2}{*}{\textbf{Rel.}} & \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}} & \textbf{Depto} \\
+%             &                                              & \textbf{Ofertante}      &                                &                                  &                                          & \textbf{Ofertante}  \\
+%             \specialrule{.1em}{.05em}{.05em}
+
+%             \multirow{6}{*}{5}               & Arquitetura e Org. de Computadores 2         & DC                      & $\leftarrow$                   & 4                                & Arquitetura e Org. de Computadores 2 & DC \\
+%             \cline{2-7}
+%             % & Lab. de Arquitetura e Org. de Computadores 2 & DC & 1 & Introdução ao Pensamento Algorítmico & DC \\
+%             & Matemática Computacional                     & DC                      & $\leftarrow$                   & 8                                & Otimização Matemática                    & DC                  \\
+%             \cline{2-7}
+%             % & Física 4 & DF & 9 & Física 4$\dagger$ & DF \\
+%             & Introdução aos Sistemas de Informação        & DC                      & $\leftarrow$                   & 4                                & Engenharia de Software 1 & DC \\
+%             \cline{2-7}
+%             & Circuitos Eletrônicos                        & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftarrow$}  & \multirow{2}{*}{5} & \multirow{2}{*}{Circuitos Eletrônicos 1} & \multirow{2}{*}{DC} \\
+%             & Lab. de Circuitos Eletrônicos & \multicolumn{1}{c|}{DC} \\
+%             \cline{2-7}
+%             & Paradigmas de Ling. de Programação           & DC                      & $\leftarrow$                   & --                               & Paradigmas de Ling. de Programação & DC \\
+%             \sline
+
+%             % TODO: Diferenciar optativas humanas/profissionalizantes
+%             \multirow{4}{*}{6}               & Microcontroladores e Aplicações              & DC                      & $\leftarrow$                   & 7                                & Proj. de Sist. Comput. Embarcados    & DC \\
+%             \cline{2-7}
+%             % & Lab. de Microcontroladores e Aplicações \\
+%             & Linguagens Formais e Autômatos               & DC                      & $\leftarrow$                   & --                               & Teoria da Computação                     & DC                  \\
+%             \cline{2-7}
+%             & Engenharia de Software 1                     & DC                      & $\leftarrow$                   & --                               & Engenharia de Software 2                 & DC                  \\
+%             \cline{2-7}
+%             % & Economia de Empresas & DEP & 7 & Economia de Empresas$\dagger$ & DEP \\
+%             % & Análise de Sinais e Sistemas & DC & $\leftarrow$ & 5 & Processamento de Sinais Digitais & DC \\
+%             \cline{2-7}
+%             & Bancos de Dados                              & DC                      & $\leftarrow$                   & 6                                & Bancos de Dados                          & DC                  \\
+%             % \cline{2-7}
+%             % & Sistemas Operacionais 1 & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\rightarrow$} & \multirow{2}{*}{5} & \multirow{2}{*}{Sistemas Operacionais 1} & \multirow{2}{*}{DC} \\
+%             % (7) & Sistemas Operacionais 2 & \multicolumn{1}{c|}{DC} \\
+
+%             % & Sistemas Operacionais 1 \\
+
+%             \sline
+
+%             % \multirow{7}{*}{7} & Análise de Investimentos & DEP & 7 & Análise de Investimentos* & DEP \\
+%             % \multirow{7}{*}{7} & Sistemas Operacionais 2 & DC & $\leftarrow$ & 8 & Programação Paralela e Distribuida & DC \\
+%             \multirow{6}{*}{7}               & Engenharia de Software 2                     & DC                      & $\leftarrow$                   & --                               & Arquitetura de Software e Padrões & DC \\
+%             \cline{2-7}
+%             & Controle e Servomecanismo                    & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftarrow$} & \multirow{2}{*}{5} & \multirow{2}{*}{Controle 1} & \multirow{2}{*}{DC} \\
+%             & Lab. de Controle e Servomecanismo & \multicolumn{1}{c|}{DC} \\
+%             \cline{2-7}
+%             & Construção de Compiladores 1                 & DC                      & $\leftarrow$                   & --                               & Compiladores                             & DC                  \\
+%             \cline{2-7}
+%             % & Lab. de Bancos de Dados \\
+%             & Tecnologia e Sociedade                       & DS                      & $\leftarrow$                   & --                               & Tecnologia e Sociedade                   & DS                  \\
+%             \cline{2-7}
+%             % & Planejamento e Gerenciamento de Sistemas de Informação \\
+%             & Tecnologia e Comunicação de Dados            & DC                      & $\leftarrow$                   & --                               & Tecnologias de Comunicação    & DC \\
+%             \sline
+
+%             % \multirow{4}{*}{8} & Proj. e Manuf. Assist. por Computador & DC & N/A & Proj. e Manuf. Assist. por Computador* & DC \\
+%             \multirow{3}{*}{8}               & Inteligência Artificial                      & DC                      & $\leftarrow$                   & 7                                & Inteligência Artificial & DC \\
+%             \cline{2-7}
+%             % & Sistemas de Integração e Automação Industrial & DC & N/A & Sistemas de Integração e Automação Industrial* & DC \\
+%             & Metodologia Científica e Gerenc. de Projetos & DC                      & $\leftarrow$                   & 8                                & Metodologia Científica & DC \\
+%             \cline{2-7}
+%             % & Computação Gráfica & DC & N/A & Computação Gráfica* & DC \\
+%             & Redes de Computadores                        & DC                      & $\leftarrow$                   & 6                                & Redes de Computadores                    & DC                  \\
+%             \sline
+
+%             9                                & Sistemas Distribuídos                        & DC                      & $\leftarrow$                   & 7                                & Sistemas Distribuídos                    & DC                  \\
+%             % \hline
+
+%             % \multirow{2}{*}{10} & Teoria das Organizações & DEP & 9 & Teoria das Organizações$\dagger$ & DEP \\
+%             % & Materiais e Ambiente & DEMa & 9 & Materiais e Ambiente$\dagger$ & DEMa \\
+%             \specialrule{.1em}{.05em}{.05em}
+%         \end{tabular}
+%     \end{table}
+% \end{landscape}
+
+
+
+
+
+% Considerando essas equivalências e dispensas, os Quadros~\ref{tab:migracao3}~e~\ref{tab:migracao5} apresentam as disciplinas que deverão ser cursadas pelos estudantes dos 3º e 5º períodos respectivamente, caso optem pela migração. Ressalta-se que os estudantes que não estejam no perfil devem avaliar individualmente as condições para a migração.
+
+
+% \begin{landscape}
+%     \begin{table}[htbp]
+%         \centering
+%         \caption{Disciplinas dispensadas ($\rightarrow$) e que precisam ser cursadas ($\Rightarrow$) pelos estudantes do 3º período}
+%         \label{tab:migracao3}
+%         \begin{tabular}{clccclc}
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multicolumn{3}{c}{\textbf{Matriz em Processo de Reformulação}} & & \multicolumn{3}{c}{\textbf{Matriz Vigente (ano: 2006)}} \\
+%             \multicolumn{3}{c}{Disciplina/atividade curricular} & & \multicolumn{3}{c}{Disciplina/atividade curricular} \\
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}}         & \textbf{Depto}     & \multirow{2}{*}{\textbf{Rel.}} & \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}} & \textbf{Depto} \\
+%             &                                        & \textbf{Ofertante} &                                &                                  &                                        & \textbf{Ofertante} \\
+%             \specialrule{.1em}{.05em}{.05em}
+
+%             \multirow{5}{*}{1}
+%             & Cálculo Diferencial e Integral 1       & DM                 & $\Rightarrow$                  &                                  & \textbf{Cursar}                        &                    \\
+%             \cline{2-7}
+%             & Geometria Analítica                    & DM                 & $\rightarrow$                  & 1                                & Geometria Analítica                    & DM                 \\
+%             \cline{2-7}
+%             % & Fundamentos de Química & DQ & 9 & Fundamentos de Química$\dagger$ & DQ \\ % $\dagger$ = ELETIVA
+%             % & Introdução à Lógica \\
+%             % & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi & 7 & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi \\
+%             & Construção de Algoritmos e Programação & DC                 & $\rightarrow$                  & 1                                & Construção de Algoritmos e Programação & DC \\
+%             \cline{2-7}
+%             & Introdução ao Pensamento Algorítmico   & DC                 & $\Rightarrow$                  &                                  & \textbf{Cursar}                        &                    \\
+%             \cline{2-7}
+%             & Lógica Digital                         & DC                 & $\Rightarrow$                  &                                  & \textbf{Cursar}                        &                    \\
+%             \sline
+
+%             \multirow{7}{*}{2}
+%             & Cálculo 2                              & DM                 & $\rightarrow$                  & 2                                & Cálculo 2                              & DM                 \\
+%             \cline{2-7}
+%             & Algebra Linear 1                       & DC                 & $\Rightarrow$                  &                                  & \textbf{Cursar}                        &                    \\
+%             \cline{2-7}
+%             & Física 1                               & DF                 & $\rightarrow$                  & 1                                & Física 1                               & DF                 \\
+%             \cline{2-7}
+%             & Física Experimental A                  & DF                 & $\rightarrow$                  & 2                                & Física Experimental A                  & DF                 \\
+%             \cline{2-7}
+%             & Algoritmos e Estruturas de Dados 1     & DC                 & $\Rightarrow$                  &                                  & \textbf{Cursar}                        &                    \\
+%             \cline{2-7}
+%             & Programação Orientada a Objetos        & DC                 & $\rightarrow$                  & 2                                & Programação de Computadores            & DC                 \\
+%             \cline{2-7}
+%             & Sistemas Digitais                      & DC                 & $\Rightarrow$                  &                                  & \textbf{Cursar}                        &                    \\
+%             \sline
+%         \end{tabular}
+%     \end{table}
+% \end{landscape}
+
+% \begin{landscape}
+%     \begin{table}[htbp]
+%         \centering
+%         \caption{Disciplinas dispensadas ($\rightarrow$) e que precisam ser cursadas ($\Rightarrow$) pelos estudantes do 5º período}
+%         \label{tab:migracao5}
+%         \begin{tabular}{clccclc}
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multicolumn{3}{c}{\textbf{Matriz em Processo de Reformulação}} & & \multicolumn{3}{c}{\textbf{Matriz Vigente (ano: 2006)}} \\
+%             \multicolumn{3}{c}{Disciplina/atividade curricular} & & \multicolumn{3}{c}{Disciplina/atividade curricular} \\
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}}                        & \textbf{Depto}      & \multirow{2}{*}{\textbf{Rel.}} & \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}} & \textbf{Depto} \\
+%             &                                                       & \textbf{Ofertante}  &                                &                                  &                                              & \textbf{Ofertante}     \\
+%             \specialrule{.1em}{.05em}{.05em}
+
+%             \multirow{6}{*}{1}
+%             & Cálculo Diferencial e Integral 1                      & DM                  & $\Rightarrow$                  &                                  & \textbf{Cursar}                              &                        \\
+%             \cline{2-7}
+%             & Geometria Analítica                                   & DM                  & $\rightarrow$                  & 1                                & Geometria Analítica                          & DM                     \\
+%             \cline{2-7}
+%             % & Fundamentos de Química & DQ & 9 & Fundamentos de Química$\dagger$ & DQ \\ % $\dagger$ = ELETIVA
+%             % & Introdução à Lógica \\
+%             % & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi & 7 & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi \\
+%             & Construção de Algoritmos e Programação                & DC                  & $\rightarrow$                  & 1                                & Construção de Algoritmos e Programação & DC \\
+%             \cline{2-7}
+%             & Introdução ao Pensamento Algorítmico                  & DC                  & $\Rightarrow$                  &                                  & \textbf{Cursar}                              &                        \\
+%             \cline{2-7}
+%             & \multirow{2}{*}{Lógica Digital}                       & \multirow{2}{*}{DC} & \multirow{2}{*}{$\rightarrow$} & \multicolumn{1}{|c}{3} & Circuitos Digitais & \multicolumn{1}{c}{DC}  \\
+%             &                                                       &                     &                                & \multicolumn{1}{|c}{3}           & Laboratório de Circuitos Digitais            & \multicolumn{1}{c}{DC} \\
+%             \sline
+
+%             \multirow{7}{*}{2}
+%             & Cálculo 2                                             & DM                  & $\rightarrow$                  & 2                                & Cálculo 2                                    & DM                     \\
+%             \cline{2-7}
+%             & Algebra Linear 1                                      & DM                  & $\rightarrow$                  & 4                                & Algebra Linear 1                             & DM                     \\
+%             \cline{2-7}
+%             & Física 1                                              & DF                  & $\rightarrow$                  & 1                                & Física 1                                     & DF                     \\
+%             \cline{2-7}
+%             & Física Experimental A                                 & DF                  & $\rightarrow$                  & 2                                & Física Experimental A                        & DF                     \\
+%             \cline{2-7}
+%             & Algoritmos e Estruturas de Dados 1                    & DC                  & $\rightarrow$                  & 3                                & Estruturas de Dados                          & DC                     \\
+%             \cline{2-7}
+%             & Programação Orientada a Objetos                       & DC                  & $\rightarrow$                  & 2                                & Programação de Computadores                  & DC                     \\
+%             \cline{2-7}
+%             & Sistemas Digitais                                     & DC                  & $\Rightarrow$                  &                                  & \textbf{Cursar}                              &                        \\
+%             \sline
+
+%             \multirow{8}{*}{3}
+%             & Calculo 3                                             & DM                  & $\rightarrow$                  & 3                                & Calculo 3                                    & DM                     \\
+%             \cline{2-7}
+%             & Séries e Equações Diferenciais                        & DM                  & $\rightarrow$                  & 2                                & Séries e Equações Diferenciais & DM \\
+%             & Física 3                                              & DF                  & $\rightarrow$                  & 3                                & Física 3                                     & DF                     \\
+%             \cline{2-7}
+%             & Física Experimental B                                 & DF                  & $\rightarrow$                  & 3                                & Física Experimental B                        & DF                     \\
+%             \cline{2-7}
+%             \cline{2-7}
+%             & Algoritmos e Estrutura de Dados 2                     & DC                  & $\Rightarrow$                  &                                  & \textbf{Cursar}                              &                        \\
+%             \cline{2-7}
+%             & \multirow{2}{*}{Arquitetura e Org. de Computadores 1} & \multirow{2}{*}{DC} & \multirow{2}{*}{$\rightarrow$} & \multicolumn{1}{|c}{4} & Arquitetura e Org. de Computadores 1   & DC \\
+%             &                                                       &                     &                                & \multicolumn{1}{|c}{4}           & Lab. de Arquitetura e Org. de Computadores 1 & DC                     \\
+%             \cline{2-7}
+%             & Seminários 1                                          & DC                  & $\rightarrow$                  & 2                                & Introdução à Engenharia                      & DC                     \\
+
+%             \sline
+%             \multirow{7}{*}{4}
+%             & Probabilidade e Estatistica                           & DEs                 & $\rightarrow$                  & 2                                & Probabilidade e Estatistica                  & DEs                    \\
+%             \cline{2-7}
+%             & Cálculo Numérico                                      & DM                  & $\rightarrow$                  & 4                                & Cálculo Numérico                             & DM                     \\
+%             \cline{2-7}
+%             & Circuitos Elétricos                                   & DC                  & $\rightarrow$                  & 3                                & Circuitos Elétricos                          & DC                     \\
+%             \cline{2-7}
+%             & Projeto e Análise de Algoritmos                       & DC                  & $\rightarrow$                  & 4                                & Projeto e Análise de Algoritmos & DC \\
+%             \cline{2-7}
+%             & Arquitetura e Org. de Computadores 2                  & DC                  & $\Rightarrow$                  &                                  & \textbf{Cursar}                              &                        \\
+%             \cline{2-7}
+%             & Engenharia de Software 1                              & DC                  & $\Rightarrow$                  &                                  & \textbf{Cursar}                              &                        \\
+%             \cline{2-7}
+%             & Sistemas Dinâmicos                                    & DC                  & $\Rightarrow$                  &                                  & \textbf{Cursar}                              &                        \\
+%             \sline
+%         \end{tabular}
+%     \end{table}
+% \end{landscape}
+
+% \ifdefined \ANOTACOES %Esta tabela não deve aparecer na versão final, só serve para darmos futuras dispensas para alunos da grande antiga quando começarem a cursar disciplinas novas.
+
+% Nos Quadros~\ref{tab:equivalencia1} e~\ref{tab:equivalencia2} são apresentadas as relações de equivalência e dispensa entre as disciplinas das grades.
+
+% \begin{landscape}
+%     \begin{table}[htbp]
+%         \centering
+%         \caption{Equivalências ($\leftrightarrow$) e dispensas ($\rightarrow$/$\leftarrow$) entre disciplinas das matrizes curriculares (I)}
+%         \label{tab:equivalencia1}
+%         \begin{tabular}{clccclc}
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multicolumn{3}{c}{\textbf{Matriz Vigente (ano: 2006)}} & & \multicolumn{3}{c}{\textbf{Matriz em Processo de Reformulação}} \\
+%             \multicolumn{3}{c}{Disciplina/atividade curricular} & & \multicolumn{3}{c}{Disciplina/atividade curricular} \\
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}}          & \textbf{Depto}          & \multirow{2}{*}{\textbf{Rel.}} & \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}} & \textbf{Depto} \\
+%             &                                         & \textbf{Ofertante}      &                                    &                                  &                                                       & \textbf{Ofertante}  \\
+%             \specialrule{.1em}{.05em}{.05em}
+
+%             \multirow{4}{*}{1}               & Geometria Analítica                     & DM                      & $\leftrightarrow$                  & 1                                & Geometria Analítica & DM \\
+%             \cline{2-7}
+%             & Física 1                                & DF                      & $\leftrightarrow$                  & 2                                & Física 1                                              & DF                  \\
+%             \cline{2-7}
+%             % & Fundamentos de Química & DQ & 9 & Fundamentos de Química$\dagger$ & DQ \\ % $\dagger$ = ELETIVA
+%             % & Introdução à Lógica \\
+%             % & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi & 7 & Introdução à Lingua Brasileira de Sinais$\ddagger$ & DPsi \\
+%             & Construção de Algoritmos e Programação  & DC                      & $\leftrightarrow$                  & 1                                & Construção de Algoritmos e Programação & DC \\
+%             \cline{2-7}
+%             & Cálculo 1                               & DM                      & $\leftarrow$                       & 1                                & Cálculo Diferencial e Integral 1                      & DM                  \\
+%             \sline
+
+%             \multirow{6}{*}{2}               & Física Experimental A                   & DF                      & $\leftrightarrow$                  & 2                                & Física Experimental A & DF \\
+%             \cline{2-7}
+%             % & Física 2 & DF & 9 & Física 2$\dagger$ & DF \\
+%             & Programação de Computadores             & DC                      & $\leftrightarrow$                  & 2                                & Programação Orientada a Objetos & DC \\
+%             \cline{2-7}
+%             & Cálculo 2                               & DM                      & $\leftrightarrow$                  & 2                                & Cálculo 2                                             & DM                  \\
+%             \cline{2-7}
+%             & Introdução à Engenharia                 & DC                      & $\leftrightarrow$                  & 3                                & Seminários 1                                          & DC                  \\
+%             \cline{2-7}
+%             & Séries e Equações Diferenciais          & DM                      & $\leftrightarrow$                  & 3                                & Séries e Equações Diferenciais & DM \\
+%             \cline{2-7}
+%             % & Estruturas Discretas \\
+%             % & Sociologia Industrial e do Trabalho & DS & 7 & Sociologia Industrial e do Trabalho$\dagger$ & DS \\
+%             & Probabilidade e Estatistica             & DEs                     & $\leftrightarrow$                  & 4                                & Probabilidade e Estatistica & DEs \\
+%             \sline
+
+%             \multirow{7}{*}{3}               & Física 3                                & DF                      & $\leftrightarrow$                  & 3                                & Física 3                                              & DF                  \\
+%             \cline{2-7}
+%             % & Mecânica Aplicada 1 & DECiv & 9 & Mecânica Aplicada 1* & DECiv \\
+%             & Circuitos Digitais                      & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftrightarrow$} & \multirow{2}{*}{1} & \multirow{2}{*}{Lógica Digital} & \multirow{2}{*}{DC} \\
+%             & Laboratório de Circuitos Digitais & \multicolumn{1}{c|}{DC} & & \\
+%             \cline{2-7}
+%             & Física Experimental B                   & DF                      & $\leftrightarrow$                  & 3                                & Física Experimental B                                 & DF                  \\
+%             \cline{2-7}
+%             & Calculo 3                               & DM                      & $\leftrightarrow$                  & 3                                & Calculo 3                                             & DM                  \\
+%             \cline{2-7}
+
+%             & Estruturas de Dados                     & DC                      & $\leftrightarrow$                  & 2                                & Algoritmos e Estruturas de Dados 1                    & DC                  \\
+%             \cline{2-7}
+%             & Circuitos Elétricos                     & DC                      & $\leftrightarrow$                  & 4                                & Circuitos Elétricos                                   & DC                  \\
+%             \sline
+
+%             \multirow{6}{*}{4}               & Organização e Recuperação da Informação & DC                      & $\leftrightarrow$                  & 5 & Organização e Recuperação da Informação & DC \\
+%             \cline{2-7}
+%             % & Mecânica dos Sólidos Elementar & DEMa & 9 & Mecânica dos Sólidos Elementar$\dagger$ & DEMa \\
+%             & Algebra Linear 1                        & DM                      & $\leftrightarrow$                  & 2                                & Algebra Linear 1                                      & DM                  \\
+%             \cline{2-7}
+%             & Calculo Numerico                        & DM                      & $\leftrightarrow$                  & 4                                & Calculo Numerico                                      & DM                  \\
+%             \cline{2-7}
+%             & Arquitetura e Org. de Computadores 1    & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftrightarrow$} & \multirow{2}{*}{3} & \multirow{2}{*}{Arquitetura e Org. de Computadores 1} & \multirow{2}{*}{DC} \\
+%             & Lab. de Arquitetura e Org. de Computadores 1 & \multicolumn{1}{c|}{DC} & \\
+%             \cline{2-7}
+%             & Projeto e Análise de Algoritmos         & DC                      & $\leftrightarrow$                  & 4                                & Projeto e Análise de Algoritmos & DC \\
+%             % & Fenômenos de Transporte 6 & DEQ & 9 & Fenômenos de Transporte 6$\dagger$ & DEQ \\
+%             \sline
+%         \end{tabular}
+%     \end{table}
+
+%     \begin{table}[htbp]
+%         \centering
+%         \caption{Equivalências ($\leftrightarrow$) e dispensas ($\rightarrow$/$\leftarrow$) entre disciplinas das matrizes curriculares (II)}
+%         \label{tab:equivalencia2}
+%         \begin{tabular}{clccclc}
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multicolumn{3}{c}{\textbf{Matriz Vigente (ano: 2006)}} & & \multicolumn{3}{c}{\textbf{Matriz em Processo de Reformulação}} \\
+%             \multicolumn{3}{c}{Disciplina/atividade curricular} & & \multicolumn{3}{c}{Disciplina/atividade curricular} \\
+%             \specialrule{.1em}{.05em}{.05em}
+%             \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}}               & \textbf{Depto}          & \multirow{2}{*}{\textbf{Rel.}} & \multirow{2}{*}{\textbf{Perfil}} & \multirow{2}{*}{\textbf{Nome}} & \textbf{Depto} \\
+%             &                                              & \textbf{Ofertante}      &                                    &                                  &                                          & \textbf{Ofertante}  \\
+%             \specialrule{.1em}{.05em}{.05em}
+
+%             \multirow{5}{*}{5}               & Arquitetura e Org. de Computadores 2         & DC                      & $\leftrightarrow$                  & 4                                & Arquitetura e Org. de Computadores 2 & DC \\
+%             \cline{2-7}
+%             % & Lab. de Arquitetura e Org. de Computadores 2 & DC & 1 & Introdução ao Pensamento Algorítmico & DC \\
+%             & Matemática Computacional                     & DC                      & $\leftrightarrow$                  & 8                                & Otimização Matemática                    & DC                  \\
+%             \cline{2-7}
+%             % & Física 4 & DF & 9 & Física 4$\dagger$ & DF \\
+%             & Introdução aos Sistemas de Informação        & DC                      & $\leftrightarrow$                  & 4                                & Engenharia de Software 1 & DC \\
+%             \cline{2-7}
+%             & Circuitos Eletrônicos                        & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftrightarrow$} & \multirow{2}{*}{5} & \multirow{2}{*}{Circuitos Eletrônicos 1} & \multirow{2}{*}{DC} \\
+%             & Lab. de Circuitos Eletrônicos & \multicolumn{1}{c|}{DC} \\
+%             \cline{2-7}
+%             & Paradigmas de Ling. de Programação           & DC                      & $\leftrightarrow$                  & N/A                              & Paradigmas de Ling. de Programação & DC \\
+%             \sline
+
+%             % TODO: Diferenciar optativas humanas/profissionalizantes
+%             \multirow{5}{*}{6}               & Microcontroladores e Aplicações              & DC                      & $\leftrightarrow$                  & 7                                & Proj. de Sist. Comput. Embarcados    & DC \\
+%             \cline{2-7}
+%             % & Lab. de Microcontroladores e Aplicações \\
+%             & Linguagens Formais e Autômatos               & DC                      & $\leftrightarrow$                  & N/A                              & Teoria da Computação                     & DC                  \\
+%             \cline{2-7}
+%             & Engenharia de Software 1                     & DC                      & $\leftrightarrow$                  & N/A                              & Engenharia de Software 2                 & DC                  \\
+%             \cline{2-7}
+%             % & Economia de Empresas & DEP & 7 & Economia de Empresas$\dagger$ & DEP \\
+%             % & Análise de Sinais e Sistemas & DC & $\leftrightarrow$ & 5 & Processamento de Sinais Digitais & DC \\
+%             \cline{2-7}
+%             & Bancos de Dados                              & DC                      & $\leftrightarrow$                  & 6                                & Bancos de Dados                          & DC                  \\
+%             \cline{2-7}
+%             & Sistemas Operacionais 1                      & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\rightarrow$}     & \multirow{2}{*}{5} & \multirow{2}{*}{Sistemas Operacionais 1} & \multirow{2}{*}{DC} \\
+%             (7) & Sistemas Operacionais 2 & \multicolumn{1}{c|}{DC} \\
+
+%             % & Sistemas Operacionais 1 \\
+
+%             \sline
+
+%             % \multirow{7}{*}{7} & Análise de Investimentos & DEP & 7 & Análise de Investimentos* & DEP \\
+%             % \multirow{7}{*}{7} & Sistemas Operacionais 2 & DC & $\leftrightarrow$ & 8 & Programação Paralela e Distribuida & DC \\
+%             \multirow{6}{*}{7}               & Engenharia de Software 2                     & DC                      & $\leftrightarrow$                  & N/A                              & Arquitetura de Software e Padrões & DC \\
+%             \cline{2-7}
+%             & Controle e Servomecanismo                    & \multicolumn{1}{c|}{DC} & \multirow{2}{*}{$\leftrightarrow$} & \multirow{2}{*}{5} & \multirow{2}{*}{Controle 1} & \multirow{2}{*}{DC} \\
+%             & Lab. de Controle e Servomecanismo & \multicolumn{1}{c|}{DC} \\
+%             \cline{2-7}
+%             & Construção de Compiladores 1                 & DC                      & $\leftrightarrow$                  & N/A                              & Compiladores                             & DC                  \\
+%             \cline{2-7}
+%             % & Lab. de Bancos de Dados \\
+%             & Tecnologia e Sociedade                       & DS                      & $\leftrightarrow$                  & 7                                & Tecnologia e Sociedade                   & DS                  \\
+%             \cline{2-7}
+%             % & Planejamento e Gerenciamento de Sistemas de Informação \\
+%             & Tecnologia e Comunicação de Dados            & DC                      & $\leftrightarrow$                  & 7                                & Tecnologias de Comunicação    & DC \\
+%             \sline
+
+%             % \multirow{4}{*}{8} & Proj. e Manuf. Assist. por Computador & DC & N/A & Proj. e Manuf. Assist. por Computador* & DC \\
+%             \multirow{3}{*}{8}               & Inteligência Artificial                      & DC                      & $\leftrightarrow$                  & 7                                & Inteligência Artificial & DC \\
+%             \cline{2-7}
+%             % & Sistemas de Integração e Automação Industrial & DC & N/A & Sistemas de Integração e Automação Industrial* & DC \\
+%             & Metodologia Científica e Gerenc. de Projetos & DC                      & $\leftrightarrow$                  & 8                                & Metodologia Científica & DC \\
+%             \cline{2-7}
+%             % & Computação Gráfica & DC & N/A & Computação Gráfica* & DC \\
+%             & Redes de Computadores                        & DC                      & $\leftrightarrow$                  & 6                                & Redes de Computadores                    & DC                  \\
+%             \sline
+
+%             9                                & Sistemas Distribuidos                        & DC                      & $\leftrightarrow$                  & 7                                & Sistemas Distribuidos                    & DC                  \\
+%             % \hline
+
+%             % \multirow{2}{*}{10} & Teoria das Organizações & DEP & 9 & Teoria das Organizações$\dagger$ & DEP \\
+%             % & Materiais e Ambiente & DEMa & 9 & Materiais e Ambiente$\dagger$ & DEMa \\
+%             \specialrule{.1em}{.05em}{.05em}
+%         \end{tabular}
+%     \end{table}
+% \end{landscape}
+
+% \fi %Esta tabela não deve aparecer na versão final, só serve para darmos futuras dispensas para alunos da grande antiga quando começarem a cursar disciplinas novas.
+
+% \doublespacing
+
+
+% %\section{Formas de Avaliação da Aprendizagem}
+
+% % A UFSCar, por meio do seu Regimento Geral dos Cursos de Graduação, estabeleceu normas para a sistemática de avaliação do desempenho dos estudantes. A avaliação contínua propicia o acompanhamento da evolução do estudante, bem como por meio desta se torna possível diagnosticar o conhecimento prévio dos estudantes, refletir sobre os resultados obtidos e construir estratégias de ensino individuais ou coletivas de superação das dificuldades apresentadas.
+
+% % \begin{quote} Art. 2o~: A avaliação deve permear todo o processo educativo, desempenhando diferentes funções, como, dentre outras, as de diagnosticar o conhecimento prévio dos estudantes, os seus interesses	e necessidades; detectar dificuldades na aprendizagem no momento em que ocorrem, abrindo a possibilidade do estabelecimento de planos imediatos de superação; oferecer uma visão do desempenho individual, em relação ao do grupo, ou do desempenho de um grupo como um todo.
+% % \end{quote}
+
+% % \begin{quote}
+% % Art. 3o: A avaliação deve oferecer subsídios à análise do processo ensino- aprendizagem aos corpos docente e discente, nos seguintes termos:
+
+% % I - Para os professores, a avaliação deve permitir recolher indícios dos avanços, dificuldades ou entraves no processo ensino-aprendizagem, nos âmbitos coletivo e individual do corpo discente, tendo em vista a consecução dos objetivos específicos da disciplina/atividade curricular, permitindo-lhes a tomada de decisões quanto à sequência e natureza das atividades didáticas, no sentido de incluir, de fato, os estudantes no processo ensino-aprendizagem, bem como de contribuir para que a interpretação dos resultados atinja gradualmente níveis de complexidade maiores e a sua incorporação na dinâmica do processo ensino-aprendizagem assuma papel cada vez mais relevante.
+% % \end{quote}
+
+% % Por outra parte, torna-se necessário proporcionar aos estudantes vários momentos de avaliação, multiplicando as suas oportunidades de aprendizagem e diversificando os métodos utilizados. Assim, permite-se que os estudantes apliquem os conhecimentos que adquirem, exercitem e controlem eles próprios a aprendizagem e o desenvolvimento das competências, recebendo feedback frequente sobre as dificuldades e progressos alcançados.
+
+% % O Regimento prevê ainda a realização de procedimentos e/ou aplicação de instrumentos de avaliações em, pelo menos, três datas distribuídas no período letivo para cada disciplina/atividade curricular. Serão considerados aprovados os estudantes que obtiverem frequência igual ou superior a setenta e cinco por cento das aulas e desempenho mínimo equivalente à nota final igual ou superior a seis.
+
+% % A utilização de diferentes métodos e instrumentos de avaliação é recomendada. A escolha dos métodos e instrumentos de avaliação depende de vários fatores: das finalidades, do objeto de avaliação, da área disciplinar e nível de grau de conhecimento dos estudantes a que se aplicam, do tipo de atividade, do contexto, e dos próprios avaliadores. Portanto, propõe-se que, além da tradicional prova individual, outras formas de avaliação sejam consideradas sempre que possível, tais como:
+
+% % \begin{itemize}
+% %    \item Trabalhos individuais ou coletivos;
+% %    \item Elaboração de projetos, monografias,
+% %relatórios, seminários, exposições etc).
+% %\end{itemize}
+
+% % \begin{quote}
+% % Art. 5o: A avaliação do processo ensino-aprendizagem, no âmbito das disciplinas/atividades curriculares deve considerar a complexidade deste, decorrente dos inúmeros fatores nele intervenientes, tais como as particularidades dos indivíduos, a dinâmica individual/coletivo, a multiplicidade de conhecimentos a serem abordados e a diversidade de aspectos da realidade social a serem considerados para atingir o perfil definido para os egressos dos cursos.
+
+% % Art. 6o: A multiplicidade de aspectos envolvidos exige avaliação nas abordagens quantitativa e qualitativa com suas possibilidades e limites específicos, entendidas como complementares e utilizadas simultaneamente ou não.
+
+% % Art. 7o~: Os instrumentos de avaliação podem ser os mais variados, adequando-se à legislação e às normas vigentes, às especificidades das disciplinas/atividades, às funções atribuídas à avaliação nos diferentes momentos do processo ensino-aprendizagem.
+% % \end{quote}
+
+
+% % Por outra parte, o uso de testes não é desconsiderado, no entanto, a aplicação deve estar prevista nos planos de ensino das disciplinas/atividades curriculares. Utilizados regularmente com objetivos formativos, os testes podem funcionar como orientadores da aprendizagem, chamando a atenção do estudante para o que é considerado essencial. Devem, contudo, ser utilizados com moderação e complementados por outros métodos de avaliação.
+
+% % Outro aspecto relevante da Portaria GR/UFSCar no~522/06 se refere ao processo de avaliação complementar em substituição ao Regime Especial de Recuperação (RER). Assim, a avaliação complementar está prevista pelos seguintes Artigos:
+
+% % \begin{quote}
+% % Art. 14 O processo de avaliação complementar deverá ser realizado em período subsequente ao término do período regular de oferecimento da disciplina. São pressupostos para a realização da avaliação complementar de recuperação que:
+
+% % I- o estudante tenha obtido na disciplina/atividade curricular, no período letivo regular, nota final igual ou superior a cinco e frequência igual ou superior a setenta e cinco por cento.
+
+% % II- sejam estabelecidos prazos para que essa avaliação se inicie e se complete em consonância com o conjunto da sistemática de avaliação proposta para a disciplina/atividade curricular.
+
+% % III- o resultado dessa avaliação complementar seja utilizado na determinação	 da nova nota final do estudante, na disciplina/atividade curricular, segundo os critérios previstos na sistemática de avaliação, a qual definirá a sua aprovação ou não, conforme estabelecido no artigo 12.
+% % \end{quote}
+
+% % Art. 15: A realização da avaliação complementar a que se refere o artigo 14 pode prolongar-se até o trigésimo quinto dia letivo do período letivo subsequente, não devendo incluir atividades em horários coincidentes com outras disciplinas/atividades curriculares realizadas pelo estudante.
+
+% % Nesse projeto, propõem-se ainda a adoção de ações e procedimentos que contribuam para a avaliação geral da aprendizagem dos estudantes do Curso de Bacharelado em Engenharia de Computação:
+% % \begin{itemize}
+% %     \item Certificar a capacidade profissional de forma coletiva, além da individual;
+% %     \item Avaliar não apenas o conhecimento adquirido, mas também as competências profissionais;
+% %     \item Diagnosticar o uso funcional e % contextualizado dos conhecimentos.
+% % \end{itemize}
+
+
+\section{Integração Ensino, Pesquisa e Extensão}
+
+No âmbito deste projeto pedagógico, o termo ``ensino'' envolve atividades relacionadas ao processo de ensino/aprendizagem, fazendo com que o estudante adquira novos conhecimentos. O termo ``pesquisa'' se refere a atividades que produzem avanço no conhecimento científico, incluindo inovação. O termo ``extensão'' caracteriza atividades que transmitem o conhecimento gerado na UFSCar para a sociedade. Em um curso de excelência, a integração entre ensino, pesquisa e extensão é fundamental para que a universidade cumpra seu papel na sociedade.
+
+Com o ensino, a universidade desenvolve competências e habilidades no estudante, que quando formado, as utilizará na sociedade, melhorando-a. O ensino também fornece ao estudante a fundamentação teórica necessária para a realização de pesquisa, formando assim pesquisadores competentes.
+
+Com a pesquisa, promove-se um constante aperfeiçoamento dos professores, fazendo que seu conhecimento sobre um assunto seja aprofundado, culminando em um ensino de melhor qualidade. A pesquisa também gera conhecimento que pode ser transferido para resolução de problemas reais ou promover melhorias na sociedade.
+
+Com a extensão, obtém-se um contato mais próximo entre a universidade e a sociedade. O ensino é beneficiado, pois com a extensão é possível trazer para a universidade demandas reais da sociedade, que podem ser incorporadas aos componentes curriculares. Também beneficia a pesquisa, pois as demandas e oportunidades estimulam a produção de conhecimento que pode ser mais diretamente aplicado na sociedade, produzindo inovação.
+
+Cada componente curricular do curso de Engenharia de Computação proporciona um nível diferente de integração entre ensino, pesquisa e extensão.
+
+% \begin{table}[htbp]
+% \centering
+% \begin{tabular}{ccccc}
+% \specialrule{.1em}{.05em}{.05em}
+% \textbf{Componente curricular} & & \textbf{Ensino} & \textbf{Pesquisa} & \textbf{Extensão} \\
+% \specialrule{.1em}{.05em}{.05em}
+% Disciplinas & & X & &  \\
+% Eixos  & & X & &  \\
+% TCC & & X & X & X \\
+% Estágio & & X & & X \\
+% \specialrule{.1em}{.05em}{.05em}
+% \textbf{Atividades complementares} & & & & \\
+% \specialrule{.1em}{.05em}{.05em}
+% Empresa Jr. & & X & & X \\
+% ACIEPE & & X & X & X \\
+% PETs & & X & X & X \\
+% Monitorias & & X & & \\
+% IC & & X & X & \\
+% Outras & & & & \\
+% \specialrule{.1em}{.05em}{.05em}
+% \end{tabular}
+% \end{table}
+
+\subsection{Atividades de Pesquisa}
+
+No curso de Engenharia de Computação, a atividade de pesquisa é realizada de forma obrigatória no Trabalho de Conclusão de Curso (TCC) fomentando práticas de investigação científica. A base de conhecimento de pesquisa é fornecida ao estudante através da disciplina de Metodologia Científica, que fornece o embasamento para as disciplinas de TTC conforme sua afinidade temática, em conjunto com um docente orientador.
+
+Também, tem-se a possibilidade do estudante realizar pesquisas de Iniciação Científica, pois a UFSCar oferece aos estudantes de graduação, por meio da Coordenadoria de Iniciação Científica e Tecnológica, vinculada à Pró-Reitoria de Pesquisa, um programa de apoio a projetos de pesquisa em nível de graduação, identificado como Programa Unificado de Iniciação Científica e Tecnológica (PUICT), do qual fazem parte:
+\begin{itemize}
+    \item Programa Institucional de Bolsas de Iniciação Científica (PIBIC/CNPq/UFSCar);
+    \item Programa Institucional de Bolsas de Iniciação Científica nas Ações Afirmativas (PIBIC-AF/CNPq/UFSCar);
+    \item Programa Institucional de Bolsas de Iniciação em Desenvolvimento Tecnológico e Inovação (PIBITI/CNPq/UFSCar);
+    \item Programa Jovens Talentos para a Ciência (CAPES/CNPq).
+\end{itemize}
+
+Além do PUICT da UFSCar, os estudantes podem usufruir do programa de bolsas de iniciação científica da Fundação de Amparo à Pesquisa do Estado de São Paulo.
+
+As atividades de pesquisa desenvolvidas segundo esses programas são voltadas à absorção de interesses científicos manifestados pelos estudantes de graduação e estão sempre sob a supervisão de um docente pesquisador (orientador).
+
+A participação nessas atividades propicia não somente a aquisição de conhecimento, muitas vezes além das ementas curriculares, mas também gera estímulo à dedicação acadêmica. Sob outros pontos de vista, os programas de iniciação científica podem ser entendidos como um primeiro passo tanto para a formação de um futuro pesquisador como para a formação de um profissional mais dedicado à inovação.
+
+Estimula-se que o estudante realize projetos de Iniciação Científica ao se considerar as horas de dedicação a essa atividade como parte do cumprimento das Atividades Complementares.
+
+\subsection{Atividades de Extensão}
+
+
+As atividades de extensão são importantes não apenas como meio de difusão do conhecimento gerado na universidade, mas também como mecanismo de aproximação da realidade. De maneira mais explícita, os estudantes terão a oportunidade de participar de atividades de extensão organizadas pelos diversos canais internos da universidade.
+
+A UFSCar é também responsável por propiciar e estimular atividades voltadas à comunidade externa por meio de variadas modalidades definidas pela Pró-Reitoria de Extensão. É por meio de tais atividades que a UFSCar compromete-se com o fortalecimento de suas funções intrínsecas: produzir, sistematizar e difundir conhecimento, desenvolvendo suas atividades de pesquisa e ensino interligadas com as demandas dos setores externos. Para os discentes, essas atividades possibilitam adquirir progressivamente a confiança necessária para o exercício de suas competências profissionais, além de aproximá-lo de situações mais reais do cotidiano profissional ao cruzar as fronteiras que o mantêm em um ambiente puramente acadêmico.
+
+Dentre as várias iniciativas presentes na UFSCar, destacam-se o movimento das Empresas Juniores e os grupos de competição em Olimpíadas de Informática e Maratona de Programação.
+
+A Engenharia de Computação possui sua Empresa Júnior, compartilhada com o curso de Ciência da Computação, sediada no Departamento de Computação da UFSCar e que desenvolve diversos projetos junto a empresas da região e a comunidade acadêmica.
+
+Tal como acontece com as Atividades de Pesquisa, estimula-se que o graduando participe de tais atividades ao reverter em créditos necessários ao cumprimento de Atividades Complementares, as horas dedicadas à participação em atividades com propósitos extensionistas.

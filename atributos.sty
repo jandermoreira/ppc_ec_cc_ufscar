@@ -1,0 +1,61 @@
+%! Package = atributos
+%! Author = jander
+%! Date = 27/11/2022
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{atributos}[2022/11/27 Comandos básicos para armazenamento de atributos]
+
+\ExplSyntaxOn
+% \atributo_crie:nnn: Cria novo atributo e armazena de valor
+% #1: classe 
+% %2: atributo
+% #3: valor
+\cs_new:Npn \atributo_crie:nnn #1#2#3 {
+    \cs_if_exist:cTF { g_#1_#2_tl } {
+        \exp_args:Nnnx \msg_new:nnn { atributos } { atributo_existente } { Repetição~do~atributo~'#2'. }
+        \msg_fatal:nn { atributos } { atributo_existente }
+    } {
+        \tl_new:c { g_#1_#2_tl }
+        \tl_set:cn { g_#1_#2_tl } { #3 }
+    }
+}
+
+% \atributo_valor:nn: Retorna o valor de um atributo
+% #1: classe
+% #2: atributo
+\cs_new:Npn \atributo_valor:nn #1#2 {
+    \tl_use:c { g_#1_#2_tl }
+}
+
+\cs_new:Npn \atributo_existe:nnnn #1#2#3#4 {
+    \cs_if_exist:cTF { g_#1_#2_tl } { #3 } { #4 }
+}
+
+%%%%%%%% Comandos de documento
+
+% \NovoAtributo: Cria um atributo novo, com classe e atributo, juntamente
+% com associação de valor
+% #1: classe
+% #2: atributo
+% #3: valor
+\NewExpandableDocumentCommand{\NovoAtributo}{ m m +m }{
+    \atributo_crie:nnn { #1 } { #2 } { #3 }
+}
+
+% \Atributo: Retorna o valor de um atributo
+% #1: classe
+% %2: atributo
+\NewExpandableDocumentCommand{\Atributo}{ m m }{%
+    \atributo_valor:nn { #1 } { #2 }
+}
+
+% SeExisteAtributo: Expande parte V ou F dependendo se o atributo existir
+% #1: classe do atributo
+% #2: atributo
+% #3: código executado se o atributo existir
+% #3: código executado se o atributo não estiver definido
+\NewExpandableDocumentCommand{\SeExisteAtributo}{ m m +m +m }{%
+    \atributo_existe:nnnn { #1 } { #2 } { #3 } { #4 }
+}
+\ExplSyntaxOff
+

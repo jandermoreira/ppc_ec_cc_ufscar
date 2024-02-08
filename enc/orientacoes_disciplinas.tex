@@ -1,0 +1,783 @@
+%! Author = Jander Moreira
+%! Date = 21/03/2023
+
+\documentclass[12pt, oneside]{book}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+
+\usepackage{atributos, disciplinas, competencias, atividades}
+
+\usepackage{tcolorbox}
+\usepackage{paralist}
+\usepackage{geometry}
+\geometry{margin = 2cm}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage{listingsutf8}
+\usepackage{lstautogobble}
+\lstset{
+    autogobble = true,
+    language = {},
+    basicstyle = \sffamily\footnotesize\color{black!80},
+    tabsize = 2,
+    breaklines = true,
+    breakindent = 0pt,
+    breakatwhitespace = true,
+    upquote = true,
+    % framesep = 0pt,
+    rulesep = 0pt,
+    frame = single,
+    % linewidth = 0.95\linewidth,
+    xleftmargin = 0.5em,
+    xrightmargin = 0.5em,
+    columns = fullflexible,
+    literate=
+        {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+        {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+        {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+        {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+        {ã}{{\~a}}1 {õ}{{\~o}}1
+        {Ã}{{\~A}}1 {Õ}{{\~O}}1
+        {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+        {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+        {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+        {ç}{{\c c}}1 {Ç}{{\c C}}1
+        {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+        {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1
+        {ß}{{\ss}}1
+        {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+        {£}{{\pounds}}1
+        {«}{{\guillemotleft}}1
+        {»}{{\guillemotright}}1
+        {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+}
+
+\input{shared/1/1calculo1.tex}
+\input{shared/1/1ga.tex}
+\input{shared/4/4cap.tex}
+\input{shared/4/4ipa.tex}
+\input{shared/5/5ld.tex}
+\input{shared/1/1calculo2.tex}
+\input{shared/1/1algelin.tex}
+\input{shared/2/2fisica1.tex}
+\input{shared/2/2fisexpa.tex}
+\input{shared/4/4aed1.tex}
+\input{shared/4/4poo.tex}
+\input{shared/5/5sd.tex}
+\input{shared/1/1calculo3.tex}
+\input{shared/1/1sereqdif.tex}
+\input{shared/2/2fisica3.tex}
+\input{shared/2/2fisexpb.tex}
+\input{shared/4/4aed2.tex}
+\input{shared/5/5arq1.tex}
+\input{shared/8/8sem1.tex}
+\input{shared/1/1probest.tex}
+\input{shared/1/1calnum.tex}
+\input{shared/3/3circeletricos.tex}
+\input{shared/4/4paa.tex}
+\input{shared/5/5arq2.tex}
+\input{shared/6/6es1.tex}
+\input{shared/7/7sistdin.tex}
+\input{shared/3/3circeletronicos1.tex}
+\input{shared/4/4ori.tex}
+\input{shared/6/6so.tex}
+\input{shared/7/7controle1.tex}
+\input{shared/7/7psd.tex}
+\input{shared/3/3circeletronicos2.tex}
+\input{shared/6/6ia.tex}
+\input{shared/6/6bd.tex}
+\input{shared/7/7controle2.tex}
+\input{shared/7/7engsis.tex}
+\input{shared/5/5arqad.tex}
+\input{shared/7/7sistdist.tex}
+\input{shared/6/6rc.tex}
+\input{shared/7/7teccom.tex}
+\input{shared/7/7projsisemb.tex}
+\input{shared/4/4ppd.tex}
+\input{shared/6/6ihc.tex}
+\input{shared/7/7om.tex}
+\input{shared/8/8metcient.tex}
+\input{shared/8/8sem2.tex}
+\input{shared/8/8tcc.tex}
+\input{shared/8/8estagio-ec.tex}
+\input{shared/6/6am1.tex}
+\input{shared/6/6am2.tex}
+\input{shared/6/6asp.tex}
+\input{shared/6/6bdcd.tex}
+\input{shared/6/6cg.tex}
+\input{shared/6/6compiladores.tex}
+\input{shared/9/9controle.tex}
+\input{shared/4/4dw1.tex}
+\input{shared/4/4dw2.tex}
+\input{shared/4/4dm.tex}
+\input{shared/6/6devops.tex}
+\input{shared/9/9empreend.tex}
+\input{shared/6/6es2.tex}
+\input{shared/9/9musical.tex}
+\input{shared/9/9libras.tex}
+\input{shared/9/9robosautonomos.tex}
+\input{shared/6/6lm.tex}
+\input{shared/9/9robotica.tex}
+\input{shared/6/6md.tex}
+\input{shared/4/4plp.tex}
+\input{shared/6/6pde.tex}
+\input{shared/6/6pdi.tex}
+\input{shared/6/6pdi3dv.tex}
+\input{shared/6/6pvd.tex}
+\input{shared/4/4pooa.tex}
+\input{shared/9/9pmac.tex}
+\input{shared/6/6pibd.tex}
+\input{shared/9/9protsisdigan.tex}
+\input{shared/9/9sc.tex}
+\input{shared/9/9siai.tex}
+\input{shared/6/6tc.tex}
+\input{shared/9/9vc.tex}
+
+\tcbuselibrary{breakable, skins}
+\tcbset{
+    fonttitle = \bfseries,
+    fontupper = \small,
+    fontlower = \small,
+    coltitle = black,
+    colbacktitle = black!5,
+    colframe = black!10,
+    colback = white,
+    enhanced jigsaw,
+    breakable,
+}
+
+\NewDocumentCommand{\ApresentaCompetenciaAuxiliar}{ m m }{
+    \begin{tcolorbox}[
+        title = Competência geral \textsc{\Atributo{#1}{aspecto}},
+    % sidebyside,
+    % sidebyside align = top,
+    % lefthand width = 0.35\textwidth,
+    ]
+        \textbf{Competências específicas que devem ser contempladas}:\par
+        \begin{description}
+            \ExecuteLista{\Especifica}{#2}{
+                \item [\texttt{\Atributo{\Especifica}{sigla}}] \Atributo{\Especifica}{descricao}.
+            }
+        \end{description}
+
+        % \tcblower
+        \medskip
+        \textbf{Atividades sugeridas para atingir as competências}:\par
+        \begin{inparaenum}
+            [1)]
+            \ExecuteLista{\Atividade}{\Atributo{#1}{atividades}}{
+                \item \Atributo{\Atividade}{descricao}.
+            }
+        \end{inparaenum}
+    \end{tcolorbox}
+}
+
+\NewDocumentCommand{\ApresentaCompetenciaAuxiliarMono}{ m m }{
+    Aspecto \MakeUppercase{\Atributo{#1}{aspecto}}\par
+    \ExecuteLista{\Especifica}{#2}{
+        \Atributo{\Especifica}{sigla} \Atributo{\Especifica}{descricao}.\par
+    }
+}
+
+\NewDocumentCommand{\ApresentaCompetencia}{
+    > { \SplitArgument { 1 } { / } } m m
+}{
+    #2 #1
+}
+
+\newbox\copiarcolarbox
+\NewDocumentCommand{\ApresenteDisciplina}{ m }{
+    \subsection*{\Atributo{#1}{nome} -- \Atributo{#1}{codigo}}
+    \label{\Atributo{#1}{abreviacao}}
+    \addcontentsline{toc}{section}{\Atributo{#1}{nome} -- \Atributo{#1}{codigo}}
+    \begin{tcolorbox}[title = Objetivo]
+        \Atributo{#1}{objetivo}
+    \end{tcolorbox}
+    \begin{tcolorbox}[title = Ementa]
+        \Atributo{#1}{ementa}
+    \end{tcolorbox}
+
+    \SeExisteAtributo{#1}{competencias}{
+        \ExecuteLista{\Competencia}{\Atributo{#1}{competencias}}{%
+            \expandafter\ApresentaCompetencia\expandafter{\Competencia}{\ApresentaCompetenciaAuxiliar}
+        }
+        \begin{tcolorbox}[title = Metodologias e avaliações por competência]
+            \textbf{Metodologias que podem ser empregadas para atingir cada competência}:\par
+            \begin{inparaenum}
+                [1)]
+                \item Apresentação de seminários e discussões em grupos;
+                \item Metodologia Design Thinking;
+                \item Metodologia PBL – Aprendizagem Baseada em Problemas;
+                \item Metodologia PjBL - Aprendizagem Baseada em Projetos;
+                \item Metodologia TBL - Aprendizado baseado em Times (Grupos);
+                \item Metodologias baseada em Estudo de Casos;
+                \item Metodologias que possibilitam ao discente maior tempo e profundidade no desenvolvimento de tarefas de laboratório. Poderia ser utilizado o Espaço Maker do DC;
+                \item Sala de aula invertida;
+                \item Trabalho em grupo.
+            \end{inparaenum}
+
+            \medskip
+            \textbf{Avaliações que podem ser empregadas para verificar se cada competência foi adquirida}:\par
+            \begin{inparaenum}
+                [1)]
+                \item Apresentação de projetos e avaliação em grupo;
+                \item Apresentação de relatórios em seminários;
+                \item Apresentações, relatórios, exercícios periódicos;
+                \item Avaliação por pares;
+                \item Compartilhamento das soluções entre grupos distintos;
+                \item Emprego de metas (com soluções esperadas) a serem alcançadas;
+                \item Identificação de evolução do material trazido e compartilhado, em uma abordagem coletiva e em pares;
+                \item Observação e apresentação dos resultados de desenvolvimento prático;
+                \item Realização de avaliações formativas e somativas;
+                \item Verificação da funcionalidade e o desempenho de programas desenvolvidos;
+                \item Verificação se as soluções desenvolvidas atendem às especificações.
+            \end{inparaenum}
+        \end{tcolorbox}
+
+    %     \savebox{\copiarcolarbox}{
+    %         \vbox\bgroup
+    %         \ExecuteLista{\Competencia}{\Atributo{#1}{competencias}}{%
+    %             \expandafter\ApresentaCompetencia\expandafter{\Competencia}{\ApresentaCompetenciaAuxiliarMono}
+    %             \null\par
+    %         }
+    %         \egroup
+    %     }
+    %     \begin{tcolorbox}[title = Para copia e colar!]
+    %         \usebox\copiarcolarbox
+    %     \end{tcolorbox}
+    }{}
+% \clearpage
+}
+
+\title{Orientações gerais para elaboração de planos de ensino por competências}
+\author{NDE-EC}
+\date{Versão de \today}
+
+
+\begin{document}
+\maketitle
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+
+\chapter{Introdução e motivação}
+As Diretrizes Curriculares Nacionais (DCNs) para as Engenharias (Resolução nº 02/2019 do CES/CNE) estabelecem a ênfase no desenvolvimento de competências técnicas e sócio emocionais dos estudantes, envolvendo o desenvolvimento do pensamento criativo com sólida base teórica e a capacidade de inovação e de empreendedorismo dos graduandos em engenharia.
+
+O NDE-EC tem, ao longo dos últimos meses, se debruçado sobre a necessária reorganização do Projeto Pedagógico do Curso (PPC) para que a referida Resolução seja atendida.
+
+Para tanto, em colaboração com diversos docentes do DC, elaborou uma lista das competências que devem ser atendidas pelas disciplinas do curso, o que resultou no conteúdo do Apêndice~\ref{cha:relacao-das-disciplinas}. Neste documento também estão relacionadas atividades, metodologias e avaliações elencadas pelos docentes para essas disciplinas.
+
+Este documento, em particular, visa apresentar sugestões/orientações para que cada docente possa preencher seu Plano de Ensino do semestre 2023/1 de acordo com as competências gerias e específicas elencadas por disciplina.
+
+A ideia é que cada docente possa ratificar/refinar as competências selecionadas de acordo com as atividades executadas anteriormente de preenchimento do formulário por disciplina e posterior discussão em grupo realizada pelos docentes do DC.
+
+Nesse novo momento de reflexão, o docente responsável pela disciplina poderá alterar, retirar ou acrescentar competências gerais e específicas descritas anteriormente, de forma a refinar as competências possíveis de serem alcançadas na disciplina.
+
+É importante que, para cada competência específica, o docente relacione um método ou forma de executá-la e também uma forma de como avaliá-la.
+
+No Plano de Ensino 2023/1 o docente deverá reescrever os tópicos de Objetivos Específicos, Estratégia de Ensino e Procedimentos de Avaliação do Aluno, de forma a relacionar cada competência específica.
+
+O preenchimento do Plano de Ensino segundo essas orientações é de crucial importância para que o Projeto Pedagógico do Curso de Engenharia de Computação (EC) possa ser reescrito de maneira consistente com as novas DCNs e coerente com sua aplicação na prática, proporcionando ao curso de EC uma melhoria contínua na busca de sua excelência de ensino.
+
+Contamos com sua colaboração!!!!
+
+
+\chapter{Orientações para o preenchimento dos planos de ensino}
+
+Nesta parte serão apresentadas, por meio de dois exemplos práticos, as orientações e sugestões de modificação no preenchimento dos planos de ensino. As disciplinas \Atributo{so}{nome} (SO) e \Atributo{cap}{nome} (CAP) foram selecionada para este fim. As caracterizações dessas disciplinas podem ser vistas na página~\pageref{so} e na página~\pageref{cap}.
+
+Para atingir o objetivo de incorporar o ensino por competências, algumas seções do plano de ensino precisam ser adequadas, sendo elas: Objetivos Específicos, Estratégias de Ensino e Procedimentos de Avaliação. Cada uma delas é ilustrada nos exemplos de forma a serem modificadas de acordo com a competências selecionadas.
+
+
+\section{Exemplo de Adaptação para \Atributo{so}{nome} (SO)}
+
+Para a disciplina \Atributo{so}{nome} (SO) serão alteradas as seções de forma que as alterações possam se adaptar a um plano de ensino já existente. 
+
+\subsection*{Objetivos Específicos}
+Os objetivos específicos devem ser adaptados para explicitar as competências da disciplina. A sugestão, portanto, é alterar/adaptar o texto já existente.
+
+Para SO, o texto original é o abaixo:
+\begin{lstlisting}
+Ao final da disciplina, o estudante deve ser capaz de:
+* reconhecer os recursos gerenciados por sistemas operacionais;
+* entender estratégias e mecanismos implementados por sistemas operacionais;
+* criar programas que usam eficientemente os recursos e serviços providos por sistemas operacionais;
+* entender e atuar no projeto e desenvolvimento de sistemas operacionais.
+\end{lstlisting}
+
+Sugere-se uma nova redação, conforme indicado na sequência.
+
+\begin{lstlisting}
+Ao final da disciplina o discente deve ter atingido as seguintes competências, tanto gerais como específicas:
+
+Aspecto APRENDER
+CE_Ap_1 Interagir com fontes diretas pela observação da execução de processos e gerenciamento de filas de escalonamento, reconhecendo os recursos gerenciados por sistemas operacionais.
+CE_Ap_2 Interagir com fontes indiretas pelo uso do código fonte dos sistemas operacionais, documentação técnica em livros, sites de sistemas operacionais e fóruns de discussões.
+CE_Ap_4 Realizar o duplo movimento de derivar o conhecimento das ações e as ações do conhecimento disponível para implemetar módulos do sistema operacional para problemas específicos e por meio da criação de programas que usam eficientemente os recursos e serviços providos pelos sistemas.
+
+Aspecto PRODUZIR
+CE_Pro_2 Planejar procedimentos adequados para encaminhar a resolução de problemas relevantes que envolvem os sistemas operacionais.
+CE_Pro_4 Implantar o planejamento realizado de uma resolução em programas que usam eficientemente os recursos e serviços providos por sistemas operacionais; CE_Pro_5 Relatar e apresentar trabalhos realizados na área de sistemas operacionasi.
+
+Aspecto ATUAR
+CE_Atuar_1 Dominar conhecimentos e habilidades da área de sistemas operacinais reconhecendo os recursos gerenciados por esses sistemas.
+CE_Atuar_2 Dominar conhecimentos e habilidades gerais e básicas de outras áreas correlatas aos sistemas operacionais.
+CE_Atuar_3 Relacionar conhecimentos e habilidades de diferentes áreas para a integração dos sistemas operacionais e sua implantação de sucesso.
+CE_Atuar_4 Extrapolar conhecimentos e habilidades para diferentes situações dentro de seu campo de atuação profissional para o projeto e implantação de sistemas operacionais com sucesso.
+\end{lstlisting}
+
+\subsection*{Estratégias de Ensino}
+As Estratégias de Ensino devem ser adaptadas para explicitar a forma como cada docente irá atuar em cada competência específica relacionada nos Objetivos Específicos. A sugestão, portanto, é alterar/adaptar o texto já existente.
+
+
+Para SO, o texto original é o abaixo:
+
+\begin{lstlisting}
+As atividades do curso serão compostas de aulas teóricas e de práticas em laboratório. Além disso, materiais complementares estarão disponíveis no ambiente virtual de aprendizagem da UFSCar (AVA2).
+
+Nas aulas teóricas, serão tratados conceitos e aspectos dos recursos físicos e lógicos gerenciados por sistemas operacionais, bem como estratégias e políticas utilizadas nesses gerenciamentos.
+
+As aulas práticas em laboratório permitirão experiências com o uso de sistemas operacionais, explorando suas interfaces para usuários e para programas, e também o conhecimento deaspectos do código fonte de um sistema operacional de código aberto.
+
+O desenvolvimento de programas será utilizado para que os estudantes aprendam a usar os recursos oferecidos por sistemas operacionais na forma de chamadas de sistema. Já a investigação do código fonte de um sistema operacional aberto permitirá que os estudantes se familiarizem com um projeto de sistema operacional real e que sejam capazes de atuar no desenvolvimento de novos sistemas.
+
+No ambiente virtual de aprendizagem serão oferecidos materiais de estudo complementar e indicações de atividades e programas a serem desenvolvidos para a consolidação dos conhecimentos tratados nesta disciplina. Fóruns de discussões na plataforma virtual também deverão servir como canal de interação constante entre professor e estudantes
+\end{lstlisting}
+
+Sugere-se uma nova redação, conforme indicado na sequência.
+
+\begin{lstlisting}
+
+As atividades do curso serão compostas de aulas teóricas e de práticas em laboratório. Além disso, materiais complementares estarão disponíveis no ambiente virtual de aprendizagem da UFSCar (AVA2). Atendendo as seguintes competências específicas: (CE_Ap_1) (CE_Ap_4) (CE_Pro_2)
+
+Nas aulas teóricas, serão tratados conceitos e aspectos dos recursos físicos e lógicos gerenciados por sistemas operacionais, bem como estratégias e políticas utilizadas nesses gerenciamentos. Atendendo as seguintes competências específicas: (CE_Atuar_1) (CE_Atuar_3)
+
+As aulas práticas em laboratório permitirão experiências com o uso de sistemas operacionais, explorando suas interfaces para usuários e para programas, e também o conhecimento de aspectos do código fonte de um sistema operacional de código aberto. Atendendo as seguintes competências específicas: (CE_Ap_1) (CE_Ap_4) (CE_Pro_2)
+\end{lstlisting}
+
+\subsection*{Procedimentos de Avaliação}
+Os Procedimentos de Avaliação também deverão ser adaptados para explicitar a forma como cada docente irá avaliar cada competência específica relacionada nos Objetivos Específicos e nas Estratégias de Ensino. A sugestão, portanto, é adaptar o texto já existente.
+
+Para SO, o texto original é o abaixo:
+
+\begin{lstlisting}
+As avaliações serão compostas por provas teóricas, pelo desenvolvimento de programas, e por estudos e apresentações de seminários.
+
+A média final será calculada da seguinte forma:
+Média Final = Média Provas Teóricas * 0.6 + Média Programas * 0.1 + Nota seminário * 0.3
+
+Serão aprovados os estudantes que obtiverem Média Final >= 6.0 e Frequência >= 75 por  cento (Conforme Portaria 522/06 Art. 14 do Regimento Geral dos Cursos de Graduação da  UFSCar, os estudantes que obtiverem Média Final maior ou igual a 5.0 e menor que 6.0 e  Frequência mínima de 75 por cento terão direito a uma Avaliação Complementar a ser realizada no início do período letivo seguinte (determinado pela Universidade). A avaliação será oferecida a todos os estudantes que atingiram a nota mínima em uma única  ocasião e, portanto, o não comparecimento do aluno implicará em sua reprovação. Nesse caso, o estudante que obtiver nota igual ou superior a 6 ficará com a Média Final igual a 6.
+
+Estará automaticamente reprovado, com Nota Final 0 (zero), o estudante que, em qualquer atividade avaliativa desta disciplina apresentar material copiado, integral ou parcialmente, de qualquer outro material de colega ou de terceiros.
+\end{lstlisting}
+
+Sugere-se uma nova redação, na qual cada competência citada possa ser avaliada de acordo com as avaliações listadas pelos docentes, para esta disciplina.
+
+A seguir são relacionadas cada competência selecionada às avaliações realizadas no curso:
+
+\begin{lstlisting}
+As avaliações serão compostas por provas teóricas, atendendo as competências específicas (CE_Ap_1) (CE_Ap_4) (CE_Pro_2) pelo desenvolvimento de programas, atendendo as competências específicas (CE_Ap_1) (CE_Ap_4) (CE_Pro_2), e por estudos e apresentações de seminários, atendendo as competências específicas (CE_Ap_1) (CE_Ap_4) (CE_Pro_2).
+
+A média final será calculada da seguinte forma:
+Média Final = Média Provas Teóricas * 0.6 + Média Programas * 0.1 + Nota seminário * 0.3
+
+Serão aprovados os estudantes que obtiverem Média Final >= 6.0 e Frequência >= 75 por cento (Conforme Portaria 522/06 Art. 14 do Regimento Geral dos Cursos de Graduação da UFSCar, os estudantes que obtiverem Média Final maior ou igual a 5.0 e menor que 6.0 e Frequência mínima de 75 por cento terão direito a uma Avaliação Complementar a ser realizada no início do período letivo seguinte (determinado pela Universidade). A avaliação será oferecida a todos os estudantes que atingiram a nota mínima em uma única ocasião e, portanto, o não comparecimento do aluno implicará em sua reprovação. Nesse caso, o estudante que obtiver nota igual ou superior a 6 ficará com a Média Final igual a 6.
+
+Estará automaticamente reprovado, com Nota Final 0 (zero), o estudante que, em qualquer atividade avaliativa desta disciplina apresentar material copiado, integral ou parcialmente, de qualquer outro material de colega ou de terceiros.
+\end{lstlisting}
+
+
+\section{Exemplo de Adaptação para \Atributo{cap}{nome} (CAP)}
+
+Para a disciplina \Atributo{cap}{nome} (CAP) serão alteradas as seções de forma que as alterações possam se adaptar a um plano de ensino já existente. A ficha de CAP está na página \pageref{cap}.
+
+\subsection*{Objetivos Específicos}
+Os objetivos específicos devem ser adaptados para explicitar as competências da disciplina. A sugestão, portanto, é alterar/adaptar o texto já existente.
+
+Para CAP, o texto original é o abaixo:
+
+\begin{lstlisting}
+Sinteticamente, os principais objetivos são fazer com que os alunos saibam:
+- Lógica de Programação
+- Algoritmos
+- Linguagem de Programação Estruturada (Linguagem C)
+
+De maneira geral, os alunos deverão ser capazes de abordar problemas de diferentes complexidades e estarem aptos a prover soluções algorítmicas para solucioná-los, apresentando propostas de soluções estruturadas, organizadas, coerentes e documentadas. Serão capazes, também, de utilizar estruturas de entrada e saída, estruturas condicionais e estruturas de repetição nos algoritmos propostos de forma eficiente, bem como farão uso justo das estruturas de representação de dados em memória primária e secundária. Terão competência para organizar o algoritmo em sub-rotinas com passagem adequada de parâmetros e fazer uso correto de variáveis globais e locais. Possuirão conhecimento para a manipulação básica de dados em arquivos armazenados em memória secundária. Adicionalmente, os alunos aprenderão uma linguagem de programação na qual as soluções algorítmicas elaboradas serão implementadas e executadas em um computador real.
+
+De modo mais específico, a disciplina objetiva fornecer ao aluno conhecimentos básicos sobre computadores (i.e. organização, representação de valores em memória, bases numéricas, dispositivos de entrada e saída, sistema operacional), sobre algoritmos (proposição de soluções algorítmicas, refinamentos e modularização) e sobre programação (codificação dos algoritmos em uma linguagem de programação, sendo a linguagem alvo a linguagem C).
+\end{lstlisting}
+
+Sugere-se uma nova redação, conforme indicado na sequência.
+
+\begin{lstlisting}
+Aspecto APRENDER
+CE_Ap_4 Realizar o duplo movimento de derivar o conhecimento das ações e as ações do conhecimento disponível, de modo que  os alunos deverão ser capazes de abordar problemas de diferentes complexidades e estarem aptos a prover soluções algorítmicas para solucioná-los, apresentando propostas de soluções estruturadas, organizadas, coerentes e documentadas.
+
+Aspecto PRODUZIR
+CE_Pro_2 Planejar procedimentos adequados para encaminhar a resolução de problemas elevantes, sendo que os estudantes usarão estruturas de entrada e saída, estruturas ondicionais e estruturas de repetição nos algoritmos propostos de forma eficiente, bem omo farão uso justo das estruturas de representação de dados em memória primária e secundária. Terão competência para organizar o algoritmo em sub-rotinas com passagem adequada de parâmetros e fazer uso correto de variáveis globais e locais.Possuirão conhecimento para a manipulação básica de dados em arquivos armazenados em memória secundária.
+
+CE_Pro_4 Implantar o planejamento realizado de uma resolução, tornando o aluno apto, dentro do escopo de complexidade de problemas abordados na disciplina, a elaborar programas em uma linguagem de programação na qual as soluções algorítmicas elaboradas serão implementadas e executadas em um computador real.
+
+Aspecto ATUAR
+CE_Pro_2 Planejar procedimentos adequados para encaminhar a resolução de problemas relevantes, proporcionando aos alunos as ferramentar para abordar problemas reais de maior ou menor complexidade, entendê-los e desenvolver soluções algorítmicas para solucioná-los.
+
+CE_Pro_4 Implantar o planejamento realizado de uma resolução, de forma que os alunos terão, de forma mais simplificada, as noções iniciais para visualizar como sua solução algorítimica e a implementação em uma linguagem de programação se insere no contexto do problema abordado.
+
+Aspecto EMPREENDER
+CE_Emp_2 Propor soluções para os problemas identificados na área de atuação profissional, sendo os estudantes expostos a problemas práticos que remetem a sua atuação quando egresso da Universidade.
+\end{lstlisting}
+
+\subsection*{Estratégias de Ensino}
+As Estratégias de Ensino devem ser adaptadas para explicitar a forma como cada docente irá atuar em cada competência específica relacionada nos Objetivos Específicos. A sugestão, portanto, é alterar/adaptar o texto já existente focando nas atividades a serem realizadas na disciplina.
+
+Para CAP, o texto original é o abaixo:
+
+\begin{lstlisting}
+Aulas teóricas ministradas com o auxílio de projetor multimídia, quadro branco e pincel.
+
+Aulas práticas ministradas em laboratório com disponibilidade de computadores.
+
+O conteúdo teórico será apresentado aos alunos e será ilustrado com exemplos. Além disso, para facilitar o processo de ensino-aprendizagem, serão estimuladas discussões e reflexões sobre os temas apresentados.
+
+Para consolidar o aprendizado, os alunos serão estimulados a resolver problemas envolvendo algoritmos e programação de computadores utilizando o conhecimento adquirido.
+\end{lstlisting}
+
+Sugere-se uma nova redação, conforme indicado na sequência.
+
+Para a elaboração do texto abaixo, foram selecionadas as seguintes atividades dentre as sugeridas na ficha da disciplina para as diversas competências:
+
+\begin{itemize}
+    \item Aulas expositivas com participação ativa dos estudantes.
+    \item Atividade em grupos
+    \item Avaliação formativa e somativa.
+    \item Desenvolvimento de projeto de programação.
+    \item Desenvolvimento de projeto em grupos com foco em problemas reais.
+\end{itemize}
+
+\begin{lstlisting}
+Os alunos assitirão aulas teóricas ministradas com o auxílio de projetor e quadro branco, acompanhando tanto conteúdo de eslaides quanto o desenvolvimento de programas. Atendendo as seguintes competências específicas: (CE_Ap_4) (CE_Pro_2) (CE_Pro_4)
+
+As aulas serão ministradas em laboratório, sendo que os alunos relizarão o desenvolvimento de projetos de programação, tanto individualmente quanto em grupos. Atendendo as seguintes competências específicas: (CE_Pro_2) (CE_Pro_4) (CE_Emp_2)
+
+Durante as aulas serão estimuladas discussões e reflexões sobre os temas e soluções apresentados. Atendendo as seguintes competências específicas: (CE_Atuar_1) (CE_Atuar_2)
+\end{lstlisting}
+
+\subsection*{Procedimentos de Avaliação}
+Os Procedimentos de Avaliação também deverão ser adaptados para explicitar a forma de como cada docente irá avaliar cada competência específica relacionada nos Objetivos Específicos e nas Estratégias de Ensino. 
+
+Para CAP, o texto original é o abaixo:
+\begin{lstlisting}
+Avaliações
+--------------
+Os alunos serão avaliados por:
+
+    Avaliações escritas (3 provas);
+    Elaboração de trabalhos práticos;
+    Elaboração de um projeto final.
+
+Todas avaliações receberão notas de 0,0 a 10,0.
+
+Datas
+--------
+Previsão para as avaliações:
+
+    Prova 1: 04 de julho;
+    Prova 2: 08 de agosto;
+    Prova 3: 19 de setembro;
+
+Cálculos
+------------
+A média final será calculada considerando os seguintes pesos:
+
+    Prova 1: 20%;
+    Prova 2: 25%;
+    Prova 3: 30%;
+    Trabalhos : 10%;
+    Projeto final: 15%.
+
+Recuperação PAC
+------------------------
+O Processo de Avaliação Complementar, regido pelo artigo 22 do Regimento Geral dos Cursos de Graduação, se dará na forma de uma nova avaliação escrita. Será considerado aprovado, recebendo nota final 6,0, o aluno que, nesta prova, obtiver nota que, somada à média final regular, somar 12,0 pontos.
+
+Critérios de conduta
+---------------------------
+A conduta desonesta não será tolerada. Assim, casos de conduta irregular em provas, trabalhos e projetos (colas, cópias, plágio etc.) implicarão em reprovação com média final zero.
+
+Ao aluno nesta situação é facultada a sua participação nas atividades da disciplina, se assim o desejar. Neste caso, provas, trabalhos e projetos serão corrigidos e o aluno terá retorno de seu desempenho.
+\end{lstlisting}
+
+A modificação seguinte consiste na apresentação dos critérios objetivos de avaliação (notas e média), com o acréscimo da correlação das estratégias de ensino apresentadas (atividades) com as avaliação e com as competências.
+
+Para a elaboração do texto abaixo, foram selecionadas as seguintes Avaliações dentre as sugeridas na ficha da disciplina:
+
+\begin{itemize}
+    \item Relatórios, exercícios periódicos
+    \item Realização de avaliações formativas e somativas.
+\end{itemize}
+
+Sugere-se uma nova redação, conforme indicado na sequência.
+
+\begin{lstlisting}
+As avaliações escritas contemplarão principalmente o conteúdo apresentado nas aulas, avaliando objetivamente o aprendizado dos alunos. Atendendo as competências específicas: (CE_Ap_4) (CE_Pro_2) (CE_Pro_4)
+
+Os trabalhos práticos, a serem desenvolvidos em aula (laboratório), terão tanto caráter de avaliação somativa quanto formativa. Atendendo as competências específicas: (CE_Pro_2) (CE_Pro_4) (CE_Emp_2) (CE_Atuar_1) (CE_Atuar_2)
+
+Avaliações
+--------------
+Os alunos serão avaliados por:
+
+    Avaliações escritas (3 provas);
+    Elaboração de trabalhos práticos.
+
+Todas avaliações receberão notas de 0,0 a 10,0.
+
+Datas
+--------
+Previsão para as avaliações:
+    Prova 1: 
+    Prova 2: 
+    Prova 3: 
+
+Cálculos
+------------
+A média final será calculada considerando os seguintes pesos:
+    Prova 1: 
+    Prova 2: 
+    Prova 3: 
+    Trabalhos: 
+
+Recuperação PAC
+------------------------
+O Processo de Avaliação Complementar, regido pelo artigo 22 do Regimento Geral dos Cursos de Graduação, se dará na forma de uma nova avaliação escrita. Será considerado aprovado, recebendo nota final 6,0, o aluno que, nesta prova, obtiver nota que, somada à média final regular, somar 12,0 pontos.
+
+Critérios de conduta
+---------------------------
+A conduta desonesta não será tolerada. Assim, casos de conduta irregular em provas, trabalhos e projetos (colas, cópias, plágio etc.) implicarão em reprovação com média final zero.
+
+Ao aluno nesta situação é facultada a sua participação nas atividades da disciplina, se assim o desejar. Neste caso, provas, trabalhos e projetos serão corrigidos e o aluno terá retorno de seu desempenho.
+\end{lstlisting}
+
+
+\appendix
+\RenewDocumentCommand{\thesection}{}{}  % omite numeração na lista de disciplinas
+
+
+\chapter{Relação das disciplinas e suas competências estabelecidas}
+\label{cha:relacao-das-disciplinas}
+\ExecuteLista{\Discipl}{%
+    % aed1,aed2,
+    % algelin,am1,am2,
+    % arq1,arq2,arqad,
+    % asp,bd,bdcd,calnum,calculo1,calculo2,calculo3,
+    cap,
+    % cg,
+     % circeletricos,
+     circeletronicos1,
+    % circeletronicos2,compiladores,controle,controle1,
+    % controle2,devops,dm,dw1,dw2,empreend,engsis,es1,
+    % es2,estagio,estagio,fisexpa,fisexpb,fisica1,
+    % fisica3,ga,ia,ihc,ipa,
+    ld,
+    % libras,lm,md,metcient,
+    % musical,om,ori,paa,pde,pdi,pdi3dv,pibd,plp,
+    % pmac,poo,pooa,ppd,probest,projsisemb,protsisdigan,
+    % psd,pvd,rc,robosautonomos,robotica,sc,sd,sem1,sem2,
+    % sereqdif,siai,sistdin,sistdist,
+    so,
+    % tc,tcc1,tcc2,teccom,
+    % vc
+}{%
+    \ApresenteDisciplina{\Discipl}
+}
+
+
+% \chapter{CAP}
+
+% Por Jander: Organizando um pouco as coisas para CAP.
+
+% \subsection*{Objetivos específicos}
+% Original do plano de ensino no SIGA:
+
+% \begin{lstlisting}
+% Sinteticamente, os principais objetivos são fazer com que os alunos saibam:
+% - Lógica de Programação
+% - Algoritmos
+% - Linguagem de Programação Estruturada (Linguagem C)
+
+% De maneira geral, os alunos deverão ser capazes de abordar problemas de diferentes complexidades e estarem aptos a prover soluções algorítmicas para solucioná-los, apresentando propostas de soluções estruturadas, organizadas, coerentes e documentadas. Serão capazes, também, de utilizar estruturas de entrada e saída, estruturas condicionais e estruturas de repetição nos algoritmos propostos de forma eficiente, bem como farão uso justo das estruturas de representação de dados em memória primária e secundária. Terão competência para organizar o algoritmo em sub-rotinas com passagem adequada de parâmetros e fazer uso correto de variáveis globais e locais. Possuirão conhecimento para a manipulação básica de dados em arquivos armazenados em memória secundária. Adicionalmente, os alunos aprenderão uma linguagem de programação na qual as soluções algorítmicas elaboradas serão implementadas e executadas em um computador real.
+
+% De modo mais específico, a disciplina objetiva fornecer ao aluno conhecimentos básicos sobre computadores (i.e. organização, representação de valores em memória, bases numéricas, dispositivos de entrada e saída, sistema operacional), sobre algoritmos (proposição de soluções algorítmicas, refinamentos e modularização) e sobre programação (codificação dos algoritmos em uma linguagem de programação, sendo a linguagem alvo a linguagem C).
+% \end{lstlisting}
+
+
+% Competências:
+
+% \begin{lstlisting}
+% Aspecto APRENDER
+% CE_Ap_4 Realizar o duplo movimento de derivar o conhecimento das ações e as ações do conhecimento disponível.
+
+% Aspecto PRODUZIR
+% CE_Pro_2 Planejar procedimentos adequados para encaminhar a resolução de problemas relevantes.
+% CE_Pro_4 Implantar o planejamento realizado de uma resolução.
+
+% Aspecto ATUAR
+% CE_Pro_2 Planejar procedimentos adequados para encaminhar a resolução de problemas relevantes.
+% CE_Pro_4 Implantar o planejamento realizado de uma resolução.
+
+% Aspecto EMPREENDER
+% CE_Emp_2 Propor soluções para os problemas identificados na área de atuação profissional.
+% \end{lstlisting}
+
+% Juntando tudo:
+
+% \begin{lstlisting}
+% Aspecto APRENDER
+% CE_Ap_4 Realizar o duplo movimento de derivar o conhecimento das ações e as ações do conhecimento disponível, de modo que  os alunos deverão ser capazes de abordar problemas de diferentes complexidades e estarem aptos a prover soluções algorítmicas para solucioná-los, apresentando propostas de soluções estruturadas, organizadas, coerentes e documentadas.
+
+% Aspecto PRODUZIR
+% CE_Pro_2 Planejar procedimentos adequados para encaminhar a resolução de problemas elevantes, sendo que os estudantes usarão estruturas de entrada e saída, estruturas ondicionais e estruturas de repetição nos algoritmos propostos de forma eficiente, bem omo farão uso justo das estruturas de representação de dados em memória primária e secundária. Terão competência para organizar o algoritmo em sub-rotinas com passagem adequada de parâmetros e fazer uso correto de variáveis globais e locais.Possuirão conhecimento para a manipulação básica de dados em arquivos armazenados em memória secundária.
+
+% CE_Pro_4 Implantar o planejamento realizado de uma resolução, tornando o aluno apto, dentro do escopo de complexidade de problemas abordados na disciplina, a elaborar programas em uma linguagem de programação na qual as soluções algorítmicas elaboradas serão implementadas e executadas em um computador real.
+
+
+% Aspecto ATUAR
+% CE_Pro_2 Planejar procedimentos adequados para encaminhar a resolução de problemas relevantes, proporcionando aos alunos as ferramentar para abordar problemas reais de maior ou menor complexidade, entendê-los e desenvolver soluções algorítmicas para solucioná-los.
+
+% CE_Pro_4 Implantar o planejamento realizado de uma resolução, de forma que os alunos terão, de forma mais simplificada, as noções iniciais para visualizar como sua solução algorítimica e a implementação em uma linguagem de programação se insere no contexto do problema abordado.
+
+% Aspecto EMPREENDER
+% CE_Emp_2 Propor soluções para os problemas identificados na área de atuação profissional, sendo os estudantes expostos a problemas práticos que remetem a sua atuação quando egresso da Universidade.
+% \end{lstlisting}
+
+% \subsection*{Estratégias de Ensino}
+
+% \begin{lstlisting}
+% Aulas teóricas ministradas com o auxílio de projetor multimídia, quadro branco e pincel.
+
+% Aulas práticas ministradas em laboratório com disponibilidade de computadores.
+
+% O conteúdo teórico será apresentado aos alunos e será ilustrado com exemplos. Além disso, para facilitar o processo de ensino-aprendizagem, serão estimuladas discussões e reflexões sobre os temas apresentados.
+
+% Para consolidar o aprendizado, os alunos serão estimulados a resolver problemas envolvendo algoritmos e programação de computadores utilizando o conhecimento adquirido.
+% \end{lstlisting}
+
+% Modificação:
+
+% Para a elaboração do texto abaixo, foram selecionadas as seguintes atividades dentre as sugeridas na ficha da disciplina para as diversas competências:
+
+% \begin{itemize}
+%     \item Aulas expositivas com participação ativa dos estudantes.
+%     \item Atividade em grupos
+%     \item Avaliação formativa e somativa.
+%     \item Desenvolvimento de projeto de programação.
+%     \item Desenvolvimento de projeto em grupos com foco em problemas reais.
+% \end{itemize}
+
+% \begin{lstlisting}
+% Os alunos assitirão aulas teóricas ministradas com o auxílio de projetor e quadro branco, acompanhando tanto conteúdo de eslaides quanto o desenvolvimento de programas. (CE_Ap_4) (CE_Pro_2) (CE_Pro_4)
+
+% As aulas serão ministradas em laboratório, sendo que os alunos relizarão o desenvolvimento de projetos de programação, tanto individualmente quanto em grupos. (CE_Pro_2) (CE_Pro_4) (CE_Emp_2)
+
+% Durante as aulas serão estimuladas discussões e reflexões sobre os temas e soluções apresentados. (CE_Atuar_1) (CE_Atuar_2)
+% \end{lstlisting}
+
+
+% \subsection*{Procedimentos de Avaliação}
+
+% \begin{lstlisting}
+% Avaliações
+% --------------
+% Os alunos serão avaliados por:
+
+%     Avaliações escritas (3 provas);
+%     Elaboração de trabalhos práticos;
+%     Elaboração de um projeto final.
+
+% Todas avaliações receberão notas de 0,0 a 10,0.
+
+% Datas
+% --------
+% Previsão para as avaliações:
+
+%     Prova 1: 04 de julho;
+%     Prova 2: 08 de agosto;
+%     Prova 3: 19 de setembro;
+
+% Cálculos
+% ------------
+% A média final será calculada considerando os seguintes pesos:
+
+%     Prova 1: 20%;
+%     Prova 2: 25%;
+%     Prova 3: 30%;
+%     Trabalhos : 10%;
+%     Projeto final: 15%.
+
+% Recuperação PAC
+% ------------------------
+% O Processo de Avaliação Complementar, regido pelo artigo 22 do Regimento Geral dos Cursos de Graduação, se dará na forma de uma nova avaliação escrita. Será considerado aprovado, recebendo nota final 6,0, o aluno que, nesta prova, obtiver nota que, somada à média final regular, somar 12,0 pontos.
+
+% Critérios de conduta
+% ---------------------------
+% A conduta desonesta não será tolerada. Assim, casos de conduta irregular em provas, trabalhos e projetos (colas, cópias, plágio etc.) implicarão em reprovação com média final zero.
+
+% Ao aluno nesta situação é facultada a sua participação nas atividades da disciplina, se assim o desejar. Neste caso, provas, trabalhos e projetos serão corrigidos e o aluno terá retorno de seu desempenho.
+% \end{lstlisting}
+
+% A modificação seguinte consiste na apresentação dos critérios objetivos de avaliação (notas e média), com o acréscimo da correlação das estratégias de ensino apresentadas (atividades) com as avaliação e com as competências.
+
+% Para a elaboração do texto abaixo, foram selecionadas as seguintes Avaliações dentre as sugeridas na ficha da disciplina:
+
+% \begin{itemize}
+%     \item Relatórios, exercícios periódicos
+%     \item Realização de avaliações formativas e somativas
+% \end{itemize}
+
+% \begin{lstlisting}
+% As avaliações escritas contemplarão principalmente o conteúdo apresentado nas aulas, avaliando objetivamente o aprendizado dos alunos. Atendendo as competências específicas: (CE_Ap_4) (CE_Pro_2) (CE_Pro_4)
+
+% Os trabalhos práticos, a serem desenvolvidos em aula (laboratório), terão tanto caráter de avaliação somativa quanto formativa. Atendendo as competências específicas: (CE_Pro_2) (CE_Pro_4) (CE_Emp_2) (CE_Atuar_1) (CE_Atuar_2)
+
+% Avaliações
+% --------------
+% Os alunos serão avaliados por:
+
+%     Avaliações escritas (3 provas);
+%     Elaboração de trabalhos práticos.
+
+% Todas avaliações receberão notas de 0,0 a 10,0.
+
+% Datas
+% --------
+% Previsão para as avaliações:
+%     Prova 1: 
+%     Prova 2: 
+%     Prova 3: 
+
+% Cálculos
+% ------------
+% A média final será calculada considerando os seguintes pesos:
+%     Prova 1: 
+%     Prova 2: 
+%     Prova 3: 
+%     Trabalhos: 
+
+% Recuperação PAC
+% ------------------------
+% O Processo de Avaliação Complementar, regido pelo artigo 22 do Regimento Geral dos Cursos de Graduação, se dará na forma de uma nova avaliação escrita. Será considerado aprovado, recebendo nota final 6,0, o aluno que, nesta prova, obtiver nota que, somada à média final regular, somar 12,0 pontos.
+
+% Critérios de conduta
+% ---------------------------
+% A conduta desonesta não será tolerada. Assim, casos de conduta irregular em provas, trabalhos e projetos (colas, cópias, plágio etc.) implicarão em reprovação com média final zero.
+
+% Ao aluno nesta situação é facultada a sua participação nas atividades da disciplina, se assim o desejar. Neste caso, provas, trabalhos e projetos serão corrigidos e o aluno terá retorno de seu desempenho.
+% \end{lstlisting}
+
+
+\end{document}

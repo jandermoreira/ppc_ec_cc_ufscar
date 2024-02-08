@@ -1,0 +1,53 @@
+digraph dot {
+
+graph [ fontname = "Cambria",
+	ranksep = 1.7,
+	layout = twopi]
+
+node [shape = ellipse,
+      style = filled,
+      color = "#00000000"]
+
+root = pe;
+
+node [fillcolor = "#205867FF", fontcolor=white]
+pe [label = "Egresso"]
+
+node [fillcolor = "#31859BC0"]
+tc [label = "Trabalho de\nConclusão\nde Curso"]
+ac [label = "Atividades\nComplementares"]
+cc  [label = "Computação"]
+et [label = "Estágio\nSupervisionado"]
+ec [label = "Engenharia"]
+
+node [fillcolor = "#92CDDCC0", fontcolor="#205867"]
+m [label = "Matemática"]
+f [label = "Física"]
+h [label = "Humanidades"]
+
+#cd  [label = "Circuitos\nDigitais"]
+#bd  [label = "Banco\nde Dados"]
+#cg  [label = "Computação Gráfica"]
+#es  [label = "Engenharia\nde Software"]
+#ia  [label = "Inteligência\nArtificial"]
+#ih  [label = "Interação\nHumano-Computador"]
+#rc  [label = "Redes de\nComputadores"]
+#sd  [label = "Sistemas Distribuídos"]
+#so  [label = "Sistemas\nOperacionais"]
+ar [label = "Arquitetura de\nComputadores"]
+se [label = "Sistemas\nEmbarcados"]
+
+edge [color = "#205867FF",
+	penwidth = 2]
+
+{cc ac ec et tc} -> pe
+
+edge [color = "#31859BC0"]
+{ACIEPEs, Projetos, Sociedade} -> ac
+{Pesquisa} -> tc
+{Empresas, Empreendedorismo} -> et
+
+{f Controle Automação se Eletrônica}  -> ec
+{h m ar Programação Design} -> cc
+
+}

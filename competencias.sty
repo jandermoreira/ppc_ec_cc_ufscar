@@ -1,0 +1,393 @@
+%! Package = competencias
+%! Author = jander
+%! Date = 2022
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{competencias}[2022/11/28 Estruturação das competências]
+
+\RequirePackage{atributos}
+\RequirePackage{pgfkeys}
+\RequirePackage{pgffor}
+
+\ExplSyntaxOn
+
+\ExplSyntaxOff
+
+\pgfkeys{
+    /competencia/.cd,
+    aspecto/.code = {\NovoAtributo{\@competenciacorrente}{aspecto}{#1}},
+    sigla/.code = {\NovoAtributo{\@competenciacorrente}{sigla}{#1}},
+    descricao/.code = {\NovoAtributo{\@competenciacorrente}{descricao}{#1}},
+    especificas/.code = {\NovoAtributo{\@competenciacorrente}{especificas}{#1}},
+}
+
+% % DefinaCompetencia
+%
+\NewDocumentCommand{\@competenciacorrente}{}{}
+\NewDocumentCommand{\NovaCompetencia}{ m m  }{
+    \RenewDocumentCommand{\@competenciacorrente}{}{#1}
+    \pgfkeys{/competencia/.cd, #2}
+}
+
+% \ExecuteLista: Varre uma sequência separada por virgulas, expandindo um código
+% #1: macro a ser usada na repetição
+% #2: lista
+% #3: comandos
+%
+% \ExecuteLista{\var}{1, 2, 3}{ \var } = for \var = 1 to 3 do \var;
+\ExplSyntaxOn
+\cs_generate_variant:Nn \tl_set:Nn { Ne }
+\cs_new:Npn \execute_lista:nn #1#2#3 {
+    \tl_clear_new:N \l_lista_tl
+    \exp_args:NNe \tl_set:Nn \l_list_tl { #2 }
+    \clist_map_inline:Nn \l_list_tl  {
+        \group_begin:
+        \tl_clear_new:N #1
+        \tl_set:Ne #1 { \tl_trim_spaces:n { ##1 } }
+        \tl_if_empty:NTF #1 {
+            % Ignora itens vazios (vírgula no fim da lista, por exemplo)
+            }{
+            #3
+        }
+        \group_end:
+    }
+}
+\NewDocumentCommand{\ExecuteLista}{ m m +m }{
+    \execute_lista:nn { #1  } { #2 } { #3 }
+}
+\ExplSyntaxOff
+
+
+% #1: classe da tabela
+\newlength{\largura}
+\setlength{\largura}{3.8cm}
+\NewDocumentCommand{\TabelaCompetencias}{ m }{%
+    \singlespacing%
+    \noindent%
+    \begin{tabular}{>{\RaggedRight\arraybackslash}p{\largura}>{\RaggedRight\arraybackslash}p{\dimexpr \textwidth - \largura - 4\tabcolsep}}
+        \sline
+        \multirow{2}{\textwidth}{\textsc{\large\Atributo{#1}{aspecto}} (\texttt{\Atributo{#1}{sigla}})\\} \\
+        \\
+        \textbf{Descrição}        & \textbf{Competências específicas}\\
+        \Atributo{#1}{descricao} &
+        \begin{minipage}[t]{\dimexpr \textwidth - \largura - 4\tabcolsep}
+            \begin{itemize}
+                \ExecuteLista{\CompEspecif}{\Atributo{#1}{especificas}}{%
+                    \item ~\texttt{\Atributo{\CompEspecif}{sigla}}:~\Atributo{\CompEspecif}{descricao}\par
+                }
+            \end{itemize}
+
+        \end{minipage}
+        \vspace{0.25\baselineskip}\null \\
+        \sline
+    \end{tabular}
+    \bigskip
+    \par
+}
+
+\ExplSyntaxOn
+% \cs_generate_variant:Nn \tl_set:Nn { Ne }
+\cs_generate_variant:Nn \tl_count:n { V }
+\cs_new:Npn \competencias_lista:n #1 {
+    \tl_clear_new:N \l_descricao_competencia_tl
+    \exp_args:NNe \tl_set:Nn \l_descricao_competencia_tl { #1 }
+    ((((\tl_count:V \l_descricao_competencia_tl))))
+    \seq_clear_new:N \l_descricao_competencia_seq
+    % \exp_args:NNnV
+    \seq_set_split:NnV \l_descricao_competencia_seq { : } \l_descricao_competencia_tl
+    (((\seq_count:N \l_descricao_competencia_seq)))
+    % \tl_clear_new:N \l_competencia_geral_tl
+    % \tl_set:Nn \l_competencia_geral_tl {
+    %     \seq_item:Nn \l_descricao_competencia_seq {1}
+    % }
+    % \tl_clear_new:N \l_competencia_especifica_tl
+    % \tl_set:Nn \l_competencia_especifica_tl {
+    %     \seq_item:Nn \l_descricao_competencia_seq {2}
+    % }
+    % ((\tl_use:N \l_competencia_geral_tl; \tl_use:N \l_competencia_especifica_tl))
+}
+\NewDocumentCommand{\@listacompetencia}{ m m }{
+    \begingroup
+    \textsc{\Atributo{#1}{aspecto}}~(\texttt{\Atributo{#1}{sigla}})
+    \setlength{\topsep}{-0.5\baselineskip}
+    \begin{itemize}[noitemsep, topsep = 0pt, leftmargin = 1em]
+        % \setlength{\itemsep}{-0.5ex}
+        \ExecuteLista{\Competencia}{#2}{
+            \item \texttt{\Atributo{\Competencia}{sigla}}:~\Atributo{\Competencia}{descricao}.
+            \stepcounter{competenciaspordisciplina}
+        }
+    \end{itemize}
+    \endgroup
+}
+\NewDocumentCommand{\MostraListaCompetencias}{
+    > { \SplitArgument { 1 } { / } } m
+}{
+    \@listacompetencia #1
+}
+\ExplSyntaxOff
+
+% MostraCompetencias: lista os dados da disciplina e suas competências
+% #1: nome abreviado da disciplina
+\NewExpandableDocumentCommand{\MostraCompetencias}{ m }{%
+    \begingroup
+    \singlespacing
+    \noindent
+    \begin{longtable*}{p{4cm}p{11.1cm}}
+        \specialrule{.1em}{.05em}{.05em}
+        \textbf{\Atributo{#1}{codigo}} & \textbf{\Atributo{#1}{nome}} \\*
+        % \hline
+
+        % \multicolumn{2}{l}{\textbf{Objetivo Geral}} \\*
+        % \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{objetivo}} \\
+        % \hline
+
+        % \ifapresentarequisitos
+        % \textbf{\textbf{Pré-requisitos}} & \Atributo{#1}{requisitos} \\
+        % \hline
+        % \fi
+
+        % \ifdefined\BCC
+        % \textbf{\textbf{Disc. recomendadas}} & \Atributo{#1}{disciplinas recomendadas}\\
+        % \hline
+        % \fi
+
+        % \textbf{\Atributo{#1}{semestre}\textdegree~Semestre} &  \\
+        % \hline
+
+        % \multicolumn{2}{l}{\textbf{Ementa}} \\*
+        % \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{ementa}} \\
+
+        % \ifapresentarhorasextras
+        % \ifdefined\BCC \textbf{Carga extra-classe} & #1 \\ \fi
+        % \fi
+        %
+        % \textbf{Respons. pela oferta} & \Atributo{#1}{departamento} (\Atributo{#1}{codigo}) \\
+        % \hline
+
+        % \multicolumn{2}{l}{\textbf{Bibliografia Básica}} \\*
+        % \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{bibliografia basica}} \\
+        % \multicolumn{2}{l}{\textbf{Bibliografia Complementar}} \\*
+        % \multicolumn{2}{p{15.5cm}}{bibliografia complementar} \\
+        % \specialrule{.1em}{.05em}{.05em}
+
+        \SeExisteAtributo{#1}{competencias}{
+            \hline
+            % \multicolumn{2}{l}{\textbf{Competências}} \\*
+            \multicolumn{2}{p{15.5cm}}{
+                \ExecuteLista{\Compet}{\Atributo{#1}{competencias}}{%
+                    \expandafter\MostraListaCompetencias\expandafter{\Compet}
+                }
+            } \\
+        }{
+            % \multicolumn{2}{l}{\textbf{\color{red}FALTA ESPECIFICAR A COMPETÊNCIA}} \\*
+        }
+
+        \specialrule{.1em}{.05em}{.05em}
+    \end{longtable*}
+    \endgroup
+% \clearpage
+}
+
+
+%%%%%%%%%%%%%%%%%%%% COMPETÊNCIAS DA UFSCAR
+
+% Aspecto: APRENDER
+\NovaCompetencia{cg-aprender}{%
+    aspecto = Aprender,
+    sigla = CG\_UFSCar\_Aprender,
+    descricao = {Aprender de forma autônoma e contínua},
+    especificas = {ce-ap-1, ce-ap-2, ce-ap-3, ce-ap-4},
+}
+\NovaCompetencia{ce-ap-1}{%
+    sigla = CE\_Ap\_1,
+    descricao = {Atuação na coleta e análise de dados diretamente a partir de experimentos ou situações reais (por exemplo, experimentos em laboratório)},
+}
+\NovaCompetencia{ce-ap-2}{%
+    sigla = CE\_Ap\_2,
+    descricao = {Atuação com análises de dados previamente realizadas, como as presentes em relatórios, artigos, livros, arquivos, jornais, datasheets etc. (consulta e análise desse material)},
+}
+\NovaCompetencia{ce-ap-3}{%
+    sigla = CE\_Ap\_3,
+    descricao = {Capacidade de escolher e avaliar o conteúdo dessas fontes, considerando origem confiável, rigorosa, relevante, ética, avaliada por pares},
+}
+\NovaCompetencia{ce-ap-4}{%
+    sigla = CE\_Ap\_4,
+    descricao = {Capacidade de adquirir novos conhecimentos a partir da prática ou de fontes de informação e aplicação dos conhecimentos na prática (trabalhada, por exemplo, por estudos de caso)},
+}
+
+% Aspecto: PRODUZIR
+\NovaCompetencia{cg-produzir}{%
+    aspecto = Produzir,
+    sigla = CG\_UFSCar\_Produzir,
+    descricao = {Produzir e divulgar novos conhecimentos, tecnologias, serviços e produtos},
+    especificas = {ce-pro-1, ce-pro-2, ce-pro-3, ce-pro-4, ce-pro-5},
+}
+\NovaCompetencia{ce-pro-1}{%
+    sigla = CE\_Pro\_1,
+    descricao = {Identificar problemas reais relevantes},
+}
+\NovaCompetencia{ce-pro-2}{%
+    sigla = CE\_Pro\_2,
+    descricao = {Planejar procedimentos adequados para resolver problemas reais},
+}
+\NovaCompetencia{ce-pro-3}{%
+    sigla = CE\_Pro\_3,
+    descricao = {Avaliar os possíveis impactos (potencial ou real) das propostas elaboradas, considerando aspectos técnico-científicos, éticos, políticos e regulatórios},
+}
+\NovaCompetencia{ce-pro-4}{%
+    sigla = CE\_Pro\_4,
+    descricao = {Implantar e avaliar o planejamento realizado},
+}
+\NovaCompetencia{ce-pro-5}{%
+    sigla = CE\_Pro\_5,
+    descricao = {Relatar/apresentar trabalhos realizados},
+}
+
+% Aspecto: EMPREENDER
+\NovaCompetencia{cg-empreender}{%
+    aspecto = Empreender,
+    sigla = CG\_UFSCar\_Empreender,
+    descricao = {Empreender formas diversificadas de atuação profissional},
+    especificas = {ce-emp-1, ce-emp-2, ce-emp-3, ce-emp-4, ce-emp-5},
+}
+\NovaCompetencia{ce-emp-1}{%
+    sigla = CE\_Emp\_1,
+    descricao = {Identificar problemas relevantes que requeiram soluções inovadoras},
+}
+\NovaCompetencia{ce-emp-2}{%
+    sigla = CE\_Emp\_2,
+    descricao = {Propor soluções inovadoras para os problemas identificados},
+}
+\NovaCompetencia{ce-emp-3}{%
+    sigla = CE\_Emp\_3,
+    descricao = {Identificar novas áreas e problemas que estendam a capacidade de atuação profissional (novas áreas nas quais empreender, busca de novos mercados)},
+}
+\NovaCompetencia{ce-emp-4}{%
+    sigla = CE\_Emp\_4,
+    descricao = {Capacitar-se ou promover condições para atuação profissional em novas áreas e em novas necessidades},
+}
+\NovaCompetencia{ce-emp-5}{%
+    sigla = CE\_Emp\_5,
+    descricao = {Comprometer-se com os resultados da atuação profissional, agindo ativamente no exercício profissional, sendo um protagonista frente à sociedade e assumindo a responsabilidade por suas ações},
+}
+
+% Aspecto: ATUAR
+\NovaCompetencia{cg-atuar}{%
+    aspecto = Atuar,
+    sigla = CG\_UFSCar\_Atuar,
+    descricao = {Atuar inter, multi e transdisciplinarmente},
+    especificas = {ce-atuar-1, ce-atuar-2, ce-atuar-3, ce-atuar-4, ce-atuar-5},
+}
+\NovaCompetencia{ce-atuar-1}{%
+    sigla = CE\_Atuar\_1,
+    descricao = {Dominar conhecimentos e habilidades específicos de sua área
+(adquirir o conteúdo da disciplina)},
+}
+\NovaCompetencia{ce-atuar-2}{%
+    sigla = CE\_Atuar\_2,
+    descricao = {Dominar conhecimentos e habilidades gerais e básicas de outras áreas da computação (obter conhecimento de outra área da computação para aplicação do conteúdo da disciplina – problemas reais, por exemplo)},
+}
+\NovaCompetencia{ce-atuar-3}{%
+    sigla = CE\_Atuar\_3,
+    descricao = {Relacionar conhecimentos e habilidades de diferentes áreas (entender como o conhecimento da disciplina se situa em relação a outras disciplinas ou outras áreas da computação ou fora dela)},
+}
+\NovaCompetencia{ce-atuar-4}{%
+    sigla = CE\_Atuar\_4,
+    descricao = {Extrapolar conhecimentos e habilidades para diferentes situações dentro de seu campo de atuação profissional },
+}
+\NovaCompetencia{ce-atuar-5}{%
+    sigla = CE\_Atuar\_5,
+    descricao = {Trabalhar em equipes multidisciplinares (atividades de extensão, por exemplo)},
+}
+
+% Aspecto: COMPROMETER
+\NovaCompetencia{cg-comprometer}{%
+    aspecto = Comprometer,
+    sigla = CG\_UFSCar\_Comprometer,
+    descricao = {Comprometer-se com a preservação da biodiversidade no ambiente natural e construído e com sustentabilidade e melhoria da qualidade da vida},
+    especificas = {ce-compr-1, ce-compr-2, ce-compr-3},
+}
+\NovaCompetencia{ce-compr-1}{%
+    sigla = CE\_Compr\_1,
+    descricao = {Compreender as relações homem, ambiente, tecnologia e sociedade},
+}
+\NovaCompetencia{ce-compr-2}{%
+    sigla = CE\_Compr\_2,
+    descricao = {Identificar problemas a partir dessas relações},
+}
+\NovaCompetencia{ce-compr-3}{%
+    sigla = CE\_Compr\_3,
+    descricao = {Propor ou implementar soluções para esses problemas},
+}
+
+% Aspecto: GERENCIAR
+\NovaCompetencia{cg-gerenciar}{%
+    aspecto = Gerenciar,
+    sigla = CG\_UFSCar\_Gerenciar,
+    descricao = {Gerenciar processos participativos de organização pública ou privada ou incluir-se neles},
+    especificas = {ce-ger-1, ce-ger-2, ce-ger-3},
+}
+\NovaCompetencia{ce-ger-1}{%
+    sigla = CE\_Ger\_1,
+    descricao = {Dominar habilidades básicas de comunicação, negociação e cooperação},
+}
+\NovaCompetencia{ce-ger-2}{%
+    sigla = CE\_Ger\_2,
+    descricao = {Conhecer os processos envolvidos nas relações interpessoais e de grupo},
+}
+\NovaCompetencia{ce-ger-3}{%
+    sigla = CE\_Ger\_3,
+    descricao = {Coordenar ações de diversas pessoas ou grupos},
+}
+
+% Aspecto: PAUTAR
+\NovaCompetencia{cg-pautar}{%
+    aspecto = Pautar,
+    sigla = CG\_UFSCar\_Pautar,
+    descricao = {Pautar-se na ética e na solidariedade enquanto ser humano, cidadão e profissional},
+    especificas = {ce-paut-1, ce-paut-2, ce-paut-3, ce-paut-4, ce-paut-5},
+}
+\NovaCompetencia{ce-paut-1}{%
+    sigla = CE\_Paut\_1,
+    descricao = {Conhecer e respeitar a si próprio e aos outros},
+}
+\NovaCompetencia{ce-paut-2}{%
+    sigla = CE\_Paut\_2,
+    descricao = {Conhecer e respeitar os direitos individuais e coletivos},
+}
+\NovaCompetencia{ce-paut-3}{%
+    sigla = CE\_Paut\_3,
+    descricao = {Respeitar as diferenças culturais, políticas e religiosas},
+}
+\NovaCompetencia{ce-paut-4}{%
+    sigla = CE\_Paut\_4,
+    descricao = {Cumprir deveres},
+}
+\NovaCompetencia{ce-paut-5}{%
+    sigla = CE\_Paut\_5,
+    descricao = {Conhecer, respeitar e contribuir para a preservação da vida},
+}
+
+% Aspecto: BUSCAR
+\NovaCompetencia{cg-buscar}{%
+    aspecto = Buscar,
+    sigla = CG\_UFSCar\_Buscar,
+    descricao = {Buscar maturidade, sensibilidade e equilíbrio ao agir profissionalmente},
+    especificas = {ce-busc-1, ce-busc-2, ce-busc-3, ce-busc-4},
+}
+\NovaCompetencia{ce-busc-1}{%
+    sigla = CE\_Busc\_1,
+    descricao = {Identificar situações geradoras de estresse},
+}
+\NovaCompetencia{ce-busc-2}{%
+    sigla = CE\_Busc\_2,
+    descricao = {Preparar-se para agir em situações estressantes, contrabalançando-as com situações relaxadoras},
+}
+\NovaCompetencia{ce-busc-3}{%
+    sigla = CE\_Busc\_3,
+    descricao = {Tomar decisões e desencadear ações, considerando simultaneamente potencialidades e limites dos envolvidos e exigências da atuação profissional},
+}
+\NovaCompetencia{ce-busc-4}{%
+    sigla = CE\_Busc\_4,
+    descricao = {Promover e aprofundar gradualmente o conhecimento de si e dos outros},
+}

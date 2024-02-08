@@ -1,0 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! Autor = Jander Moreira
+%! Data = 28/11/2022
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage{competencias}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+[\i, \j]
+
+\ExecuteLista{\i}{1, 2, 3}{
+    \ExecuteLista{\j}{A, B, C}{
+        (\i, \j)
+    }
+}
+
+[\i, \j]
+
+\end{document}

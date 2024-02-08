@@ -1,0 +1,164 @@
+%! Package = atividades
+%! Author = Jander Moreira
+%! Date = 2023/03
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{atividades}[2023/03/21 Descrição das atividades e competências associadas]
+
+\RequirePackage{atributos}
+\RequirePackage{competencias}
+
+% Descrições
+\NovoAtributo{analise-aplic}{descricao}{Análise de aplicações ou sistemas com proposta de soluções e melhorias}
+\NovoAtributo{analise-sist-dig}{descricao}{Análise de sistemas digitais com engenharia reversa}
+\NovoAtributo{analise-sist-reais}{descricao}{Análise de sistemas reais}
+\NovoAtributo{apl-logica-comp}{descricao}{Aplicação da lógica computacional para o desenvolvimento de soluções algorítmicas}
+\NovoAtributo{apl-probl-reais}{descricao}{Aplicação de conhecimentos teóricos para solução de problemas reais}
+\NovoAtributo{seminarios}{descricao}{Apresentação de seminários}
+\NovoAtributo{ativ-participativa}{descricao}{Atividade com participação interativa de estudantes}
+\NovoAtributo{ativ-lab}{descricao}{Atividade de laboratório correlacionando teoria e prática}
+\NovoAtributo{ativ-grupos}{descricao}{Atividade em grupos}
+\NovoAtributo{ativ-grupos-integracao}{descricao}{Atividade em grupos com integração entre grupos}
+\NovoAtributo{aula}{descricao}{Aulas expositivas com participação ativa dos estudantes}
+\NovoAtributo{consulta-fontes}{descricao}{Consulta a fontes de conhecimento}
+\NovoAtributo{consulta-doc-probl-praticos}{descricao}{Consulta e análise de documentação técnica com aplicação em problemas práticos}
+\NovoAtributo{consulta-doc-em-aula}{descricao}{Consulta e análise de documentação técnica durante atividade em aula}
+\NovoAtributo{consulta-doc-e-analise}{descricao}{Consulta e análise de documentação técnica e científica}
+\NovoAtributo{consulta-doc-probl-reais}{descricao}{Consulta e análise de documentação técnica e científica com aplicação e levantamento de problemas reais}
+\NovoAtributo{consulta-doc-temas-especificos}{descricao}{Consulta e análise de documentação técnica e científica com aplicação em problemas com temas específicos}
+\NovoAtributo{consulta-mat-cientifico}{descricao}{Consulta e análise de material científico e escrita acadêmica}
+\NovoAtributo{desenv-busca}{descricao}{Desenvolvimento da capacidade de busca por material técnico e científico}
+\NovoAtributo{ativ-grupos-discussao}{descricao}{Desenvolvimento de atividade em grupos com posterior discussão em aula}
+\NovoAtributo{desenv-grupos-compartilhamento}{descricao}{Desenvolvimento de atividade em grupos com temas distintos e posterior compartilhamento de resultados}
+\NovoAtributo{desenv-proj}{descricao}{Desenvolvimento de projeto}
+\NovoAtributo{desenv-proj-social}{descricao}{Desenvolvimento de projeto com apelo social e ambiental}
+\NovoAtributo{desenv-proj-e-relat}{descricao}{Desenvolvimento de projeto com elaboração de relatório}
+\NovoAtributo{desenv-proj-probl-reais}{descricao}{Desenvolvimento de projeto com foco em problemas reais}
+\NovoAtributo{desenv-proj-e-seminario}{descricao}{Desenvolvimento de projeto com posterior apresentação de seminário}
+\NovoAtributo{desenv-proj-prog}{descricao}{Desenvolvimento de projeto de programação}
+\NovoAtributo{desenv-proj-estr-dados}{descricao}{Desenvolvimento de projeto de programação com foco em estruturas de dados específicas}
+\NovoAtributo{desenv-proj-desempenho}{descricao}{Desenvolvimento de projeto de sistema com foco em desempenho, tolerância a falhas e consumo energético}
+\NovoAtributo{desenv-proj-tecnica-especifica}{descricao}{Desenvolvimento de projeto de sistema com foco em técnica ou conceito específico}
+\NovoAtributo{desenv-proj-tema-especifico}{descricao}{Desenvolvimento de projeto de sistema com tema específico}
+\NovoAtributo{desenv-proj-hardware}{descricao}{Desenvolvimento de projeto de sistema de hardware}
+\NovoAtributo{desenv-proj-software}{descricao}{Desenvolvimento de projeto de sistema de software}
+\NovoAtributo{desenv-proj-inovador}{descricao}{Desenvolvimento de projeto de sistema inovadores}
+\NovoAtributo{desenv-proj-sist-reais}{descricao}{Desenvolvimento de projeto de sistema reais}
+\NovoAtributo{desenv-proj-grupos-progressivo}{descricao}{Desenvolvimento de projeto em grupos com construção progressiva de conhecimento}
+\NovoAtributo{desenv-proj-grupos-probl-reais}{descricao}{Desenvolvimento de projeto em grupos com foco em problemas reais}
+\NovoAtributo{desenv-proj-grupos-e-seminario}{descricao}{Desenvolvimento de projeto em grupos com posterior apresentação de seminário}
+\NovoAtributo{desenv-proj-parceria-externa}{descricao}{Desenvolvimento de projeto envolvendo parcerias externas}
+\NovoAtributo{desenv-proj-multidiscipl}{descricao}{Desenvolvimento de projeto multidisciplinar ou entre cursos}
+\NovoAtributo{desenv-proj-pratico}{descricao}{Desenvolvimento de projeto prático}
+\NovoAtributo{monografia}{descricao}{Elaboração de monografia ou relatório com apresentação em formato de artigo ou seminário}
+\NovoAtributo{integr-setor-produtivo}{descricao}{Integração ao setor produtivo para levantamento de problemas reais}
+\NovoAtributo{avaliacao}{descricao}{Avaliação formativa e somativa}
+\NovoAtributo{simulacao}{descricao}{Simulação de sistemas de hardware ou software}
+
+\NovoAtributo{cg-aprender}{atividades}{
+    analise-aplic,
+    analise-sist-dig,
+    apl-logica-comp,
+    avaliacao,
+    seminarios,
+    ativ-lab,
+    ativ-grupos,
+    aula,
+    consulta-fontes,
+    consulta-doc-probl-praticos,
+    consulta-doc-em-aula,
+    consulta-doc-e-analise,
+    consulta-doc-temas-especificos,
+    desenv-busca,
+    ativ-grupos-discussao,
+    desenv-proj,
+    desenv-proj-e-relat,
+    desenv-proj-probl-reais,
+    desenv-proj-tecnica-especifica,
+    desenv-proj-hardware,
+    desenv-proj-grupos-progressivo,
+    desenv-proj-grupos-e-seminario,
+    monografia,
+    integr-setor-produtivo,
+    simulacao
+}
+\NovoAtributo{cg-produzir}{atividades}{
+    analise-aplic,
+    apl-probl-reais,
+    avaliacao,
+    seminarios,
+    ativ-lab,
+    aula,
+    consulta-fontes,
+    consulta-doc-probl-praticos,
+    consulta-doc-probl-reais,
+    consulta-doc-temas-especificos,
+    consulta-mat-cientifico,
+    ativ-grupos-discussao,
+    desenv-grupos-compartilhamento,
+    desenv-proj,
+    desenv-proj-e-seminario,
+    desenv-proj-prog,
+    desenv-proj-estr-dados,
+    desenv-proj-tecnica-especifica,
+    desenv-proj-hardware,
+    desenv-proj-software,
+    desenv-proj-grupos-probl-reais,
+    desenv-proj-grupos-e-seminario,
+    desenv-proj-pratico,
+    monografia,
+    integr-setor-produtivo,
+    simulacao
+}
+\NovoAtributo{cg-empreender}{atividades}{
+    analise-aplic,
+    consulta-doc-probl-reais,
+    desenv-proj,
+    desenv-proj-inovador,
+    desenv-proj-grupos-progressivo,
+    desenv-proj-grupos-probl-reais,
+    desenv-proj-parceria-externa
+}
+\NovoAtributo{cg-atuar}{atividades}{
+    avaliacao,
+    analise-sist-reais,
+    apl-probl-reais,
+    ativ-lab,
+    ativ-grupos,
+    aula,
+    consulta-fontes,
+    consulta-doc-probl-praticos,
+    consulta-doc-temas-especificos,
+    desenv-proj,
+    desenv-proj-estr-dados,
+    desenv-proj-desempenho,
+    desenv-proj-tema-especifico,
+    desenv-proj-hardware,
+    desenv-proj-software,
+    desenv-proj-sist-reais,
+    desenv-proj-grupos-progressivo,
+    desenv-proj-grupos-probl-reais,
+    desenv-proj-parceria-externa,
+    desenv-proj-multidiscipl
+}
+\NovoAtributo{cg-comprometer}{atividades}{
+    consulta-mat-cientifico,
+    desenv-proj-social
+}
+\NovoAtributo{cg-gerenciar}{atividades}{
+    apl-probl-reais,
+    ativ-grupos,
+    ativ-grupos-integracao
+}
+\NovoAtributo{cg-pautar}{atividades}{
+    ativ-grupos,
+    aula,
+    consulta-doc-probl-praticos,
+    desenv-proj-tema-especifico,
+    desenv-proj-grupos-probl-reais
+}
+\NovoAtributo{cg-buscar}{atividades}{
+    ativ-participativa,
+    ativ-grupos,
+    desenv-proj
+}

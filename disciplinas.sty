@@ -1,0 +1,228 @@
+%! Package = disciplinas
+%! Author = jander
+%! Date = 2022
+
+% Este pacote substitui o arquivo comandos.tex original, mantendo a
+% compatibilidade
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{disciplinas}[2022/11/24 Comandos para manipulação das disciplinas]
+
+\RequirePackage{atributos}
+\RequirePackage{competencias}
+
+%% Usar o template abaixo
+% \disciplina[nome abreviado]{
+%  \titulo      {#semestre}{Nome da Disciplinas}
+%  \objetivo    {Objetivos}
+%  \requisitos  {XX.XXX-X}
+%  \recomendadas{XX.XXX-X}
+%  \ementa      {Topicos; }
+%  \creditos    {#X total (#X teórico(s), #X prático(s)} preencher em HORAS
+%  \extra       {#X horas} % Não será usado! Recomendação da DiDPed
+%  \codigo      {DC}{XX.XXX-X}
+%  \bibliografia{ % basica
+%         livro 1
+%
+%         livro 2
+%
+%         livro 3
+%   }{ % complementar
+%         livro A
+%
+%         livro B
+%
+%         livro C}
+% }
+
+\NewDocumentCommand{\livrotexto}{ m }{%
+    \ifdefined\ANOTACOES
+    \textbf{Livro Texto #1}
+    \fi%
+}
+
+\NewDocumentCommand{\@disciplinacorrente}{}{}  % atualizada em \disciplina
+
+% \@disciplinaatributo: Cria de um novo atributo para a disciplina que
+% está sendo definida (\@disciplinacorrente define a classe)
+% #1: atributo
+% #2: valor
+\ExplSyntaxOn
+\NewDocumentCommand{\@disciplinaatributo}{ m +m }{
+    \atributo_crie:nnn { \@disciplinacorrente } { #1 } { #2 }
+}
+\ExplSyntaxOff
+
+% Ambiente para cada disciplina
+% #1: versão abrevidada do nome da disciplina
+\NewDocumentEnvironment{discipl}{ m }{
+    \label{disciplina:#1}
+    }{}
+
+% Definição da disciplina
+% #1: a versão abreviada da disciplina
+% #2: sequência de comandos que definem cada elemento da disciplina
+\NewDocumentCommand{\disciplina}{ m +m }{%
+    \RenewDocumentCommand{\@disciplinacorrente}{}{#1}%
+    \@disciplinaatributo{abreviacao}{#1}%
+
+    % Processa os comandos internos
+    \apresentarequisitosfalse%
+    \apresentarhorasextrasfalse%
+    #2%
+
+    % Apresenta a disciplina somente para BCC, por enquanto
+    \ifdefined\BCC%
+        \MostraDisciplina{#1}%
+    \fi%
+}
+
+% Semestre e nome
+% #1: semestre
+% #2: nome
+\NewDocumentCommand{\titulo}{ m m }{
+    \@disciplinaatributo{semestre}{#1}
+    \@disciplinaatributo{nome}{#2}
+}
+
+% Objetivo
+% #1: texto dos objetivos gerais
+\NewDocumentCommand{\objetivo}{ +m }{%
+    \@disciplinaatributo{objetivo}{#1}
+}
+
+% Requisitos
+% #1: pré-requisitos
+\newif\ifapresentarequisitos
+\NewDocumentCommand{\requisitos}{ m }{
+    \apresentarequisitostrue
+    \@disciplinaatributo{requisitos}{#1}
+}
+
+% Disciplinas recomendadas
+% #1: Lista de códigos de disciplinas recomendadas
+\NewDocumentCommand{\recomendadas}{ m }{
+    \@disciplinaatributo{disciplinas recomendadas}{#1}
+}
+
+% Ementa
+% #1: texto da ementa
+\NewDocumentCommand{\ementa}{ +m }{
+    \@disciplinaatributo{ementa}{#1}
+}
+
+% Crẽditos
+% #1: número de créditos
+\NewDocumentCommand{\creditos}{ m }{
+    \@disciplinaatributo{creditos}{#1}
+}
+
+% Carga extra-classe
+% #1: número de horas
+\newif\ifapresentarhorasextras
+\NewDocumentCommand{\extra}{ m }{
+% Em reunião na DidPEd foi desaconselhado usar esta informação
+    \apresentarhorasextrasfalse
+}
+
+% Departamento e código 
+% #1: sigla do departamento
+% #2: código da disciplina
+\NewDocumentCommand{\codigo}{ m m }{
+    \@disciplinaatributo{departamento}{#1}
+    \@disciplinaatributo{codigo}{#2}
+}
+
+% Bibliografias básica e complementar
+% #1: biblografia básica
+% #2: biblografia complementar
+\NewDocumentCommand{\bibliografia}{ +m +m }{
+    \@disciplinaatributo{bibliografia basica}{#1}
+    \@disciplinaatributo{bibliografia complementar}{#2}
+}
+
+\NewDocumentCommand{\competencias}{ m }{
+    \@disciplinaatributo{competencias}{#1}
+}
+
+\NewDocumentCommand{\dataatualizacao}{ m }{%
+    \@disciplinaatributo{dataatualizacao}{#1}%
+}
+% \NewDocumentCommand{\atualizacao}{ m m }{%
+%     \SeExisteAtributo{#1}{#2}{%
+%         \Atributo{#1}{#2}%
+%     }{%
+%         \textcolor{red}{\textbf{Não atualizado}}
+%     }
+% }
+
+\newcounter{competenciaspordisciplina}
+\newlength{\primeiracoluna}
+\setlength{\primeiracoluna}{4cm}
+\NewExpandableDocumentCommand{\MostraDisciplina}{ m }{%
+    \noindent
+    \begin{discipl}{#1}
+        %! suppress = EscapeAmpersand
+        \begin{longtable*}{p{4cm}p{\dimexpr \textwidth - \primeiracoluna - 5\tabcolsep}}
+            \specialrule{.1em}{.05em}{.05em}
+            \textbf{\ifdefined\BCC Título \else \Atributo{#1}{semestre}\textdegree~Semestre \fi} & \textbf{\Atributo{#1}{nome}} \\*
+            \hline
+
+            \multicolumn{2}{l}{\textbf{Objetivo Geral}} \\*
+            \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{objetivo}} \\
+            \hline
+
+            \SeExisteAtributo{#1}{requisitos}{%
+                \textbf{Pré-requisitos} & \Atributo{#1}{requisitos} \\
+                \hline
+            }{}
+
+            \ifdefined\BCC
+            \textbf{\textbf{Disc. recomendadas}} & \Atributo{#1}{disciplinas recomendadas}\\
+            \hline
+            \fi
+
+            \textbf{Créditos} & \Atributo{#1}{creditos} \\
+            \hline
+
+            \multicolumn{2}{l}{\textbf{Ementa}} \\*
+            \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{ementa}} \\
+            \hline
+
+            \ifapresentarhorasextras
+            \ifdefined\BCC \textbf{Carga extra-classe} & #1 \\ \fi
+            \fi
+
+            \textbf{Respons. pela oferta} & \Atributo{#1}{departamento} (\Atributo{#1}{codigo}) \\
+            \hline
+
+            \multicolumn{2}{l}{\textbf{Bibliografia Básica}} \\*
+            \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{bibliografia basica}} \\
+            \multicolumn{2}{l}{\textbf{Bibliografia Complementar}} \\*
+            \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{bibliografia complementar}} \\
+
+            \ifdefined\BCC\else  % somente para EC, por enquanto
+                \SeExisteAtributo{#1}{competencias}{
+                    \hline
+                    \multicolumn{2}{l}{
+                        \setcounter{competenciaspordisciplina}{0}
+                        \textbf{Competências}
+                    } \\*
+                    % \multicolumn{2}{l}{\textbf{Competências}} \\*
+                    \multicolumn{2}{p{15.5cm}}{
+                        \ExecuteLista{\Compet}{\Atributo{#1}{competencias}}{%
+                            \expandafter\MostraListaCompetencias\expandafter{\Compet}
+                        }
+                    } \\
+                    
+                        \multicolumn{2}{l}{
+                        \ifnum\thecompetenciaspordisciplina>12\relax
+                        \textcolor{red}{\textbf{\thecompetenciaspordisciplina} competências. Reduzir para máximo de 12.}\fi} \\*                    
+                }{}
+            \fi
+    
+            \specialrule{.1em}{.05em}{.05em}
+        \end{longtable*}
+    \end{discipl}
+    \clearpage
+}
