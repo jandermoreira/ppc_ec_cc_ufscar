@@ -1,7 +1,8 @@
+#dot -Tpdf Perfil.dot > Perfil.pdf
 digraph dot {
 
 graph [ fontname = "Cambria",
-	ranksep = 1.7,
+	ranksep = 2.0,
 	layout = twopi]
 
 node [shape = ellipse,
@@ -17,6 +18,7 @@ node [fillcolor = "#31859BC0"]
 tc [label = "Trabalho de\nConclusão\nde Curso"]
 ac [label = "Atividades\nComplementares"]
 cc  [label = "Computação"]
+ae [label = "Atividades\nExtensionistas"]
 et [label = "Estágio\nSupervisionado"]
 ec [label = "Engenharia"]
 
@@ -34,20 +36,20 @@ h [label = "Humanidades"]
 #rc  [label = "Redes de\nComputadores"]
 #sd  [label = "Sistemas Distribuídos"]
 #so  [label = "Sistemas\nOperacionais"]
-ar [label = "Arquitetura de\nComputadores"]
 se [label = "Sistemas\nEmbarcados"]
 
 edge [color = "#205867FF",
 	penwidth = 2]
 
-{cc ac ec et tc} -> pe
+{cc ac ec et tc ae} -> pe
 
 edge [color = "#31859BC0"]
-{ACIEPEs, Projetos, Sociedade} -> ac
+{ACEs, h} -> ae
+{Projetos, Sociedade} -> ac
 {Pesquisa} -> tc
 {Empresas, Empreendedorismo} -> et
-
 {f Controle Automação se Eletrônica}  -> ec
-{h m ar Programação Design} -> cc
+{Projeto Programação m ar} -> cc
+ar [label = "Arquitetura de\nComputadores"]
 
 }

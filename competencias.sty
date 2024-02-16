@@ -124,6 +124,18 @@
 }{
     \@listacompetencia #1
 }
+
+\NewDocumentCommand{\@listacompetenciaresumida}{ m m }{
+    \begingroup
+    \textbf{\Atributo{#1}{aspecto}}:~%
+    \Atributo{#1}{descricao}.\newline
+    \endgroup
+}
+\NewDocumentCommand{\MostraListaCompetenciasResumida}{
+    > { \SplitArgument { 1 } { / } } m
+}{
+    \@listacompetenciaresumida #1
+}
 \ExplSyntaxOff
 
 % MostraCompetencias: lista os dados da disciplina e suas competências

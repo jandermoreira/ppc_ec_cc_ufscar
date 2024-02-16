@@ -170,6 +170,28 @@
 
             \multicolumn{2}{l}{\textbf{Objetivo Geral}} \\*
             \multicolumn{2}{p{15.5cm}}{\Atributo{#1}{objetivo}} \\
+
+            \ifdefined\BCC\else  % somente para EC, por enquanto
+                \SeExisteAtributo{#1}{competencias}{%
+                    \multicolumn{2}{l}{%
+                        \setcounter{competenciaspordisciplina}{0}%
+                        \noindent Competências:
+                    } \\*
+                    % \multicolumn{2}{l}{\textbf{Competências}} \\*
+                    \multicolumn{2}{p{15.5cm}}{
+                        \ExecuteLista{\Compet}{\Atributo{#1}{competencias}}{%
+                            \expandafter\MostraListaCompetenciasResumida\expandafter{\Compet}
+                        }
+                    }%
+                    \ifnum\thecompetenciaspordisciplina>12\relax%
+                        \\*%
+                        \multicolumn{2}{l}{%
+                        \textcolor{red}%
+                        {\textbf{\thecompetenciaspordisciplina} competências. Reduzir para máximo de 12.}} \\*
+                    \fi
+                }{}%
+            \fi
+            
             \hline
 
             \SeExisteAtributo{#1}{requisitos}{%
@@ -206,18 +228,19 @@
                     \hline
                     \multicolumn{2}{l}{
                         \setcounter{competenciaspordisciplina}{0}
-                        \textbf{Competências}
+                        \textbf{Competências específicas}%
                     } \\*
                     % \multicolumn{2}{l}{\textbf{Competências}} \\*
                     \multicolumn{2}{p{15.5cm}}{
                         \ExecuteLista{\Compet}{\Atributo{#1}{competencias}}{%
                             \expandafter\MostraListaCompetencias\expandafter{\Compet}
                         }
-                    } \\
-                    
-                        \multicolumn{2}{l}{
-                        \ifnum\thecompetenciaspordisciplina>12\relax
-                        \textcolor{red}{\textbf{\thecompetenciaspordisciplina} competências. Reduzir para máximo de 12.}\fi} \\*                    
+                    } \\*
+                    \ifnum\thecompetenciaspordisciplina>12\relax%
+                        \multicolumn{2}{l}{%
+                        \textcolor{red}%
+                        {\textbf{\thecompetenciaspordisciplina} competências. Reduzir para máximo de 12.}} \\*
+                    \fi
                 }{}
             \fi
     
