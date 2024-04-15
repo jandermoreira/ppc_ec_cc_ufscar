@@ -182,7 +182,7 @@
                         \ExecuteLista{\Compet}{\Atributo{#1}{competencias}}{%
                             \expandafter\MostraListaCompetenciasResumida\expandafter{\Compet}
                         }
-                    }%
+                    } \\*%
                     % \ifnum\thecompetenciaspordisciplina>12\relax%
                     %     \\*%
                     %     \multicolumn{2}{l}{%
@@ -191,7 +191,7 @@
                     % \fi
                 }{}%
             \fi
-            
+
             \hline
 
             \SeExisteAtributo{#1}{requisitos}{%
@@ -243,7 +243,7 @@
                     % \fi
                 }{}
             \fi
-    
+
             \specialrule{.1em}{.05em}{.05em}
         \end{longtable*}
     \end{discipl}

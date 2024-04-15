@@ -1,31 +1,56 @@
 \babel@toc {portuguese}{}\relax 
-\contentsline {chapter}{\numberline {1}Introdução}{6}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Organização deste Documento}{7}{section.1.1}%
-\contentsline {chapter}{\numberline {2}Marco Referencial do Curso}{8}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Áreas de Conhecimento Predominantes no Curso}{8}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Campos de Atuação Profissional}{9}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Objetivos do Curso}{10}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Justificativa da Criação do Curso na UFSCar e sua Evolução Institucional}{11}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Marco Conceitual do Curso}{14}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Competências Gerais da Formação do Engenheiro de Computação}{15}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Competências Específicas da Formação do Engenheiro de Computação}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Estratégias e metodologias de ensino e avaliação}{20}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Atividades em disciplinas}{20}{subsection.3.3.1}%
-\contentsline {subsubsection}{Aprender}{20}{subsection.3.3.1}%
-\contentsline {subsubsection}{Produzir}{21}{subsection.3.3.1}%
-\contentsline {subsubsection}{Empreender}{22}{subsection.3.3.1}%
-\contentsline {subsubsection}{Atuar}{23}{subsection.3.3.1}%
-\contentsline {subsubsection}{Comprometer}{23}{subsection.3.3.1}%
-\contentsline {subsubsection}{Gerenciar}{24}{subsection.3.3.1}%
-\contentsline {subsubsection}{Pautar}{24}{subsection.3.3.1}%
-\contentsline {subsubsection}{Buscar}{24}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Metodologias}{24}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Avaliação}{25}{subsection.3.3.3}%
-\contentsline {chapter}{\numberline {4}Plano de Implantação}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Infraestrutura Necessária para o Funcionamento do Curso}{27}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Corpo Docente e Técnico}{27}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Espaço físico}{29}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Infraestrutura de apoio}{29}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Administração e Condução do Curso}{30}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Processo para Autoavaliação do Curso}{31}{section.4.3}%
-\contentsline {chapter}{Referências Bibliográficas}{33}{chapter*.10}%
+\contentsline {chapter}{\numberline {1}Introdução}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Organização deste Documento}{8}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Marco Referencial do Curso}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Áreas de Conhecimento Predominantes no Curso}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Campos de Atuação Profissional}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Objetivos do Curso}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Justificativa da Criação do Curso na UFSCar e sua Evolução Institucional}{12}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Marco Conceitual do Curso}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Competências Gerais da Formação do Engenheiro de Computação}{16}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Competências Específicas da Formação do Engenheiro de Computação}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Estratégias e metodologias de ensino e avaliação}{21}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Atividades em disciplinas}{21}{subsection.3.3.1}%
+\contentsline {subsubsection}{Aprender}{21}{subsection.3.3.1}%
+\contentsline {subsubsection}{Produzir}{22}{subsection.3.3.1}%
+\contentsline {subsubsection}{Empreender}{23}{subsection.3.3.1}%
+\contentsline {subsubsection}{Atuar}{24}{subsection.3.3.1}%
+\contentsline {subsubsection}{Comprometer}{24}{subsection.3.3.1}%
+\contentsline {subsubsection}{Gerenciar}{25}{subsection.3.3.1}%
+\contentsline {subsubsection}{Pautar}{25}{subsection.3.3.1}%
+\contentsline {subsubsection}{Buscar}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Metodologias}{25}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Avaliação}{26}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Marco Estrutural do Curso}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Princípios Norteadores da Reformulação Curricular}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Atividades Curriculares e Matriz Curricular}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Conteúdos básicos e tecnológicos referentes à área da computação}{34}{subsection.4.2.1}%
+\contentsline {subsubsection}{Eixo de Fundamentos de Matemática e Estatística}{34}{subsection.4.2.1}%
+\contentsline {subsubsection}{Eixo de Algoritmos e Programação}{34}{Item.10}%
+\contentsline {subsubsection}{Eixo de Arquiteturas de Computadores}{35}{Item.18}%
+\contentsline {subsubsection}{Eixo de Metodologia e Técnicas da Computação }{35}{Item.23}%
+\contentsline {subsubsection}{Eixo de Humanas}{36}{Item.30}%
+\contentsline {subsection}{\numberline {4.2.2}Conteúdos básicos e tecnológicos específicos para o curso de Engenharia de Computação}{37}{subsection.4.2.2}%
+\contentsline {subsubsection}{Eixo de Física}{37}{subsection.4.2.2}%
+\contentsline {subsubsection}{Eixo de Eletrônica}{37}{Item.37}%
+\contentsline {subsubsection}{Eixo de Engenharia e Sistemas}{38}{Item.40}%
+\contentsline {subsubsection}{Eixo Extensionista }{39}{Item.52}%
+\contentsline {subsubsection}{Eixo de Especializações }{39}{Item.55}%
+\contentsline {subsection}{\numberline {4.2.3}Matriz Curricular}{40}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Ementário de Disciplinas}{50}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Disciplinas Optativas}{151}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Integração Ensino, Pesquisa e Extensão}{213}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Atividades de Pesquisa}{213}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Atividades de Extensão}{214}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}Plano de Implantação}{215}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Infraestrutura Necessária para o Funcionamento do Curso}{215}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Corpo Docente e Técnico}{215}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Espaço físico}{216}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Infraestrutura de apoio}{216}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Administração e Condução do Curso}{218}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Processo para Autoavaliação do Curso}{218}{section.5.3}%
+\contentsline {chapter}{Referências Bibliográficas}{220}{chapter*.26}%
+\contentsline {chapter}{\numberline {A}Caracterização das competências da UFSCar}{221}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Regulamentação da Inserção Curricular das Atividades de Extensão}{226}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Regulamento de Atividades Complementares}{231}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Regulamento do Estágio Curricular Obrigatório e Não-obrigatório}{241}{appendix.D}%
