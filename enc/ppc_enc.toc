@@ -1,0 +1,31 @@
+\babel@toc {portuguese}{}\relax 
+\contentsline {chapter}{\numberline {1}Introdução}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Organização deste Documento}{7}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Marco Referencial do Curso}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Áreas de Conhecimento Predominantes no Curso}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Campos de Atuação Profissional}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Objetivos do Curso}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Justificativa da Criação do Curso na UFSCar e sua Evolução Institucional}{11}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Marco Conceitual do Curso}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Competências Gerais da Formação do Engenheiro de Computação}{15}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Competências Específicas da Formação do Engenheiro de Computação}{16}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Estratégias e metodologias de ensino e avaliação}{20}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Atividades em disciplinas}{20}{subsection.3.3.1}%
+\contentsline {subsubsection}{Aprender}{20}{subsection.3.3.1}%
+\contentsline {subsubsection}{Produzir}{21}{subsection.3.3.1}%
+\contentsline {subsubsection}{Empreender}{22}{subsection.3.3.1}%
+\contentsline {subsubsection}{Atuar}{23}{subsection.3.3.1}%
+\contentsline {subsubsection}{Comprometer}{23}{subsection.3.3.1}%
+\contentsline {subsubsection}{Gerenciar}{24}{subsection.3.3.1}%
+\contentsline {subsubsection}{Pautar}{24}{subsection.3.3.1}%
+\contentsline {subsubsection}{Buscar}{24}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Metodologias}{24}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Avaliação}{25}{subsection.3.3.3}%
+\contentsline {chapter}{\numberline {4}Plano de Implantação}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Infraestrutura Necessária para o Funcionamento do Curso}{27}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Corpo Docente e Técnico}{27}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Espaço físico}{29}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Infraestrutura de apoio}{29}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Administração e Condução do Curso}{30}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Processo para Autoavaliação do Curso}{31}{section.4.3}%
+\contentsline {chapter}{Referências Bibliográficas}{33}{chapter*.10}%
